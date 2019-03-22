@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[随笔杂谈]]></title>
-    <url>%2F2019%2F03%2F22%2F%E9%9A%8F%E7%AC%94%E6%9D%82%E8%B0%88%2F</url>
-    <content type="text"><![CDATA[第一篇文章写的啥这个是3级标题 列表1 列表2 -a 子列表哦 -b 子列表哈 列表3 测试测试百度导航 字体是谢的字体加粗&lt;html&gt;&lt;/html&gt;1System.out.println(&quot;Hello world!&quot;); 我是应用哦]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>-导航 -分享</tag>
-      </tags>
+    <title><![CDATA[测试]]></title>
+    <url>%2F2019%2F03%2F22%2F%E6%B5%8B%E8%AF%95%2F</url>
+    <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[I love you forever]]></title>
-    <url>%2F2019%2F03%2F21%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. I love you foreverQuick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[使用hexo写博客攻略]]></title>
+    <url>%2F2019%2F03%2F22%2F%E4%BD%BF%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%94%BB%E7%95%A5%2F</url>
+    <content type="text"><![CDATA[新建文章在站点的根目录下执行以下命令：(本博客站点根目录为D:\blog\WJJ711)$ hexo new post &lt;title&gt;//此处title不需要加双引号例如$ hexo new post 使用hexo写攻略可以简写为$ hexo n &lt;title&gt;例如$ hexo n 使用hexo写攻略 给文章添加分类，标签 1 使用Subline Text 打开《使用hexo写博客攻略》 2 设置如下：12345678---title: 使用hexo写博客攻略date: 2019-03-22 19:34:50tags: - hexo - Markdown 编辑器categories: hexo--- 注意 - 后面的空格！ 3 博客正文需要在---下面撰写 一级标题使用一个#空格+内容设置一级标签 二级标题使用2个#空格+内容设置2级标签 三级标题使用3个#空格+内容设置3级标签 设置列表 列表1 列表2 a 子列表1 b 子列表2 列表312345- 列表1- 列表2 a 子列表1 b 子列表2- 列表3 注意- 后面的空格 添加网站链接B站导航[B站导航](https://www.bilibili.com/)注意：https://不能少 插入图片网络图片]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>Markdown 编辑器</tag>
+      </tags>
   </entry>
 </search>
