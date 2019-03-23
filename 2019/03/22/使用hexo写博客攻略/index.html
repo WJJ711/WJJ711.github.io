@@ -81,7 +81,7 @@
     version: '7.0.1',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
-    back2top_sidebar: false,
+    back2top_sidebar: true,
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -111,10 +111,12 @@
 <meta property="og:site_name" content="wjjのhomepage">
 <meta property="og:description" content="新建文章在站点的根目录下执行以下命令：(本博客站点根目录为D:\blog\WJJ711)$ hexo new post &amp;lt;title&amp;gt;//此处title不需要加双引号例如$ hexo new post 使用hexo写攻略可以简写为$ hexo n &amp;lt;title&amp;gt;例如$ hexo n 使用hexo写攻略 给文章添加分类，标签 1 使用Subline Text 打开《使用hex">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-22T14:25:26.315Z">
+<meta property="og:image" content="https://wjj711.github.io/2019/03/22/使用hexo写博客攻略/2019/03/22/使用hexo写博客攻略/ZJU.jpg">
+<meta property="og:updated_time" content="2019-03-23T04:35:59.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo写博客攻略">
 <meta name="twitter:description" content="新建文章在站点的根目录下执行以下命令：(本博客站点根目录为D:\blog\WJJ711)$ hexo new post &amp;lt;title&amp;gt;//此处title不需要加双引号例如$ hexo new post 使用hexo写攻略可以简写为$ hexo n &amp;lt;title&amp;gt;例如$ hexo n 使用hexo写攻略 给文章添加分类，标签 1 使用Subline Text 打开《使用hex">
+<meta name="twitter:image" content="https://wjj711.github.io/2019/03/22/使用hexo写博客攻略/2019/03/22/使用hexo写博客攻略/ZJU.jpg">
 
 
 
@@ -226,6 +228,8 @@
     
 
     
+      
+    
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
@@ -243,8 +247,10 @@
     
 
     
+      
+    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">3</span></a>
 
   </li>
         
@@ -260,8 +266,10 @@
     
 
     
+      
+    
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">1</span></a>
 
   </li>
 
@@ -385,12 +393,24 @@
                 
               
 
-              <time title="创建时间：2019-03-22 19:34:50 / 修改时间：22:25:26" itemprop="dateCreated datePublished" datetime="2019-03-22T19:34:50+08:00">2019-03-22</time>
+              <time title="创建时间：2019-03-22 19:34:50" itemprop="dateCreated datePublished" datetime="2019-03-22T19:34:50+08:00">2019-03-22</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-23 12:35:59" itemprop="dateModified" datetime="2019-03-23T12:35:59+08:00">2019-03-23</time>
               
             
           </span>
@@ -456,7 +476,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">558</span>
+                <span title="本文字数">1.9k</span>
               
 
               
@@ -470,7 +490,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -500,10 +520,11 @@
 <ul>
 <li>3 博客正文需要在<code>---</code>下面撰写</li>
 </ul>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><p>使用一个#空格+内容设置一级标签</p>
-<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>使用2个#空格+内容设置2级标签</p>
-<h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>使用3个#空格+内容设置3级标签</p>
-<h1 id="设置列表"><a href="#设置列表" class="headerlink" title="设置列表"></a>设置列表</h1><ul>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><p>使用一个#+空格+内容</p>
+<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>使用2个#+空格+内容</p>
+<h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>使用3个#+空格+内容</p>
+<h1 id="设置列表"><a href="#设置列表" class="headerlink" title="设置列表"></a>设置列表</h1><p>Markdown支持有序列表和无序列表两种形式：<br>无序列表用*或+或-标识<br>有序列表用数字加.标识，例如1.</p>
+<ul>
 <li>列表1</li>
 <li>列表2<br>  a 子列表1<br>  b 子列表2</li>
 <li>列表3<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- 列表1</span><br><span class="line">- 列表2</span><br><span class="line">	a 子列表1</span><br><span class="line">	b 子列表2</span><br><span class="line">- 列表3</span><br></pre></td></tr></table></figure>
@@ -511,7 +532,44 @@
 </ul>
 <p>注意- 后面的空格</p>
 <h1 id="添加网站链接"><a href="#添加网站链接" class="headerlink" title="添加网站链接"></a>添加网站链接</h1><p><a href="https://www.bilibili.com/" target="_blank" rel="noopener">B站导航</a><br><code>[B站导航](https://www.bilibili.com/)</code><br>注意：<code>https://</code>不能少</p>
-<h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><h2 id="网络图片"><a href="#网络图片" class="headerlink" title="网络图片"></a>网络图片</h2>
+<h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><h2 id="插入本地图片"><a href="#插入本地图片" class="headerlink" title="插入本地图片"></a>插入本地图片</h2><p>设置主题_config.yml<br><code>post_asset_folder: true</code><br>当资源文件管理功能打开后，Hexo将会在你每一次通过<code>hexo new post &lt;title&gt;</code>命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个markdown文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹之中，你可以通过相对路径来引用它们，这样你就得到了一个简单而且方便很多的工作流。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>例如本例中，将ZJU.jpg放到资源文件夹中。通过<br><img src="/2019/03/22/使用hexo写博客攻略/2019/03/22/使用hexo写博客攻略/ZJU.jpg"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img ZJU.jpg 测试%&#125;</span><br></pre></td></tr></table></figure></p>
+<p>命令插入，其中[title]可省略<br><strong>注意，此处必须用```加换行的方式插入上面代码</strong></p>
+<h1 id="制表"><a href="#制表" class="headerlink" title="制表"></a>制表</h1><p>语法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">表头|条目一|条目二</span><br><span class="line">:---:|:---:|:---:</span><br><span class="line">项目|项目一|项目二</span><br></pre></td></tr></table></figure></p>
+<p>以上标记效果显示如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">表头</th>
+<th style="text-align:center">条目一</th>
+<th style="text-align:center">条目二</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">项目</td>
+<td style="text-align:center">项目一</td>
+<td style="text-align:center">项目二</td>
+</tr>
+</tbody>
+</table>
+<h2 id="语法说明"><a href="#语法说明" class="headerlink" title="语法说明"></a>语法说明</h2><ol>
+<li>|、-、:之间多余的空格会被忽略，不影响布局。</li>
+<li>三个短斜杠左右的冒号用于控制对齐方式，只放置左边冒号表示文字居左，只放置右边冒号表示文字居右，如果两边都放置冒号表示文字居中。</li>
+<li><strong>表格的语句上一行必须为空行，不然表格不生效</strong></li>
+</ol>
+<h1 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h1><p>有时候，我们希望对某一部分文字进行强调，使用*或_包裹即可。使用单一符号标记的效果是斜体，使用两个符号标记的效果是加粗<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*这里是斜体*</span><br><span class="line">_这里是斜体_</span><br><span class="line"></span><br><span class="line">**这里是加粗**</span><br><span class="line">__这里是加粗__</span><br></pre></td></tr></table></figure></p>
+<p><em>这里是斜体</em><br><em>这里是斜体</em></p>
+<p><strong>这里是加粗</strong><br><strong>这里是加粗</strong></p>
+<h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>有时候，为了排版漂亮，可能会加入分隔线。Markdown加入分隔线非常简单，使用下面任意一种形式都可以</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<h1 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h1><p>`System.out.println(“Hello World!”);`<br><code>System.out.println(&quot;Hello World!&quot;);</code><br>```<br>System.out.println(“Hello Hexo”);<br>System.out.println(“Hello World!”);<br>```<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(&quot;Hello Hexo&quot;);</span><br><span class="line">System.out.println(&quot;Hello World!&quot;);</span><br></pre></td></tr></table></figure></p>
+<p>行内代码引用，使用单个反引号进行包裹（Tab上面那个），代码块用三个反引号包裹。</p>
+<h1 id="使用反斜杠-插入语法中用到的特殊符号"><a href="#使用反斜杠-插入语法中用到的特殊符号" class="headerlink" title="使用反斜杠\插入语法中用到的特殊符号"></a>使用反斜杠\插入语法中用到的特殊符号</h1><p>在Markdown中，主要有以下几种特殊符号需要处理：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   底线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  括弧</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   惊叹号</span><br></pre></td></tr></table></figure></p>
+<p>例如要输出```需要<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\`\`\`</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -578,6 +636,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/23/使用Typora快速编辑Markdown/" rel="prev" title="使用Typora快速编辑Markdown">
+                使用Typora快速编辑Markdown <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -649,7 +723,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -689,7 +763,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -730,6 +806,16 @@
           
 
           
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
 
           
           
@@ -753,7 +839,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#新建文章"><span class="nav-number">1.</span> <span class="nav-text">新建文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#给文章添加分类，标签"><span class="nav-number">1.1.</span> <span class="nav-text">给文章添加分类，标签</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">2.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">2.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">2.1.1.</span> <span class="nav-text">三级标题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置列表"><span class="nav-number">3.</span> <span class="nav-text">设置列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加网站链接"><span class="nav-number">4.</span> <span class="nav-text">添加网站链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入图片"><span class="nav-number">5.</span> <span class="nav-text">插入图片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络图片"><span class="nav-number">5.1.</span> <span class="nav-text">网络图片</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#新建文章"><span class="nav-number">1.</span> <span class="nav-text">新建文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#给文章添加分类，标签"><span class="nav-number">1.1.</span> <span class="nav-text">给文章添加分类，标签</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">2.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">2.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">2.1.1.</span> <span class="nav-text">三级标题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置列表"><span class="nav-number">3.</span> <span class="nav-text">设置列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加网站链接"><span class="nav-number">4.</span> <span class="nav-text">添加网站链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入图片"><span class="nav-number">5.</span> <span class="nav-text">插入图片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#插入本地图片"><span class="nav-number">5.1.</span> <span class="nav-text">插入本地图片</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制表"><span class="nav-number">6.</span> <span class="nav-text">制表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语法说明"><span class="nav-number">6.1.</span> <span class="nav-text">语法说明</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#强调"><span class="nav-number">7.</span> <span class="nav-text">强调</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分割线"><span class="nav-number">8.</span> <span class="nav-text">分割线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入代码"><span class="nav-number">9.</span> <span class="nav-text">插入代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用反斜杠-插入语法中用到的特殊符号"><span class="nav-number">10.</span> <span class="nav-text">使用反斜杠\插入语法中用到的特殊符号</span></a></li></ol></div>
             
 
           </div>
@@ -761,6 +847,13 @@
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -776,7 +869,7 @@
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-fas fa-heartbeat"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">wjj</span>
 
@@ -786,7 +879,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">1k</span>
+    <span title="站点总字数">2k</span>
   
 
   
@@ -795,7 +888,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">2 分钟</span>
   
 </div>
 
@@ -852,11 +945,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -969,6 +1057,9 @@
 
 
   
+  <script src="/js/src/js.cookie.js?v=7.0.1"></script>
+  <script src="/js/src/scroll-cookie.js?v=7.0.1"></script>
+
 
   
 
@@ -1358,6 +1449,41 @@
   
 
   
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
 
   
 
