@@ -111,12 +111,12 @@
 <meta property="og:site_name" content="wjjのhomepage">
 <meta property="og:description" content="新建文章在站点的根目录下执行以下命令：(本博客站点根目录为D:\blog\WJJ711)$ hexo new post &amp;lt;title&amp;gt;//此处title不需要加双引号例如$ hexo new post 使用hexo写攻略可以简写为$ hexo n &amp;lt;title&amp;gt;例如$ hexo n 使用hexo写攻略 给文章添加分类，标签 1 使用Subline Text 打开《使用hex">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://wjj711.github.io/2019/03/22/使用hexo写博客攻略/2019/03/22/使用hexo写博客攻略/ZJU.jpg">
-<meta property="og:updated_time" content="2019-03-23T04:35:59.819Z">
+<meta property="og:image" content="https://wjj711.github.io/2019/03/22/使用hexo写博客攻略/ZJU.jpg">
+<meta property="og:updated_time" content="2019-03-23T07:45:59.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo写博客攻略">
 <meta name="twitter:description" content="新建文章在站点的根目录下执行以下命令：(本博客站点根目录为D:\blog\WJJ711)$ hexo new post &amp;lt;title&amp;gt;//此处title不需要加双引号例如$ hexo new post 使用hexo写攻略可以简写为$ hexo n &amp;lt;title&amp;gt;例如$ hexo n 使用hexo写攻略 给文章添加分类，标签 1 使用Subline Text 打开《使用hex">
-<meta name="twitter:image" content="https://wjj711.github.io/2019/03/22/使用hexo写博客攻略/2019/03/22/使用hexo写博客攻略/ZJU.jpg">
+<meta name="twitter:image" content="https://wjj711.github.io/2019/03/22/使用hexo写博客攻略/ZJU.jpg">
 
 
 
@@ -410,7 +410,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-23 12:35:59" itemprop="dateModified" datetime="2019-03-23T12:35:59+08:00">2019-03-23</time>
+                <time title="修改时间：2019-03-23 15:45:59" itemprop="dateModified" datetime="2019-03-23T15:45:59+08:00">2019-03-23</time>
               
             
           </span>
@@ -532,8 +532,9 @@
 </ul>
 <p>注意- 后面的空格</p>
 <h1 id="添加网站链接"><a href="#添加网站链接" class="headerlink" title="添加网站链接"></a>添加网站链接</h1><p><a href="https://www.bilibili.com/" target="_blank" rel="noopener">B站导航</a><br><code>[B站导航](https://www.bilibili.com/)</code><br>注意：<code>https://</code>不能少</p>
-<h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><h2 id="插入本地图片"><a href="#插入本地图片" class="headerlink" title="插入本地图片"></a>插入本地图片</h2><p>设置主题_config.yml<br><code>post_asset_folder: true</code><br>当资源文件管理功能打开后，Hexo将会在你每一次通过<code>hexo new post &lt;title&gt;</code>命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个markdown文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹之中，你可以通过相对路径来引用它们，这样你就得到了一个简单而且方便很多的工作流。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure></p>
-<p>例如本例中，将ZJU.jpg放到资源文件夹中。通过<br><img src="/2019/03/22/使用hexo写博客攻略/2019/03/22/使用hexo写博客攻略/ZJU.jpg"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img ZJU.jpg 测试%&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><h2 id="插入本地图片"><a href="#插入本地图片" class="headerlink" title="插入本地图片"></a>插入本地图片</h2><p>设置主题_config.yml<br><code>post_asset_folder: true</code><br>当资源文件管理功能打开后，Hexo将会在你每一次通过<code>hexo new post &lt;title&gt;</code>命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个markdown文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹之中，你可以通过相对路径来引用它们，这样你就得到了一个简单而且方便很多的工作流。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure>
+<p>例如本例中，将ZJU.jpg放到资源文件夹中。通过<br><img src="/2019/03/22/使用hexo写博客攻略/ZJU.jpg"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img ZJU.jpg 测试%&#125;</span><br></pre></td></tr></table></figure></p>
 <p>命令插入，其中[title]可省略<br><strong>注意，此处必须用```加换行的方式插入上面代码</strong></p>
 <h1 id="制表"><a href="#制表" class="headerlink" title="制表"></a>制表</h1><p>语法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">表头|条目一|条目二</span><br><span class="line">:---:|:---:|:---:</span><br><span class="line">项目|项目一|项目二</span><br></pre></td></tr></table></figure></p>
 <p>以上标记效果显示如下：</p>
@@ -879,7 +880,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">2k</span>
+    <span title="站点总字数">3k</span>
   
 
   
@@ -888,7 +889,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">2 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
   
 </div>
 

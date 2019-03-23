@@ -111,12 +111,12 @@
 <meta property="og:site_name" content="wjjのhomepage">
 <meta property="og:description" content="标题标题是用“#”实现的，标题前面加一个“#”，代表一级标题；依次类推，标题前面加六个“#”代表六级标题；一共有六级标题，编辑各种文档完全够用。 #+空格+标题内容 下划线快捷键Ctrl+u，即可实现下划线功能。 强调内容的前后分别加两个*号 斜体内容前后分别加一个\号* 斜体加粗*前后加3个** 删除线先转化成英文输入法，再把内容前后分别加上两个~号 特别注意是2个~ 列表有序列表输入数字“1”">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://wjj711.github.io/2019/03/23/使用Typora快速编辑Markdown/D:/blog/WJJ711/source/_posts/使用Typora快速编辑Markdown/ZJU.jpg">
-<meta property="og:updated_time" content="2019-03-23T06:23:07.919Z">
+<meta property="og:image" content="https://wjj711.github.io/2019/03/23/使用Typora快速编辑Markdown/ZJU.jpg">
+<meta property="og:updated_time" content="2019-03-23T11:53:09.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Typora快速编辑Markdown">
 <meta name="twitter:description" content="标题标题是用“#”实现的，标题前面加一个“#”，代表一级标题；依次类推，标题前面加六个“#”代表六级标题；一共有六级标题，编辑各种文档完全够用。 #+空格+标题内容 下划线快捷键Ctrl+u，即可实现下划线功能。 强调内容的前后分别加两个*号 斜体内容前后分别加一个\号* 斜体加粗*前后加3个** 删除线先转化成英文输入法，再把内容前后分别加上两个~号 特别注意是2个~ 列表有序列表输入数字“1”">
-<meta name="twitter:image" content="https://wjj711.github.io/2019/03/23/使用Typora快速编辑Markdown/D:/blog/WJJ711/source/_posts/使用Typora快速编辑Markdown/ZJU.jpg">
+<meta name="twitter:image" content="https://wjj711.github.io/2019/03/23/使用Typora快速编辑Markdown/ZJU.jpg">
 
 
 
@@ -393,7 +393,7 @@
                 
               
 
-              <time title="创建时间：2019-03-23 12:48:17 / 修改时间：14:23:07" itemprop="dateCreated datePublished" datetime="2019-03-23T12:48:17+08:00">2019-03-23</time>
+              <time title="创建时间：2019-03-23 12:48:17 / 修改时间：19:53:09" itemprop="dateCreated datePublished" datetime="2019-03-23T12:48:17+08:00">2019-03-23</time>
             
 
             
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">456</span>
+                <span title="本文字数">1.1k</span>
               
 
               
@@ -549,7 +549,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <hr>
 <hr>
-<h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><h2 id="本地图片：直接把图片拖入"><a href="#本地图片：直接把图片拖入" class="headerlink" title="本地图片：直接把图片拖入"></a>本地图片：直接把图片拖入</h2><p><img src="/2019/03/23/使用Typora快速编辑Markdown/D:/blog\WJJ711\source\_posts\使用Typora快速编辑Markdown\ZJU.jpg" alt="zju"></p>
+<h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><h2 id="插入本地图片"><a href="#插入本地图片" class="headerlink" title="插入本地图片"></a>插入本地图片</h2><p>设置主题_config.yml<br><code>post_asset_folder: true</code><br>当资源文件管理功能打开后，Hexo将会在你每一次通过<code>hexo new post &lt;title&gt;</code>命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个markdown文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹之中，你可以通过相对路径来引用它们，这样你就得到了一个简单而且方便很多的工作流。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>例如本例中，将ZJU.jpg放到资源文件夹中。通过</p>
+<img src="/2019/03/23/使用Typora快速编辑Markdown/ZJU.jpg" title="测试">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img ZJU.jpg 测试%&#125;</span><br></pre></td></tr></table></figure>
+<p>命令插入，其中[title]可省略</p>
+<h1 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h1><p>`System.out.println(“Hello World!”);`<br><code>System.out.println(&quot;Hello World!&quot;);</code><br>```<br>System.out.println(“Hello Hexo”);<br>System.out.println(“Hello World!”);<br>```</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"Hello Hexo"</span>);</span><br><span class="line">System.out.println(<span class="string">"Hello World!"</span>);</span><br></pre></td></tr></table></figure>
+<p>行内代码引用，使用单个反引号进行包裹（Tab上面那个），代码块用三个反引号包裹。</p>
 
       
     </div>
@@ -818,7 +825,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下划线"><span class="nav-number">2.</span> <span class="nav-text">下划线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#强调"><span class="nav-number">3.</span> <span class="nav-text">强调</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#斜体"><span class="nav-number">4.</span> <span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#斜体加粗"><span class="nav-number">5.</span> <span class="nav-text">斜体加粗</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除线"><span class="nav-number">6.</span> <span class="nav-text">删除线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表"><span class="nav-number">7.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#有序列表"><span class="nav-number">7.1.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无序列表"><span class="nav-number">7.2.</span> <span class="nav-text">无序列表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#table"><span class="nav-number">8.</span> <span class="nav-text">table</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分割线"><span class="nav-number">9.</span> <span class="nav-text">分割线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入图片"><span class="nav-number">10.</span> <span class="nav-text">插入图片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地图片：直接把图片拖入"><span class="nav-number">10.1.</span> <span class="nav-text">本地图片：直接把图片拖入</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下划线"><span class="nav-number">2.</span> <span class="nav-text">下划线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#强调"><span class="nav-number">3.</span> <span class="nav-text">强调</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#斜体"><span class="nav-number">4.</span> <span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#斜体加粗"><span class="nav-number">5.</span> <span class="nav-text">斜体加粗</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除线"><span class="nav-number">6.</span> <span class="nav-text">删除线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表"><span class="nav-number">7.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#有序列表"><span class="nav-number">7.1.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无序列表"><span class="nav-number">7.2.</span> <span class="nav-text">无序列表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#table"><span class="nav-number">8.</span> <span class="nav-text">table</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分割线"><span class="nav-number">9.</span> <span class="nav-text">分割线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入图片"><span class="nav-number">10.</span> <span class="nav-text">插入图片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#插入本地图片"><span class="nav-number">10.1.</span> <span class="nav-text">插入本地图片</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入代码"><span class="nav-number">11.</span> <span class="nav-text">插入代码</span></a></li></ol></div>
             
 
           </div>
@@ -858,7 +865,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">2k</span>
+    <span title="站点总字数">3k</span>
   
 
   
@@ -867,7 +874,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">2 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
   
 </div>
 
