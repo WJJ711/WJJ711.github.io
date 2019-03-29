@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[数组]]></title>
+    <url>%2F2019%2F03%2F29%2F%E6%95%B0%E7%BB%84%2F</url>
+    <content type="text"><![CDATA[数组数组变量属引用类型，数组也可以看成是对象，数组中的每个元素相当于该对象的成员变量。数组本身就是对象，Java中对象是在堆中的，因此数组无论保存原始类型还是其他对象类型，数组对象本身是在堆中存储的。 数组概念 数组是存储同一种数据类型多个元素的集合。也可以看成是一个容器。 数组既可以存储基本数据类型，也可以存储引用数据类型。（对象的地址）（对象数组） 长度是确定的。数组一旦被创建，它的大小就是不可以改变的。 数组定义格式12type[] arr_name; //（推荐使用这种方式）type arr_name[]; 注意事项 ​ 1. 声明的时候并没有实例化任何对象，只有在实例化数组对象时，JVM才分配空间，这时才与长度有关。 ​ 2. 声明一个数组的时候并没有数组真正被创建。 ​ 3. 构造一个数组，必须指定长度。 数组初始化 Java中的数组必须先初始化,然后才能使用。 所谓初始化：就是为数组中的数组元素分配内存空间，并为每个数组元素赋初值。 数组的初始化方式 动态初始化：初始化时程序猿只指定数组长度，由系统为数组分配初始值。 123int[] a1 = new int[2];//动态初始化数组，先分配空间；a1[0]=1;//给数组元素赋值；a1[1]=2;//给数组元素赋值； 静态初始化：初始化时指定每个数组元素的初始值，由系统决定数组长度。 12int[] a = &#123; 1, 2, 3 &#125;;// 静态初始化基本类型数组；Man[] mans = &#123; new Man(1, 1), new Man(2, 2) &#125;;// 静态初始化引用类型数组； 默认初始化：数组是引用类型，它的元素相当于类的实例变量，因此数组一经分配空间，其中的每个元素也被按照实例变量同样的方式被隐式初始化。 123int a2[] = new int[2]; // 默认值：0,0boolean[] b = new boolean[2]; // 默认值：false,falseString[] s = new String[2]; // 默认值：null, null byte,short,int,long ：0 float,double：0.0 char：‘\u0000’ boolean：false 引用类型：null 0x0000(4字节) 但是一定要注意不能同时进行动态初始化和静态初始化。就是不能在给定数组长度的同时给出元素。 例如 1int data[]=new int[3]&#123;1,2,3&#125;;///编译错误！ 数组的内存分配12345678public class TestDemo&#123; public static void main(String[] args) &#123; int data[]=new int[3];//声明数组并分配空间 data[0]=10; data[1]=20; data[2]=30; &#125;&#125;]]></content>
+      <categories>
+        <category>JavaSE</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JavaSE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[位运算符面试问题]]></title>
+    <url>%2F2019%2F03%2F28%2F%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[位运算符面试问题请用最有效率的方式写出计算2乘以8的结果答：2&lt;&lt;3 请自己实现两个整数变量的交换 法一 123int temp=a;a=b;b=temp; 法二 123a=a+b;b=a-b;a=a-b; 法三 123a=a^b;b=a^b;//b=a^b^b=a 主要利用性质 x^x=0a=a^b;//a=a^b^a=b x^0=x 法四 1a=(a+b)-(b=a);//不推荐 判断一个数是否是2的n次幂分析：2^n：素数因子只有2 法一:使用循环，若为偶数，一直除以2，最后为1，则为2^n，时间复杂度logn 法二：位运算2^n的数有一特点，转为2进制形式为：只有一个1，其余全为0，因此只需要判断二进制形式是否只有1个1 ​ a: 0000 1000 ​ a-1: 0000 0111 若a不为2^n次，则至少有2个1，例如 ​ b: 0000 1100 ​ b-1: 0000 1011 显然若a是2^n的数，则a&amp;(a-1)=0 123456class TestDemo&#123; public static void main(String[] args)&#123; int a=1024; System.out.println((a&amp;(a-1))==0); &#125;&#125; 一堆整数中都是成双存在，只有一个数是单独存在，请找出这个数？分析：因为一个整数x^x=0 ​ x^0=x 所以，相同的部分^运算后全变成了0，最后一个单独存在的^0得到本身 答：例如有数a,b,c,d,e 用a^b得到a1 a1^c得到a2 以此往复，得到的最后一个数，就是单独的数]]></content>
+      <categories>
+        <category>JavaSE</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JavaSE</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Java变量的分类与自动类型转换]]></title>
     <url>%2F2019%2F03%2F26%2FJava%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%86%E7%B1%BB%E4%B8%8E%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%2F</url>
-    <content type="text"><![CDATA[Java变量的分类与自动类型转换变量的分类 类型 声明位置 从属于 生命周期 局部变量 方法或者语句块内 方法/语句块 从声明位置开始，直到方法或语句块执行完毕，局部变量消失 成员变量（实例变量） 类内部，方法外部 对象 对象创建，成员变量也跟着创建。对象消失，成员变量也跟着消失； 静态变量（类变量） 类内部（不能定义在方法或者语句块中），static修饰 类 类被加载，静态变量就有效；类被卸载，静态变量就消失 局部变量（local variable）方法或语句块内部定义的变量。生命周期是从声明位置开始到到方法或语句块执行完毕为止。局部变量在使用前必须先声明、初始化(赋初值)再使用。 成员变量（也叫实例变量 member variable）方法外部、类的内部定义的变量。从属于对象，生命周期伴随对象始终。如果不自行初始化，它会自动初始化成该类型的默认初始值。 数据类型 默认初始值 int 0 double 0.0 char ‘\u0000’ boolean false 静态变量（类变量 static variable） 使用static定义。 从属于类，生命周期伴随类始终，从类加载到卸载。 如果不自行初始化，与成员变量相同会自动初始化成该类型的默认初始值，如上表所示。 123456789101112public class TestVariable&#123; int a;//成员变量，从属于对象；成员变量会自动被初始化 static int size; //静态变量，从属于类 public static void main(String[] args) &#123; &#123; int age=18;//局部变量，从属于语句块 &#125; int salary=3000;//局部变量，从属于方法 int i;//局部变量，必须初始化 int j=i+5;//编译出错，变量i还未被初始化 &#125;&#125; 自动类型转换 数据范围小的数据与数据范围大的数据进行数学计算时，自动向大范围的数据类型转换后计算。（例如int和long计算，则int类型先自动变为long类型，再计算） 常量也有类型，常整数为int，常浮点数为double 12long a = 55555555; //编译成功，在int表示的范围内(2.1e9内)。long b = 55555555555;//不加L编译错误，已经超过int表示的范围。 我们修改成long类型的常量即可 1long b = 55555555555L; 注意事项 byte,short,char参与运算的时候默认会转换成int类型，即使是统一数据类型相加也会转成int型 123456public static void main(String[] args) &#123; byte b=10; byte c=10; byte d=b+c;//此处报错，Type mismatch: cannot convert from int to byte，b+c时候，自动转换成int类型 short s=b;//此处没问题&#125;]]></content>
+    <content type="text"><![CDATA[Java变量的分类与自动类型转换变量的分类 类型 声明位置 从属于 生命周期 局部变量 方法或者语句块内 方法/语句块 从声明位置开始，直到方法或语句块执行完毕，局部变量消失 成员变量（实例变量） 类内部，方法外部 对象 对象创建，成员变量也跟着创建。对象消失，成员变量也跟着消失； 静态变量（类变量） 类内部（不能定义在方法或者语句块中），static修饰 类 类被加载，静态变量就有效；类被卸载，静态变量就消失 局部变量（local variable）方法或语句块内部定义的变量。生命周期是从声明位置开始到到方法或语句块执行完毕为止。局部变量在使用前必须先声明、初始化(赋初值)再使用。 成员变量（也叫实例变量 member variable）方法外部、类的内部定义的变量。从属于对象，生命周期伴随对象始终。如果不自行初始化，它会自动初始化成该类型的默认初始值。 数据类型 默认初始值 int 0 double 0.0 char ‘\u0000’ boolean false 静态变量（类变量 static variable） 使用static定义。 从属于类，生命周期伴随类始终，从类加载到卸载。 如果不自行初始化，与成员变量相同会自动初始化成该类型的默认初始值，如上表所示。 123456789101112public class TestVariable&#123; int a;//成员变量，从属于对象；成员变量会自动被初始化 static int size; //静态变量，从属于类 public static void main(String[] args) &#123; &#123; int age=18;//局部变量，从属于语句块 &#125; int salary=3000;//局部变量，从属于方法 int i;//局部变量，必须初始化 int j=i+5;//编译出错，变量i还未被初始化 &#125;&#125; 自动类型转换 数据范围小的数据与数据范围大的数据进行数学计算时，自动向大范围的数据类型转换后计算。（例如int和long计算，则int类型先自动变为long类型，再计算） 常量也有类型，常整数为int，常浮点数为double 12long a = 55555555; //编译成功，在int表示的范围内(2.1e9内)。long b = 55555555555;//不加L编译可通过，但是结果不正确，已经超过int表示的范围，数据溢出。 我们修改成long类型的常量即可 1long b = 55555555555L; 1234567public class Test02 &#123; public static void main(String[] args) &#123; int microPerDay=24*60*60*1000; long nanosPerDay=24*60*60*1000*1000*1000L; System.out.print(nanosPerDay/microPerDay); &#125;&#125; 输出： 15794//显然溢出了 这是因为24*60*60*1000*1000数据已经溢出，需要修改如下 1long nanosPerDay=24L*60*60*1000*1000*1000; 此时第一个数就变成long类型，计算正确 11000000//结果正确 12float f=(float)1.24;float f=1.24f; 问：这两种赋值方式一样么？ 答：不一样。 第一种方式，底层存储double类型，占8字节，再强制类型转换成float 第二种方式，底层 存储float类型，占4字节（推荐使用） 注意事项 byte,short,char参与运算的时候默认会转换成int类型，即使是统一数据类型相加也会转成int型 1234567public static void main(String[] args) &#123; byte b=10; byte c=10;//编译器会自动判断是否处于byte范围内。若属于，则编译通过 short a=10;//同理 byte d=b+c;//此处报错，Type mismatch: cannot convert from int to byte，b+c时候，自动转换成int类型 short s=b;//此处没问题&#125;]]></content>
       <categories>
         <category>JavaSE</category>
       </categories>
