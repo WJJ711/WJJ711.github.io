@@ -103,25 +103,25 @@
 
 
 
-  <meta name="description" content="我们千万不要把面向过程和面向对象对立起来。他们是相辅相成的。面向对象离不开面向过程! 总结 都是解决问题的思维方式，都是代码组织的方式。 解决简单问题可以使用面向过程 解决复杂问题：宏观上使用面向对象把握，微观处理上仍然是面向过程。  面向对象思考方式 遇到复杂问题，先从问题中找名词，然后确立这些名词哪些可以作为类，再根据问题需求确定的类的属性和方法，确定类之间的关系。 建议  面向对象具有三大特">
+  <meta name="description" content="构造器也叫构造方法(constructor)，用于对象的初始化。构造器是一个创建对象时被自动调用的特殊方法，目的是对象的初始化。构造器的名称应与类的名称一致。Java通过new关键字来调用构造器，从而返回该类的实例，是一种特殊的方法。 申明格式123[修饰符] 类名(形参列表)&amp;#123;    ``//n条语句&amp;#125;  方法名与类名相同 没有返回值类型，连void都没有 没有具体的返回值">
 <meta name="keywords" content="Java,JavaSE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面向对象与面向过程">
-<meta property="og:url" content="https://WJJ711.github.io/2019/04/01/面向对象与面向过程/index.html">
+<meta property="og:title" content="构造方法">
+<meta property="og:url" content="https://WJJ711.github.io/2019/04/02/构造方法/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="我们千万不要把面向过程和面向对象对立起来。他们是相辅相成的。面向对象离不开面向过程! 总结 都是解决问题的思维方式，都是代码组织的方式。 解决简单问题可以使用面向过程 解决复杂问题：宏观上使用面向对象把握，微观处理上仍然是面向过程。  面向对象思考方式 遇到复杂问题，先从问题中找名词，然后确立这些名词哪些可以作为类，再根据问题需求确定的类的属性和方法，确定类之间的关系。 建议  面向对象具有三大特">
+<meta property="og:description" content="构造器也叫构造方法(constructor)，用于对象的初始化。构造器是一个创建对象时被自动调用的特殊方法，目的是对象的初始化。构造器的名称应与类的名称一致。Java通过new关键字来调用构造器，从而返回该类的实例，是一种特殊的方法。 申明格式123[修饰符] 类名(形参列表)&amp;#123;    ``//n条语句&amp;#125;  方法名与类名相同 没有返回值类型，连void都没有 没有具体的返回值">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-01T08:48:32.336Z">
+<meta property="og:updated_time" content="2019-04-02T07:30:33.398Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面向对象与面向过程">
-<meta name="twitter:description" content="我们千万不要把面向过程和面向对象对立起来。他们是相辅相成的。面向对象离不开面向过程! 总结 都是解决问题的思维方式，都是代码组织的方式。 解决简单问题可以使用面向过程 解决复杂问题：宏观上使用面向对象把握，微观处理上仍然是面向过程。  面向对象思考方式 遇到复杂问题，先从问题中找名词，然后确立这些名词哪些可以作为类，再根据问题需求确定的类的属性和方法，确定类之间的关系。 建议  面向对象具有三大特">
+<meta name="twitter:title" content="构造方法">
+<meta name="twitter:description" content="构造器也叫构造方法(constructor)，用于对象的初始化。构造器是一个创建对象时被自动调用的特殊方法，目的是对象的初始化。构造器的名称应与类的名称一致。Java通过new关键字来调用构造器，从而返回该类的实例，是一种特殊的方法。 申明格式123[修饰符] 类名(形参列表)&amp;#123;    ``//n条语句&amp;#125;  方法名与类名相同 没有返回值类型，连void都没有 没有具体的返回值">
 
 
 
 
 
 
-  <link rel="canonical" href="https://WJJ711.github.io/2019/04/01/面向对象与面向过程/">
+  <link rel="canonical" href="https://WJJ711.github.io/2019/04/02/构造方法/">
 
 
 
@@ -131,7 +131,7 @@
   };
 </script>
 
-  <title>面向对象与面向过程 | wjjのhomepage</title>
+  <title>构造方法 | wjjのhomepage</title>
   
 
 
@@ -357,7 +357,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/01/面向对象与面向过程/">
+    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/02/构造方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wjj">
@@ -374,7 +374,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">面向对象与面向过程
+          <h1 class="post-title" itemprop="name headline">构造方法
 
               
             
@@ -400,7 +400,7 @@
                 
               
 
-              <time title="创建时间：2019-04-01 16:26:52 / 修改时间：16:48:32" itemprop="dateCreated datePublished" datetime="2019-04-01T16:26:52+08:00">2019-04-01</time>
+              <time title="创建时间：2019-04-02 15:11:10 / 修改时间：15:30:33" itemprop="dateCreated datePublished" datetime="2019-04-02T15:11:10+08:00">2019-04-02</time>
             
 
             
@@ -441,8 +441,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/01/面向对象与面向过程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/01/面向对象与面向过程/" itemprop="commentCount"></span>
+                <a href="/2019/04/02/构造方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/02/构造方法/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -471,7 +471,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.9k</span>
+                <span title="本文字数">1.6k</span>
               
 
               
@@ -485,7 +485,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -505,43 +505,36 @@
       
 
       
-        <p><strong>我们千万不要把面向过程和面向对象对立起来。他们是相辅相成的。面向对象离不开面向过程!</strong></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>都是解决问题的思维方式，都是代码组织的方式。</li>
-<li>解决简单问题可以使用面向过程</li>
-<li>解决复杂问题：宏观上使用面向对象把握，微观处理上仍然是面向过程。</li>
-</ol>
-<p><strong><em>面向对象思考方式</em></strong></p>
-<p>遇到复杂问题，先从问题中找名词，然后确立这些名词哪些可以作为类，再根据问题需求确定的类的属性和方法，确定类之间的关系。</p>
-<p><strong><em>建议</em></strong></p>
+        <p>构造器也叫构造方法(constructor)，用于对象的初始化。构造器是一个创建对象时被自动调用的特殊方法，目的是对象的初始化。构造器的名称应与类的名称一致。<strong><em>Java通过new关键字来调用构造器，从而返回该类的实例，是一种特殊的方法。</em></strong></p>
+<h1 id="申明格式"><a href="#申明格式" class="headerlink" title="申明格式"></a>申明格式</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[修饰符] 类名(形参列表)&#123;</span><br><span class="line">    ``<span class="comment">//n条语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol>
-<li>面向对象具有三大特征：封装性、继承性和多态性，而面向过程没有继承性和多态性，并且面向过程的封装只是封装功能，而面向对象可以封装数据和功能。所以面向对象优势更明显。</li>
-<li>对象说白了也是一种数据结构(对数据的管理模式)，将数据和数据的行为放到了一起。即将相关数据和相关方法封装到一个独立的实体</li>
-<li>在内存上，对象就是一个内存块，存放了相关的数据集合!</li>
-<li>对象的本质就一种数据的组织方式!</li>
+<li>方法名与类名相同</li>
+<li>没有返回值类型，连void都没有</li>
+<li>没有具体的返回值</li>
 </ol>
-<p><strong>面向过程程序设计：程序=算法+数据结构（动词的集合，关注操作）</strong></p>
-<p><strong>面向对象程序设计：程序=对象+消息（名次的集合）</strong></p>
-<h1 id="面向过程-Procedure-Oriented"><a href="#面向过程-Procedure-Oriented" class="headerlink" title="面向过程(Procedure Oriented)"></a>面向过程(Procedure Oriented)</h1><p>面向过程思想思考问题时，我们首先思考“怎么按步骤实现?”并将步骤对应成方法，一步一步，最终完成。 这个适合简单任务，不需要过多协作的情况下。比如，如何开车?我们很容易就列出实现步骤：</p>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">    <span class="keyword">double</span> x, y;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Point</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">double</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.x = x;</span><br><span class="line">        <span class="keyword">this</span>.y = y;  </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getDistance</span><span class="params">(Point p)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Math.sqrt((x - p.x) * (x - p.x) + (y - p.y) * (y - p.y));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestConstructor</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Point p = <span class="keyword">new</span> Point(<span class="number">3.0</span>, <span class="number">4.0</span>);</span><br><span class="line">        Point origin = <span class="keyword">new</span> Point(<span class="number">0.0</span>, <span class="number">0.0</span>);</span><br><span class="line">        System.out.println(p.getDistance(origin));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>5.0//程序结果</code></p>
+<h1 id="构造方法的重载"><a href="#构造方法的重载" class="headerlink" title="构造方法的重载"></a>构造方法的重载</h1><p>构造方法也是方法，只不过有特殊的作用而已。与普通方法一样，构造方法也可以重载。</p>
+<p><strong>【特别注意】</strong></p>
 <ol>
-<li>发动车 2. 挂挡 3.踩油门 4. 走你</li>
+<li><p>如果方法构造中形参名与属性名相同时，需要使用this关键字区分属性与形参。如下示例所示：this.id 表示属性id;id表示形参id</p>
+</li>
+<li><p>如果你不提供构造方法，系统会给出默认构造方法</p>
+</li>
+<li><p>如果你提供了构造方法，系统将不再提供<strong><em>【强烈推荐永远自己写一个无参构造方法】</em></strong></p>
+</li>
+<li><p>构造方法不能递归使用（显然会一直调用自己，栈溢出）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> classlib;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> id; <span class="comment">// id</span></span><br><span class="line">    String name; <span class="comment">// 账户名</span></span><br><span class="line">    String pwd; <span class="comment">// 密码</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">(<span class="keyword">int</span> id, String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">(<span class="keyword">int</span> id, String name, String pwd)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.pwd = pwd;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        User u1 = <span class="keyword">new</span> User();</span><br><span class="line">        User u2 = <span class="keyword">new</span> User(<span class="number">101</span>, <span class="string">"WJJ"</span>);</span><br><span class="line">        User u3 = <span class="keyword">new</span> User(<span class="number">100</span>, <span class="string">"AL"</span>, <span class="string">"123456"</span>);     </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<p>例如把大象放进冰箱,Java语言描述</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		step1();</span><br><span class="line">		step2();</span><br><span class="line">		step3();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">step1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"开冰箱门"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">step2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"把大象放进冰箱"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">step3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"关上冰箱门"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="面向对象-Object-Oriented-OO"><a href="#面向对象-Object-Oriented-OO" class="headerlink" title="面向对象(Object Oriented,OO)"></a>面向对象(Object Oriented,OO)</h1><p>面向过程适合简单、不需要协作的事务。 但是当我们思考比较复杂的问题，比如“如何造车?”，就会发现列出1234这样的步骤，是不可能的。那是因为，造车太复杂，需要很多协作才能完成。此时面向对象思想就应运而生了。</p>
-<p>面向对象(Object Oriented)思想更契合人的思维模式。我们首先思考的是“怎么设计这个事物?” 比如思考造车，我们就会先思考“怎么设计车?”，而不是“怎么按步骤造车的问题”。这就是思维方式的转变。</p>
-<p>一、面向对象思想思考造车，发现车由如下对象组成：</p>
-<ol>
-<li>轮胎</li>
-<li>发动机</li>
-<li>车壳</li>
-<li>座椅</li>
-<li>挡风玻璃</li>
+<h1 id="标准案例"><a href="#标准案例" class="headerlink" title="标准案例"></a>标准案例</h1><ol>
+<li>讲成员变量私有化</li>
+<li>提供一个无参和所有参数的构造方法</li>
+<li>提供setXxx和getXxx</li>
+<li>成员方法</li>
 </ol>
-<p>为了便于协作，我们找轮胎厂完成制造轮胎的步骤，发动机厂完成制造发动机的步骤;这样，发现大家可以同时进行车的制造，最终进行组装，大大提高了效率。但是，具体到轮胎厂的一个流水线操作，仍然是有步骤的，还是离不开面向过程思想!</p>
-<p>因此，面向对象可以帮助我们从宏观上把握、从整体上分析整个系统。 但是，具体到实现部分的微观操作(就是一个个方法)，仍然需要面向过程的思路去处理。</p>
-<p>例如把大象放进冰箱，Java语言描述</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Fridge.open();</span><br><span class="line">		Elephant.in();</span><br><span class="line">		Fridge.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Elephant</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">in</span><span class="params">()</span> </span>&#123;<span class="comment">//此处用静态方法方便调用</span></span><br><span class="line">		System.out.println(<span class="string">"放进冰箱"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fridge</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">open</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"打开冰箱门"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"关上冰箱门"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>　　</p>
 
       
     </div>
@@ -613,8 +606,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/29/数组/" rel="next" title="数组">
-                <i class="fa fa-chevron-left"></i> 数组
+              <a href="/2019/04/02/this关键字/" rel="next" title="this关键字">
+                <i class="fa fa-chevron-left"></i> this关键字
               </a>
             
           </div>
@@ -623,8 +616,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/02/类与对象/" rel="prev" title="类与对象">
-                类与对象 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/02/面向对象三大特性1—-封装/" rel="prev" title="面向对象三大特性1—_封装">
+                面向对象三大特性1—_封装 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -812,7 +805,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">1.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向过程-Procedure-Oriented"><span class="nav-number">2.</span> <span class="nav-text">面向过程(Procedure Oriented)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象-Object-Oriented-OO"><span class="nav-number">3.</span> <span class="nav-text">面向对象(Object Oriented,OO)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#申明格式"><span class="nav-number">1.</span> <span class="nav-text">申明格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构造方法的重载"><span class="nav-number">2.</span> <span class="nav-text">构造方法的重载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标准案例"><span class="nav-number">3.</span> <span class="nav-text">标准案例</span></a></li></ol></div>
             
 
           </div>

@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[面向对象三大特性1—_封装]]></title>
+    <url>%2F2019%2F04%2F02%2F%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A71%E2%80%94-%E5%B0%81%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[封装的作用与含义 我要看电视，只需要按一下开关和换台就可以了。有必要了解电视机内部的结构吗?有必要碰碰显像管吗?制造厂家为了方便我们使用电视，把复杂的内部细节全部封装起来，只给我们暴露简单的接口，比如：电源开关。具体内部是怎么实现的，我们不需要操心。 需要让用户知道的才暴露出来，不需要让用户知道的全部隐藏起来，这就是封装。说的专业一点，封装就是把对象的属性和操作结合为一个独立的整体，并尽可能隐藏对象的内部实现细节。 我们程序设计要追求“高内聚，低耦合”。 高内聚就是类的内部数据操作细节自己完成，不允许外部干涉; 低耦合是仅暴露少量的方法给外部使用，尽量方便外部调用。 编程中封装的具体优点： 提高代码的安全性。 提高代码的复用性。 “高内聚”：封装细节，便于修改内部代码，提高可维护性。 “低耦合”：简化外部调用，便于调用者使用，便于扩展和协作。 没有封装的代码会出现一些问题12345678910111213141516class Person &#123; String name; int age; @Override public String toString() &#123; return "Person [name=" + name + ", age=" + age + "]"; &#125;&#125;public class Test &#123; public static void main(String[] args) &#123; Person p = new Person(); p.name = "小红";//此处也可以加限制，例如游戏起名的时候会判断你的名字是否合法 p.age = -45;//年龄可以通过这种方式随意赋值，没有任何限制 System.out.println(p); &#125;&#125; *再比如说，如果哪天我们需要将Person类中的age属性修改为String类型的，你会怎么办? 例如p.age=1; 改成p.age=&quot;1&quot;; p2.age=2; 改成p2.age=&quot;2&quot;; p3.age=3; 改成p2.age=&quot;3&quot;; 你只有一处使用了这个类的话那还比较幸运，但如果你有几十处甚至上百处都用到了，那你岂不是要改到崩溃。而封装恰恰能解决这样的问题。如果使用封装，我们只需要稍微修改下Person类的setAge()方法即可，而无需修改使用了该类的客户代码。 123public void setAge(Integer age)&#123;//此处为自动装箱 this.age=age.toString();&#125; 封装的使用细节类的属性的处理 一般使用private访问权限。 提供相应的get/set方法来访问相关属性，这些方法通常是public修饰的，以提供对属性的赋值与读取操作(注意：boolean变量的get方法是is开头!)。 一些只用于本类的辅助性方法可以用private修饰，希望其他类调用的方法用public修饰。 封装使用实例1234567891011121314151617181920212223242526272829303132333435363738394041424344454647class Person &#123; private String name; private int age; public Person() &#123;//无参构造函数 &#125; public Person(String name, int age) &#123; this.name = name; //this.age = age;//构造方法中直接赋值，就不会判断年龄是否正确 setAge(age);// 应该调用setAge方法 &#125; public void setName(String name) &#123; this.name = name; &#125; public String getName() &#123; return name; &#125; public void setAge(int age) &#123; //在赋值之前先判断年龄是否合法 if (age &gt; 130 || age &lt; 0) &#123; System.out.println("Are you kidding?");//不合法 &#125; else &#123; this.age = age;//合法才能赋值给属性age &#125; &#125; public int getAge() &#123; return age; &#125; @Override public String toString() &#123; return "Person [name=" + name + ", age=" + age + "]"; &#125;&#125; public class Test2 &#123; public static void main(String[] args) &#123; Person p1 = new Person(); //p1.name = "小红"; //编译错误 //p1.age = -45; //编译错误 p1.setName("小红"); p1.setAge(-45); System.out.println(p1); Person p2 = new Person("小白", 300); System.out.println(p2); &#125;&#125; 1234Are you kidding?Person [name=小红, age=0]Are you kidding?Person [name=小白, age=0]//输出结果]]></content>
+      <categories>
+        <category>JavaSE</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JavaSE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[构造方法]]></title>
+    <url>%2F2019%2F04%2F02%2F%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[构造器也叫构造方法(constructor)，用于对象的初始化。构造器是一个创建对象时被自动调用的特殊方法，目的是对象的初始化。构造器的名称应与类的名称一致。Java通过new关键字来调用构造器，从而返回该类的实例，是一种特殊的方法。 申明格式123[修饰符] 类名(形参列表)&#123; ``//n条语句&#125; 方法名与类名相同 没有返回值类型，连void都没有 没有具体的返回值 例如： 1234567891011121314151617class Point &#123; double x, y; public Point(double x, double y) &#123; this.x = x; this.y = y; &#125; public double getDistance(Point p) &#123; return Math.sqrt((x - p.x) * (x - p.x) + (y - p.y) * (y - p.y)); &#125;&#125;public class TestConstructor &#123; public static void main(String[] args) &#123; Point p = new Point(3.0, 4.0); Point origin = new Point(0.0, 0.0); System.out.println(p.getDistance(origin)); &#125;&#125; 5.0//程序结果 构造方法的重载构造方法也是方法，只不过有特殊的作用而已。与普通方法一样，构造方法也可以重载。 【特别注意】 如果方法构造中形参名与属性名相同时，需要使用this关键字区分属性与形参。如下示例所示：this.id 表示属性id;id表示形参id 如果你不提供构造方法，系统会给出默认构造方法 如果你提供了构造方法，系统将不再提供【强烈推荐永远自己写一个无参构造方法】 构造方法不能递归使用（显然会一直调用自己，栈溢出） 123456789101112131415161718192021222324package classlib;public class User &#123; int id; // id String name; // 账户名 String pwd; // 密码 public User() &#123; &#125; public User(int id, String name) &#123; super(); this.id = id; this.name = name; &#125; public User(int id, String name, String pwd) &#123; this.id = id; this.name = name; this.pwd = pwd; &#125; public static void main(String[] args) &#123; User u1 = new User(); User u2 = new User(101, "WJJ"); User u3 = new User(100, "AL", "123456"); &#125;&#125; 标准案例 讲成员变量私有化 提供一个无参和所有参数的构造方法 提供setXxx和getXxx 成员方法]]></content>
+      <categories>
+        <category>JavaSE</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JavaSE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[this关键字]]></title>
+    <url>%2F2019%2F04%2F02%2Fthis%E5%85%B3%E9%94%AE%E5%AD%97%2F</url>
+    <content type="text"><![CDATA[对象创建过程与this的本质构造方法是创建Java对象的重要途径，通过new关键字调用构造器时，构造器也确实返回该类的对象，但这个对象并不是完全由构造器负责创建。创建一个对象分为如下四步： 分配对象空间，并将对象成员变量初始化为0或空 执行属性值的显示初始化 执行构造方法 返回对象的地址给相关的变量 this的本质就是“创建好的对象的地址”! 由于在构造方法调用前，对象已经创建。因此，在构造方法中也可以使用this代表“当前对象” 。 this最常用的用法： 在程序中产生二义性之处，应使用this来指明当前对象;普通方法中，this总是指向调用该方法的对象。构造方法中，this总是指向正要初始化的对象。 使用this关键字调用重载的构造方法，避免相同的初始化代码。但只能在构造方法中用，并且必须位于构造方法的第一句。 this不能用于static方法中。]]></content>
+      <categories>
+        <category>JavaSE</category>
+      </categories>
+      <tags>
+        <tag>-JavaSE -Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[面向对象的内存分析]]></title>
     <url>%2F2019%2F04%2F02%2F%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90%2F</url>
-    <content type="text"><![CDATA[Java虚拟机的内存可以分为三个区域：栈stack、堆heap、方法区method area。 栈的特点如下： 栈描述的是方法执行的内存模型。每个方法被调用都会创建一个栈帧(存储局部变量、操作数、方法出口等) JVM为每个线程创建一个栈，用于存放该线程执行方法的信息(实际参数、局部变量等) 栈属于线程私有，不能实现线程间的共享! 栈的存储特性是“先进后出，后进先出” 栈是由系统自动分配，速度快!栈是一个连续的内存空间! 堆的特点如下： 堆用于存储创建好的对象和数组(数组也是对象) JVM只有一个堆，被所有线程共享 堆是一个不连续的内存空间，分配灵活，速度慢! 方法区(又叫静态区)特点如下： JVM只有一个方法区，被所有线程共享! 方法区实际也是堆，只是用于存储类、常量相关的信息! 来存放程序中永远是不变或唯一的内容。(类信息【Class对象】、静态变量、字符串常量等) 内存图解1234567891011121314151617181920212223class Computer&#123; String brand;//品牌&#125;public class Stu&#123; int id; String name; int age; Computer comp; void study() &#123; System.out.println("我正在学习！使用电脑:"+comp.brand); &#125; //构造方法 Stu()&#123; &#125; public static void main(String[] args) &#123; Stu stu1=new Stu(); stu1.name="张三"; Computer comp1=new Computer(); comp1.brand="联想"; stu1.comp=comp1; stu1.study(); &#125;&#125;]]></content>
+    <content type="text"><![CDATA[一个类的初始化过程Student s = new Student();在内存中做了哪些事情? 加载Student.class文件进内存【方法区】,并且创建对应的字节码文件 在栈内存为s开辟空间 在堆内存为学生对象开辟空间 对学生对象的成员变量进行默认初始化//0,null, 对学生对象的成员变量进行显示初始化显示初始化的意思是，类定义的时候给成员变量赋了初值例如： 12345class Person &#123; private String name="WJJ";//显示初始化 private int age=18;//显示初始化 //构造函数即getXxx(),setXxxx()&#125; 通过构造方法对学生对象的成员变量赋值 学生对象初始化完毕，把对象地址赋值给s变量 Java虚拟机的内存可以分为三个区域：栈stack、堆heap、方法区method area。* 栈的特点如下： 栈描述的是方法执行的内存模型。每个方法被调用都会创建一个栈帧(存储局部变量、操作数、方法出口等) JVM为每个线程创建一个栈，用于存放该线程执行方法的信息(实际参数、局部变量等) 栈属于线程私有，不能实现线程间的共享! 栈的存储特性是“先进后出，后进先出” 栈是由系统自动分配，速度快!栈是一个连续的内存空间! 堆的特点如下： 堆用于存储创建好的对象和数组(数组也是对象) JVM只有一个堆，被所有线程共享 堆是一个不连续的内存空间，分配灵活，速度慢! 方法区(又叫静态区)特点如下： JVM只有一个方法区，被所有线程共享! 方法区实际也是堆，只是用于存储类、常量相关的信息! 来存放程序中永远是不变或唯一的内容。(类信息【Class对象】、静态变量、字符串常量等) 内存图解1234567891011121314151617181920212223class Computer&#123; String brand;//品牌&#125;public class Stu&#123; int id; String name; int age; Computer comp; void study() &#123; System.out.println("我正在学习！使用电脑:"+comp.brand); &#125; //构造方法 Stu()&#123; &#125; public static void main(String[] args) &#123; Stu stu1=new Stu(); stu1.name="张三"; Computer comp1=new Computer(); comp1.brand="联想"; stu1.comp=comp1; stu1.study(); &#125;&#125;]]></content>
       <categories>
-        <category>-JavaSE</category>
+        <category>JavaSE</category>
       </categories>
       <tags>
         <tag>Java</tag>

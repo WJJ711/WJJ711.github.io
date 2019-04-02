@@ -103,20 +103,20 @@
 
 
 
-  <meta name="description" content="Java虚拟机的内存可以分为三个区域：栈stack、堆heap、方法区method area。 栈的特点如下： 栈描述的是方法执行的内存模型。每个方法被调用都会创建一个栈帧(存储局部变量、操作数、方法出口等) JVM为每个线程创建一个栈，用于存放该线程执行方法的信息(实际参数、局部变量等) 栈属于线程私有，不能实现线程间的共享! 栈的存储特性是“先进后出，后进先出” 栈是由系统自动分配，速度快!栈">
+  <meta name="description" content="一个类的初始化过程Student s = new Student();在内存中做了哪些事情? 加载Student.class文件进内存【方法区】,并且创建对应的字节码文件 在栈内存为s开辟空间 在堆内存为学生对象开辟空间 对学生对象的成员变量进行默认初始化//0,null, 对学生对象的成员变量进行显示初始化显示初始化的意思是，类定义的时候给成员变量赋了初值例如：  12345class Per">
 <meta name="keywords" content="Java,JavaSE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面向对象的内存分析">
 <meta property="og:url" content="https://WJJ711.github.io/2019/04/02/面向对象的内存分析/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="Java虚拟机的内存可以分为三个区域：栈stack、堆heap、方法区method area。 栈的特点如下： 栈描述的是方法执行的内存模型。每个方法被调用都会创建一个栈帧(存储局部变量、操作数、方法出口等) JVM为每个线程创建一个栈，用于存放该线程执行方法的信息(实际参数、局部变量等) 栈属于线程私有，不能实现线程间的共享! 栈的存储特性是“先进后出，后进先出” 栈是由系统自动分配，速度快!栈">
+<meta property="og:description" content="一个类的初始化过程Student s = new Student();在内存中做了哪些事情? 加载Student.class文件进内存【方法区】,并且创建对应的字节码文件 在栈内存为s开辟空间 在堆内存为学生对象开辟空间 对学生对象的成员变量进行默认初始化//0,null, 对学生对象的成员变量进行显示初始化显示初始化的意思是，类定义的时候给成员变量赋了初值例如：  12345class Per">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wjj711.github.io/2019/04/02/面向对象的内存分析/内存分配图1.png">
 <meta property="og:image" content="https://wjj711.github.io/2019/04/02/面向对象的内存分析/内存分配图2.png">
-<meta property="og:updated_time" content="2019-04-02T05:09:36.381Z">
+<meta property="og:updated_time" content="2019-04-02T08:00:07.260Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象的内存分析">
-<meta name="twitter:description" content="Java虚拟机的内存可以分为三个区域：栈stack、堆heap、方法区method area。 栈的特点如下： 栈描述的是方法执行的内存模型。每个方法被调用都会创建一个栈帧(存储局部变量、操作数、方法出口等) JVM为每个线程创建一个栈，用于存放该线程执行方法的信息(实际参数、局部变量等) 栈属于线程私有，不能实现线程间的共享! 栈的存储特性是“先进后出，后进先出” 栈是由系统自动分配，速度快!栈">
+<meta name="twitter:description" content="一个类的初始化过程Student s = new Student();在内存中做了哪些事情? 加载Student.class文件进内存【方法区】,并且创建对应的字节码文件 在栈内存为s开辟空间 在堆内存为学生对象开辟空间 对学生对象的成员变量进行默认初始化//0,null, 对学生对象的成员变量进行显示初始化显示初始化的意思是，类定义的时候给成员变量赋了初值例如：  12345class Per">
 <meta name="twitter:image" content="https://wjj711.github.io/2019/04/02/面向对象的内存分析/内存分配图1.png">
 
 
@@ -251,7 +251,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">4</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">5</span></a>
 
   </li>
         
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">2</span></a>
 
   </li>
 
@@ -403,7 +403,7 @@
                 
               
 
-              <time title="创建时间：2019-04-02 10:42:44 / 修改时间：13:09:36" itemprop="dateCreated datePublished" datetime="2019-04-02T10:42:44+08:00">2019-04-02</time>
+              <time title="创建时间：2019-04-02 10:42:44 / 修改时间：16:00:07" itemprop="dateCreated datePublished" datetime="2019-04-02T10:42:44+08:00">2019-04-02</time>
             
 
             
@@ -425,7 +425,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaSE/" itemprop="url" rel="index"><span itemprop="name">-JavaSE</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaSE/" itemprop="url" rel="index"><span itemprop="name">JavaSE</span></a></span>
 
                 
                 
@@ -474,7 +474,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">829</span>
+                <span title="本文字数">1.2k</span>
               
 
               
@@ -508,7 +508,22 @@
       
 
       
-        <p><strong><em>Java虚拟机的内存可以分为三个区域：栈stack、堆heap、方法区method area。</em></strong></p>
+        <hr>
+<h1 id="一个类的初始化过程"><a href="#一个类的初始化过程" class="headerlink" title="一个类的初始化过程"></a>一个类的初始化过程</h1><h2 id="Student-s-new-Student-在内存中做了哪些事情"><a href="#Student-s-new-Student-在内存中做了哪些事情" class="headerlink" title="Student s = new Student();在内存中做了哪些事情?"></a>Student s = new Student();在内存中做了哪些事情?</h2><ol>
+<li>加载Student.class文件进内存【方法区】,并且创建对应的字节码文件</li>
+<li>在栈内存为s开辟空间</li>
+<li>在堆内存为学生对象开辟空间</li>
+<li>对学生对象的成员变量进行默认初始化//0,null,</li>
+<li>对学生对象的成员变量进行显示初始化<code>显示初始化的意思是，类定义的时候给成员变量赋了初值</code>例如：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name=<span class="string">"WJJ"</span>;<span class="comment">//显示初始化</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age=<span class="number">18</span>;<span class="comment">//显示初始化</span></span><br><span class="line">  	<span class="comment">//构造函数即getXxx(),setXxxx()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li><p>通过构造方法对学生对象的成员变量赋值</p>
+</li>
+<li><p>学生对象初始化完毕，把对象地址赋值给s变量</p>
+</li>
+</ol>
+<p><strong>Java虚拟机的内存可以分为三个区域：栈stack、堆heap、方法区method area。*</strong></p>
 <h1 id="栈的特点如下："><a href="#栈的特点如下：" class="headerlink" title="栈的特点如下："></a>栈的特点如下：</h1><ol>
 <li>栈描述的是方法执行的内存模型。每个方法被调用都会创建一个栈帧(存储局部变量、操作数、方法出口等)</li>
 <li>JVM为每个线程创建一个栈，用于存放该线程执行方法的信息(实际参数、局部变量等)</li>
@@ -610,6 +625,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/04/02/this关键字/" rel="prev" title="this关键字">
+                this关键字 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -683,7 +702,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -704,9 +723,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -731,7 +748,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -795,7 +814,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#栈的特点如下："><span class="nav-number">1.</span> <span class="nav-text">栈的特点如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#堆的特点如下："><span class="nav-number">2.</span> <span class="nav-text">堆的特点如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法区-又叫静态区-特点如下："><span class="nav-number">3.</span> <span class="nav-text">方法区(又叫静态区)特点如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内存图解"><span class="nav-number">4.</span> <span class="nav-text">内存图解</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一个类的初始化过程"><span class="nav-number">1.</span> <span class="nav-text">一个类的初始化过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Student-s-new-Student-在内存中做了哪些事情"><span class="nav-number">1.1.</span> <span class="nav-text">Student s = new Student();在内存中做了哪些事情?</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#栈的特点如下："><span class="nav-number">2.</span> <span class="nav-text">栈的特点如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#堆的特点如下："><span class="nav-number">3.</span> <span class="nav-text">堆的特点如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法区-又叫静态区-特点如下："><span class="nav-number">4.</span> <span class="nav-text">方法区(又叫静态区)特点如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内存图解"><span class="nav-number">5.</span> <span class="nav-text">内存图解</span></a></li></ol></div>
             
 
           </div>
@@ -835,7 +854,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">18k</span>
   
 
   
@@ -844,7 +863,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">11 分钟</span>
+    <span title="站点阅读时长">16 分钟</span>
   
 </div>
 
