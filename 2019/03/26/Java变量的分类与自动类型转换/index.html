@@ -103,18 +103,18 @@
 
 
 
-  <meta name="description" content="Java变量的分类与自动类型转换变量的分类   类型 声明位置 从属于 生命周期     局部变量 方法或者语句块内 方法/语句块 从声明位置开始，直到方法或语句块执行完毕，局部变量消失   成员变量（实例变量） 类内部，方法外部 对象 对象创建，成员变量也跟着创建。对象消失，成员变量也跟着消失；   静态变量（类变量） 类内部（不能定义在方法或者语句块中），static修饰 类 类被加载，静态变">
+  <meta name="description" content="Java变量的分类与自动类型转换变量的分类   类型 从属于 内存位置 声明位置 生命周期     局部变量 方法/语句块 栈内存（方法被调用时都会创建一个栈帧，存储局部变量等)）（没有默认初始化） 方法或者语句块内 从声明位置开始，直到方法或语句块执行完毕，局部变量消失   成员变量（实例变量） 对象 堆内存（有默认初始化） 类内部，方法外部 对象创建，成员变量也跟着创建。对象消失，成员变量也跟">
 <meta name="keywords" content="Java,JavaSE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java变量的分类与自动类型转换">
 <meta property="og:url" content="https://WJJ711.github.io/2019/03/26/Java变量的分类与自动类型转换/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="Java变量的分类与自动类型转换变量的分类   类型 声明位置 从属于 生命周期     局部变量 方法或者语句块内 方法/语句块 从声明位置开始，直到方法或语句块执行完毕，局部变量消失   成员变量（实例变量） 类内部，方法外部 对象 对象创建，成员变量也跟着创建。对象消失，成员变量也跟着消失；   静态变量（类变量） 类内部（不能定义在方法或者语句块中），static修饰 类 类被加载，静态变">
+<meta property="og:description" content="Java变量的分类与自动类型转换变量的分类   类型 从属于 内存位置 声明位置 生命周期     局部变量 方法/语句块 栈内存（方法被调用时都会创建一个栈帧，存储局部变量等)）（没有默认初始化） 方法或者语句块内 从声明位置开始，直到方法或语句块执行完毕，局部变量消失   成员变量（实例变量） 对象 堆内存（有默认初始化） 类内部，方法外部 对象创建，成员变量也跟着创建。对象消失，成员变量也跟">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-27T03:58:05.257Z">
+<meta property="og:updated_time" content="2019-04-02T10:05:09.227Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java变量的分类与自动类型转换">
-<meta name="twitter:description" content="Java变量的分类与自动类型转换变量的分类   类型 声明位置 从属于 生命周期     局部变量 方法或者语句块内 方法/语句块 从声明位置开始，直到方法或语句块执行完毕，局部变量消失   成员变量（实例变量） 类内部，方法外部 对象 对象创建，成员变量也跟着创建。对象消失，成员变量也跟着消失；   静态变量（类变量） 类内部（不能定义在方法或者语句块中），static修饰 类 类被加载，静态变">
+<meta name="twitter:description" content="Java变量的分类与自动类型转换变量的分类   类型 从属于 内存位置 声明位置 生命周期     局部变量 方法/语句块 栈内存（方法被调用时都会创建一个栈帧，存储局部变量等)）（没有默认初始化） 方法或者语句块内 从声明位置开始，直到方法或语句块执行完毕，局部变量消失   成员变量（实例变量） 对象 堆内存（有默认初始化） 类内部，方法外部 对象创建，成员变量也跟着创建。对象消失，成员变量也跟">
 
 
 
@@ -248,7 +248,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">5</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">4</span></a>
 
   </li>
         
@@ -417,7 +417,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-27 11:58:05" itemprop="dateModified" datetime="2019-03-27T11:58:05+08:00">2019-03-27</time>
+                <time title="修改时间：2019-04-02 18:05:09" itemprop="dateModified" datetime="2019-04-02T18:05:09+08:00">2019-04-02</time>
               
             
           </span>
@@ -483,7 +483,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.9k</span>
+                <span title="本文字数">2k</span>
               
 
               
@@ -521,28 +521,32 @@
 <thead>
 <tr>
 <th>类型</th>
-<th>声明位置</th>
 <th>从属于</th>
+<th>内存位置</th>
+<th>声明位置</th>
 <th>生命周期</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>局部变量</td>
-<td>方法或者语句块内</td>
 <td>方法/语句块</td>
+<td>栈内存（方法被调用时都会创建一个栈帧，存储局部变量等)）（没有默认初始化）</td>
+<td>方法或者语句块内</td>
 <td>从声明位置开始，直到方法或语句块执行完毕，局部变量消失</td>
 </tr>
 <tr>
 <td>成员变量（实例变量）</td>
-<td>类内部，方法外部</td>
 <td>对象</td>
+<td>堆内存（有默认初始化）</td>
+<td>类内部，方法外部</td>
 <td>对象创建，成员变量也跟着创建。对象消失，成员变量也跟着消失；</td>
 </tr>
 <tr>
 <td>静态变量（类变量）</td>
-<td>类内部（不能定义在方法或者语句块中），static修饰</td>
 <td>类</td>
+<td>方法区中的静态区（有默认初始化）</td>
+<td>类内部，方法外部。static修饰。</td>
 <td>类被加载，静态变量就有效；类被卸载，静态变量就消失</td>
 </tr>
 </tbody>
@@ -757,7 +761,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -803,9 +807,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -909,7 +911,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">18k</span>
+    <span title="站点总字数">21k</span>
   
 
   
@@ -918,7 +920,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">16 分钟</span>
+    <span title="站点阅读时长">19 分钟</span>
   
 </div>
 
