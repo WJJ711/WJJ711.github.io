@@ -113,7 +113,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wjj711.github.io/2019/04/02/面向对象的内存分析/内存分配图1.png">
 <meta property="og:image" content="https://wjj711.github.io/2019/04/02/面向对象的内存分析/内存分配图2.png">
-<meta property="og:updated_time" content="2019-04-02T04:47:11.855Z">
+<meta property="og:updated_time" content="2019-04-02T05:09:36.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象的内存分析">
 <meta name="twitter:description" content="Java虚拟机的内存可以分为三个区域：栈stack、堆heap、方法区method area。 栈的特点如下： 栈描述的是方法执行的内存模型。每个方法被调用都会创建一个栈帧(存储局部变量、操作数、方法出口等) JVM为每个线程创建一个栈，用于存放该线程执行方法的信息(实际参数、局部变量等) 栈属于线程私有，不能实现线程间的共享! 栈的存储特性是“先进后出，后进先出” 栈是由系统自动分配，速度快!栈">
@@ -403,7 +403,7 @@
                 
               
 
-              <time title="创建时间：2019-04-02 10:42:44 / 修改时间：12:47:11" itemprop="dateCreated datePublished" datetime="2019-04-02T10:42:44+08:00">2019-04-02</time>
+              <time title="创建时间：2019-04-02 10:42:44 / 修改时间：13:09:36" itemprop="dateCreated datePublished" datetime="2019-04-02T10:42:44+08:00">2019-04-02</time>
             
 
             
@@ -474,7 +474,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">825</span>
+                <span title="本文字数">829</span>
               
 
               
@@ -526,7 +526,7 @@
 <li>方法区实际也是堆，只是用于存储类、常量相关的信息!</li>
 <li>来存放程序中永远是不变或唯一的内容。(类信息【Class对象】、静态变量、字符串常量等)</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Computer</span></span>&#123;</span><br><span class="line">	String brand;<span class="comment">//品牌</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Stu</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> id;</span><br><span class="line">	String name;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">	Computer comp;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">study</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"我正在学习！使用电脑:"</span>+comp.brand);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	Stu()&#123;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Stu stu1=<span class="keyword">new</span> Stu();</span><br><span class="line">		stu1.name=<span class="string">"张三"</span>;</span><br><span class="line">		Computer comp1=<span class="keyword">new</span> Computer();</span><br><span class="line">		comp1.brand=<span class="string">"联想"</span>;</span><br><span class="line">		stu1.comp=comp1;</span><br><span class="line">		stu1.study();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="内存图解"><a href="#内存图解" class="headerlink" title="内存图解"></a>内存图解</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Computer</span></span>&#123;</span><br><span class="line">	String brand;<span class="comment">//品牌</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Stu</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> id;</span><br><span class="line">	String name;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">	Computer comp;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">study</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"我正在学习！使用电脑:"</span>+comp.brand);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	Stu()&#123;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Stu stu1=<span class="keyword">new</span> Stu();</span><br><span class="line">		stu1.name=<span class="string">"张三"</span>;</span><br><span class="line">		Computer comp1=<span class="keyword">new</span> Computer();</span><br><span class="line">		comp1.brand=<span class="string">"联想"</span>;</span><br><span class="line">		stu1.comp=comp1;</span><br><span class="line">		stu1.study();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <img src="/2019/04/02/面向对象的内存分析/内存分配图1.png">
 <img src="/2019/04/02/面向对象的内存分析/内存分配图2.png">
 
@@ -795,7 +795,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#栈的特点如下："><span class="nav-number">1.</span> <span class="nav-text">栈的特点如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#堆的特点如下："><span class="nav-number">2.</span> <span class="nav-text">堆的特点如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法区-又叫静态区-特点如下："><span class="nav-number">3.</span> <span class="nav-text">方法区(又叫静态区)特点如下：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#栈的特点如下："><span class="nav-number">1.</span> <span class="nav-text">栈的特点如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#堆的特点如下："><span class="nav-number">2.</span> <span class="nav-text">堆的特点如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法区-又叫静态区-特点如下："><span class="nav-number">3.</span> <span class="nav-text">方法区(又叫静态区)特点如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内存图解"><span class="nav-number">4.</span> <span class="nav-text">内存图解</span></a></li></ol></div>
             
 
           </div>
