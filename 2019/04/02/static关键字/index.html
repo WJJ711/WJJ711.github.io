@@ -112,7 +112,7 @@
 <meta property="og:description" content="核心要点 static修饰的成员变量和方法，从属于类。 普通变量和方法从属于对象的。  　在类中，用static声明的成员变量为静态成员变量，也称为类变量。 类变量的生命周期和类相同，在整个应用程序执行期间都有效。它有如下特点：  　1. 为该类的公用变量，属于类，被该类的所有实例共享，在类被载入时被显式初始化。（随着类的加载而加载） 　2. 优先于对象存在 　3. 对于该类的所有对象来说，sta">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wjj711.github.io/2019/04/02/static关键字/static内存图解.png">
-<meta property="og:updated_time" content="2019-04-02T11:22:59.160Z">
+<meta property="og:updated_time" content="2019-04-03T02:19:37.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="static关键字">
 <meta name="twitter:description" content="核心要点 static修饰的成员变量和方法，从属于类。 普通变量和方法从属于对象的。  　在类中，用static声明的成员变量为静态成员变量，也称为类变量。 类变量的生命周期和类相同，在整个应用程序执行期间都有效。它有如下特点：  　1. 为该类的公用变量，属于类，被该类的所有实例共享，在类被载入时被显式初始化。（随着类的加载而加载） 　2. 优先于对象存在 　3. 对于该类的所有对象来说，sta">
@@ -402,12 +402,24 @@
                 
               
 
-              <time title="创建时间：2019-04-02 17:08:08 / 修改时间：19:22:59" itemprop="dateCreated datePublished" datetime="2019-04-02T17:08:08+08:00">2019-04-02</time>
+              <time title="创建时间：2019-04-02 17:08:08" itemprop="dateCreated datePublished" datetime="2019-04-02T17:08:08+08:00">2019-04-02</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-03 10:19:37" itemprop="dateModified" datetime="2019-04-03T10:19:37+08:00">2019-04-03</time>
               
             
           </span>
@@ -512,7 +524,7 @@
 <li><strong>普通变量和方法从属于对象的。</strong></li>
 </ol>
 <p>　在类中，用static声明的成员变量为静态成员变量，也称为类变量。 类变量的生命周期和类相同，在整个应用程序执行期间都有效。它有如下特点：</p>
-<p> 　1. 为该类的<strong>公用变量，属于类</strong>，被该类的所有实例共享，在类被载入时被显式初始化。（随着类的加载而加载）<br> 　2. <strong>优先于对象存在</strong><br> 　3. 对于该类的所有对象来说，static成员变量只有一份。被该类的所有对象共享!!<br> 　4. 一般用<strong>“类名.类属性/方法”</strong>来调用。(也可以通过对象引用或类名(不需要实例化)访问静态成员。<strong>【强烈推荐使用类名调用！！！】</strong><br> 　5. 在static方法中不可直接访问非static的成员。<strong>（因为非static成员要对象存在才存在，而static方法优先于对象存在，从属于类）</strong><br> 　6. this不能用于static方法中。（因为<strong>this的本质就是“创建好的对象的地址”!</strong> ）</p>
+<p> 　1. 为该类的<strong>公用变量，属于类</strong>，被该类的所有实例共享，在类被载入时被显式初始化。<strong><em>（随着类的加载而加载）</em></strong><br> 　2. <strong>优先于对象存在</strong><br> 　3. 对于该类的所有对象来说，static成员变量只有一份。<strong><em>被该类的所有对象共享!!</em></strong><br> 　4. 一般用<strong>“类名.类属性/方法”</strong>来调用。(也可以通过对象引用或类名(不需要实例化)访问静态成员。<strong>【强烈推荐使用类名调用！！！】</strong><br> 　5. 在static方法中不可直接访问非static的成员。<strong>（因为非static成员要对象存在才存在，而static方法优先于对象存在，从属于类）</strong><br> 　6. this不能用于static方法中。（因为<strong>this的本质就是“创建好的对象的地址”!</strong> ）</p>
 <h1 id="内存分析"><a href="#内存分析" class="headerlink" title="内存分析"></a>内存分析</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDemo</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Person p1=<span class="keyword">new</span> Person(<span class="string">"中国"</span>,<span class="string">"迪丽热巴"</span>,<span class="number">20</span>);</span><br><span class="line">		p1.show();</span><br><span class="line">		Person p2=<span class="keyword">new</span> Person(<span class="string">"中国"</span>,<span class="string">"古力娜扎"</span>,<span class="number">21</span>);</span><br><span class="line">		p2.show();</span><br><span class="line">		Person p3=<span class="keyword">new</span> Person(<span class="string">"中国"</span>,<span class="string">"凤姐"</span>,<span class="number">40</span>);</span><br><span class="line">		p3.show();</span><br><span class="line">		System.out.println(<span class="string">"----------------------------"</span>);</span><br><span class="line">		p3.nation=<span class="string">"America"</span>;</span><br><span class="line">		<span class="comment">//等价于Person.nation="America";</span></span><br><span class="line">		p1.show();</span><br><span class="line">		p2.show();</span><br><span class="line">		p3.show();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> String nation;</span><br><span class="line">	String name;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span> </span>&#123;<span class="comment">//构造方法</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String nation,String name,<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.name=name;</span><br><span class="line">		<span class="keyword">this</span>.nation=nation;</span><br><span class="line">		<span class="keyword">this</span>.age=age;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"nation="</span>+nation+<span class="string">",name="</span>+name+<span class="string">",age="</span>+age);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nation=中国,name=迪丽热巴,age=<span class="number">20</span></span><br><span class="line">nation=中国,name=古力娜扎,age=<span class="number">21</span></span><br><span class="line">nation=中国,name=凤姐,age=<span class="number">40</span></span><br><span class="line">----------------------------</span><br><span class="line">nation=America,name=迪丽热巴,age=<span class="number">20</span></span><br><span class="line">nation=America,name=古力娜扎,age=<span class="number">21</span></span><br><span class="line">nation=America,name=凤姐,age=<span class="number">40</span></span><br></pre></td></tr></table></figure>
@@ -608,6 +620,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/04/03/代码块/" rel="prev" title="代码块">
+                代码块 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -681,7 +697,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -831,7 +847,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">21k</span>
+    <span title="站点总字数">23k</span>
   
 
   
@@ -840,7 +856,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">19 分钟</span>
+    <span title="站点阅读时长">21 分钟</span>
   
 </div>
 
