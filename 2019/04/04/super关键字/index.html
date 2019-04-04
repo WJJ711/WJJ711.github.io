@@ -103,18 +103,20 @@
 
 
 
-  <meta name="description" content="this: ​    a：代表当前对象（哪个对象调用这个方法，它就代表哪个对象） b：代表该对象的一个空间标识（可以调用在本类中定义的成员） super：  ​    a: 代表该对象的空间标识，里面存的是父类继承的成员（可以调用在父类中定义的成员） 静态方法中不能使用super关键字 123456789101112131415161718public class TestDemo&amp;#123;	p">
+  <meta name="description" content="this:        a. 代表当前对象（哪个对象调用这个方法，它就代表哪个对象）        b.代表该对象的一个空间标识（可以调用在本类中定义的成员） super：  ​    a: super表示的是该对象内存中的一部分空间，该部分空间存储了从父类中继承的成员，（可以调用在父类中定义的成员） 如图所示，super代表的是里面那个小框，表示的是该对象内存中的一部分空间，该部分空间存储了从">
 <meta name="keywords" content="Java,JavaSE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="super关键字&amp;&amp;继承树">
 <meta property="og:url" content="https://WJJ711.github.io/2019/04/04/super关键字/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="this: ​    a：代表当前对象（哪个对象调用这个方法，它就代表哪个对象） b：代表该对象的一个空间标识（可以调用在本类中定义的成员） super：  ​    a: 代表该对象的空间标识，里面存的是父类继承的成员（可以调用在父类中定义的成员） 静态方法中不能使用super关键字 123456789101112131415161718public class TestDemo&amp;#123;	p">
+<meta property="og:description" content="this:        a. 代表当前对象（哪个对象调用这个方法，它就代表哪个对象）        b.代表该对象的一个空间标识（可以调用在本类中定义的成员） super：  ​    a: super表示的是该对象内存中的一部分空间，该部分空间存储了从父类中继承的成员，（可以调用在父类中定义的成员） 如图所示，super代表的是里面那个小框，表示的是该对象内存中的一部分空间，该部分空间存储了从">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-04T13:50:54.891Z">
+<meta property="og:image" content="https://wjj711.github.io/2019/04/04/super关键字/super代表的内存空间标识.png">
+<meta property="og:updated_time" content="2019-04-04T15:01:49.184Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="super关键字&amp;&amp;继承树">
-<meta name="twitter:description" content="this: ​    a：代表当前对象（哪个对象调用这个方法，它就代表哪个对象） b：代表该对象的一个空间标识（可以调用在本类中定义的成员） super：  ​    a: 代表该对象的空间标识，里面存的是父类继承的成员（可以调用在父类中定义的成员） 静态方法中不能使用super关键字 123456789101112131415161718public class TestDemo&amp;#123;	p">
+<meta name="twitter:description" content="this:        a. 代表当前对象（哪个对象调用这个方法，它就代表哪个对象）        b.代表该对象的一个空间标识（可以调用在本类中定义的成员） super：  ​    a: super表示的是该对象内存中的一部分空间，该部分空间存储了从父类中继承的成员，（可以调用在父类中定义的成员） 如图所示，super代表的是里面那个小框，表示的是该对象内存中的一部分空间，该部分空间存储了从">
+<meta name="twitter:image" content="https://wjj711.github.io/2019/04/04/super关键字/super代表的内存空间标识.png">
 
 
 
@@ -400,7 +402,7 @@
                 
               
 
-              <time title="创建时间：2019-04-04 10:22:21 / 修改时间：21:50:54" itemprop="dateCreated datePublished" datetime="2019-04-04T10:22:21+08:00">2019-04-04</time>
+              <time title="创建时间：2019-04-04 10:22:21 / 修改时间：23:01:49" itemprop="dateCreated datePublished" datetime="2019-04-04T10:22:21+08:00">2019-04-04</time>
             
 
             
@@ -505,17 +507,17 @@
       
 
       
-        <p>this:</p>
-<p>​    a：代表当前对象（哪个对象调用这个方法，它就代表哪个对象）</p>
-<pre><code>b：代表该对象的一个空间标识（可以调用在本类中定义的成员）
-</code></pre><p>super： </p>
-<p>​    a: 代表该对象的空间标识，里面存的是父类继承的成员（可以调用在父类中定义的成员）</p>
+        <p>this:<br>        a. 代表当前对象（哪个对象调用这个方法，它就代表哪个对象）<br>        b.代表该对象的一个空间标识（可以调用在本类中定义的成员）</p>
+<p>super： </p>
+<p>​    a: super表示的是该对象内存中的一部分空间，该部分空间存储了从父类中继承的成员，（可以调用在父类中定义的成员）</p>
+<p>如图所示，super代表的是里面那个小框，表示的是该对象内存中的一部分空间，该部分空间存储了从父类中继承的成员</p>
+<img src="/2019/04/04/super关键字/super代表的内存空间标识.png">
 <p><strong><em>静态方法中不能使用super关键字</em></strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDemo</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Son1 son=<span class="keyword">new</span> Son1();</span><br><span class="line">		son.method(<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Father1</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n=<span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son1</span> <span class="keyword">extends</span> <span class="title">Father1</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n=<span class="number">2048</span>;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"n="</span>+n);</span><br><span class="line">		System.out.println(<span class="string">"this.n="</span>+<span class="keyword">this</span>.n);</span><br><span class="line">		System.out.println(<span class="string">"super.n="</span>+<span class="keyword">super</span>.n);						System.out.println(<span class="string">"子类对象:"</span>+<span class="keyword">this</span>);</span><br><span class="line">		<span class="comment">//System.out.println(super);编译错误</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">n=<span class="number">0</span><span class="comment">//方法中的局部变量</span></span><br><span class="line"><span class="keyword">this</span>.n=<span class="number">2048</span><span class="comment">//this代表子类，子类中的成员变量</span></span><br><span class="line"><span class="keyword">super</span>.n=<span class="number">1024</span><span class="comment">//上面代码中父类对象没有创建，只new了一个子类对象，所以super代表该对象的空间标识，里面存的是父类继承的成员</span></span><br><span class="line">子类对象:classlib.Son1@<span class="number">36</span>d64342<span class="comment">//相当于this.toString()</span></span><br></pre></td></tr></table></figure>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li><p>super是直接父类对象的引用。可以通过super来访问父类中被子类覆盖的非static方法或非static属性。</p>
+<li><p>super是直接对父类对象的引用。可以通过super来访问父类中被子类覆盖的非static方法或非static属性。</p>
 </li>
 <li><p>使用super调用普通方法，语句没有位置限制，可以在子类中随便调用。</p>
 </li>
@@ -891,7 +893,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">32k</span>
+    <span title="站点总字数">33k</span>
   
 
   
@@ -900,7 +902,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">29 分钟</span>
+    <span title="站点阅读时长">30 分钟</span>
   
 </div>
 
