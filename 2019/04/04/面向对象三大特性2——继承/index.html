@@ -103,25 +103,25 @@
 
 
 
-  <meta name="description" content="构造器也叫构造方法(constructor)，用于对象的初始化。构造器是一个创建对象时被自动调用的特殊方法，目的是对象的初始化。构造器的名称应与类的名称一致。Java通过new关键字来调用构造器，从而返回该类的实例，是一种特殊的方法。 申明格式123[修饰符] 类名(形参列表)&amp;#123;    ``//n条语句&amp;#125;  方法名与类名相同 没有返回值类型，连void都没有 没有具体的返回值">
+  <meta name="description" content="继承概述 多个类中存在相同属性和行为时，将这些内容抽取到单独一个类中，那么多个类无需再定义这些属性和行为，只要继承那个类即可。  通过extends关键字可以实现类与类的继承 class 子类名 extends 父类名 {}    单独的这个类称为父类，基类或者超类；这多个类可以称为子类或者派生类。  有了继承以后，我们定义一个类的时候，可以在一个已经存在的类的基础上，还可以定义自己的新成员。">
 <meta name="keywords" content="Java,JavaSE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="构造方法">
-<meta property="og:url" content="https://WJJ711.github.io/2019/04/02/构造方法/index.html">
+<meta property="og:title" content="面向对象三大特性2——继承">
+<meta property="og:url" content="https://WJJ711.github.io/2019/04/04/面向对象三大特性2——继承/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="构造器也叫构造方法(constructor)，用于对象的初始化。构造器是一个创建对象时被自动调用的特殊方法，目的是对象的初始化。构造器的名称应与类的名称一致。Java通过new关键字来调用构造器，从而返回该类的实例，是一种特殊的方法。 申明格式123[修饰符] 类名(形参列表)&amp;#123;    ``//n条语句&amp;#125;  方法名与类名相同 没有返回值类型，连void都没有 没有具体的返回值">
+<meta property="og:description" content="继承概述 多个类中存在相同属性和行为时，将这些内容抽取到单独一个类中，那么多个类无需再定义这些属性和行为，只要继承那个类即可。  通过extends关键字可以实现类与类的继承 class 子类名 extends 父类名 {}    单独的这个类称为父类，基类或者超类；这多个类可以称为子类或者派生类。  有了继承以后，我们定义一个类的时候，可以在一个已经存在的类的基础上，还可以定义自己的新成员。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-03T02:37:28.797Z">
+<meta property="og:updated_time" content="2019-04-04T14:04:18.682Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="构造方法">
-<meta name="twitter:description" content="构造器也叫构造方法(constructor)，用于对象的初始化。构造器是一个创建对象时被自动调用的特殊方法，目的是对象的初始化。构造器的名称应与类的名称一致。Java通过new关键字来调用构造器，从而返回该类的实例，是一种特殊的方法。 申明格式123[修饰符] 类名(形参列表)&amp;#123;    ``//n条语句&amp;#125;  方法名与类名相同 没有返回值类型，连void都没有 没有具体的返回值">
+<meta name="twitter:title" content="面向对象三大特性2——继承">
+<meta name="twitter:description" content="继承概述 多个类中存在相同属性和行为时，将这些内容抽取到单独一个类中，那么多个类无需再定义这些属性和行为，只要继承那个类即可。  通过extends关键字可以实现类与类的继承 class 子类名 extends 父类名 {}    单独的这个类称为父类，基类或者超类；这多个类可以称为子类或者派生类。  有了继承以后，我们定义一个类的时候，可以在一个已经存在的类的基础上，还可以定义自己的新成员。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://WJJ711.github.io/2019/04/02/构造方法/">
+  <link rel="canonical" href="https://WJJ711.github.io/2019/04/04/面向对象三大特性2——继承/">
 
 
 
@@ -131,7 +131,7 @@
   };
 </script>
 
-  <title>构造方法 | wjjのhomepage</title>
+  <title>面向对象三大特性2——继承 | wjjのhomepage</title>
   
 
 
@@ -357,7 +357,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/02/构造方法/">
+    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/04/面向对象三大特性2——继承/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wjj">
@@ -374,7 +374,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">构造方法
+          <h1 class="post-title" itemprop="name headline">面向对象三大特性2——继承
 
               
             
@@ -400,24 +400,12 @@
                 
               
 
-              <time title="创建时间：2019-04-02 15:11:10" itemprop="dateCreated datePublished" datetime="2019-04-02T15:11:10+08:00">2019-04-02</time>
+              <time title="创建时间：2019-04-04 09:33:57 / 修改时间：22:04:18" itemprop="dateCreated datePublished" datetime="2019-04-04T09:33:57+08:00">2019-04-04</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-03 10:37:28" itemprop="dateModified" datetime="2019-04-03T10:37:28+08:00">2019-04-03</time>
               
             
           </span>
@@ -453,8 +441,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/02/构造方法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/02/构造方法/" itemprop="commentCount"></span>
+                <a href="/2019/04/04/面向对象三大特性2——继承/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/04/面向对象三大特性2——继承/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -483,7 +471,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.9k</span>
+                <span title="本文字数">1.6k</span>
               
 
               
@@ -497,7 +485,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -517,40 +505,55 @@
       
 
       
-        <p>构造器也叫构造方法(constructor)，用于对象的初始化。构造器是一个创建对象时被自动调用的特殊方法，目的是对象的初始化。构造器的名称应与类的名称一致。<strong><em>Java通过new关键字来调用构造器，从而返回该类的实例，是一种特殊的方法。</em></strong></p>
-<h1 id="申明格式"><a href="#申明格式" class="headerlink" title="申明格式"></a>申明格式</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[修饰符] 类名(形参列表)&#123;</span><br><span class="line">    ``<span class="comment">//n条语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>方法名与类名相同</li>
-<li>没有返回值类型，连void都没有</li>
-<li>没有具体的返回值</li>
-</ol>
-<p>例如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">    <span class="keyword">double</span> x, y;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Point</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">double</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.x = x;</span><br><span class="line">        <span class="keyword">this</span>.y = y;  </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getDistance</span><span class="params">(Point p)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Math.sqrt((x - p.x) * (x - p.x) + (y - p.y) * (y - p.y));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestConstructor</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Point p = <span class="keyword">new</span> Point(<span class="number">3.0</span>, <span class="number">4.0</span>);</span><br><span class="line">        Point origin = <span class="keyword">new</span> Point(<span class="number">0.0</span>, <span class="number">0.0</span>);</span><br><span class="line">        System.out.println(p.getDistance(origin));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>5.0//程序结果</code></p>
-<h1 id="构造方法的重载"><a href="#构造方法的重载" class="headerlink" title="构造方法的重载"></a>构造方法的重载</h1><p>构造方法也是方法，只不过有特殊的作用而已。与普通方法一样，构造方法也可以重载。</p>
-<p><strong>【特别注意】</strong></p>
-<ol>
-<li><p>如果方法构造中形参名与属性名相同时，需要使用this关键字区分属性与形参。如下示例所示：this.id 表示属性id;id表示形参id</p>
+        <h1 id="继承概述"><a href="#继承概述" class="headerlink" title="继承概述"></a>继承概述</h1><ol>
+<li><p>多个类中存在相同属性和行为时，将这些内容抽取到单独一个类中，那么多个类无需再定义这些属性和行为，只要继承那个类即可。</p>
 </li>
-<li><p>如果你不提供构造方法，系统会给出默认构造方法</p>
+<li><p>通过extends关键字可以实现类与类的继承</p>
+<p>class 子类名 extends 父类名 {}  </p>
 </li>
-<li><p>如果你提供了构造方法，系统将不再提供<strong><em>【强烈推荐永远自己写一个无参构造方法】</em></strong></p>
+<li><p>单独的这个类称为父类，基类或者超类；这多个类可以称为子类或者派生类。</p>
 </li>
-<li><p>构造方法不能递归使用（显然会一直调用自己，栈溢出）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> classlib;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> id; <span class="comment">// id</span></span><br><span class="line">    String name; <span class="comment">// 账户名</span></span><br><span class="line">    String pwd; <span class="comment">// 密码</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">(<span class="keyword">int</span> id, String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">(<span class="keyword">int</span> id, String name, String pwd)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.pwd = pwd;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        User u1 = <span class="keyword">new</span> User();</span><br><span class="line">        User u2 = <span class="keyword">new</span> User(<span class="number">101</span>, <span class="string">"WJJ"</span>);</span><br><span class="line">        User u3 = <span class="keyword">new</span> User(<span class="number">100</span>, <span class="string">"AL"</span>, <span class="string">"123456"</span>);     </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>有了继承以后，我们定义一个类的时候，可以在一个已经存在的类的基础上，还可以定义自己的新成员。</p>
 </li>
 </ol>
-<h1 id="标准案例"><a href="#标准案例" class="headerlink" title="标准案例"></a>标准案例</h1><ol>
-<li>讲成员变量私有化</li>
-<li>提供一个无参和所有参数的构造方法</li>
-<li>提供setXxx和getXxx</li>
-<li>成员方法</li>
+<h1 id="继承的好处"><a href="#继承的好处" class="headerlink" title="继承的好处"></a>继承的好处</h1><ol>
+<li><p>提高了代码的复用性</p>
+<p>​    多个类相同的成员可以放到同一个类中</p>
+</li>
+<li><p>提高了代码的维护性</p>
+<p>​    如果功能的代码需要修改，修改一处即可</p>
+</li>
+<li><p>让类与类之间产生了关系，是多态的前提</p>
+<p>​    其实这也是继承的一个弊端：类的耦合性很强</p>
+</li>
 </ol>
-<p>　　# 构造方法私有化</p>
-<p>对于一个工具类，可以将无参构造方法初始化，这样这能通过类名调用其静态方法，不能为该类实例化对象</p>
-<p>例如</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyMath</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">MyMath</span><span class="params">()</span></span>&#123;<span class="comment">//The constructor MyMath() is not visible</span></span><br><span class="line">        <span class="comment">//讲无参构造函数私有化</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> a+b;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//还可以有其它计算</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>则此时MyMath类不能实例化，只能用类名调用静态方法</p>
+<p><strong><em>设计原则：高内聚低耦合。</em></strong></p>
+<p>  简单的理解：</p>
+<p>  内聚就是自己完成某件事情的能力。</p>
+<p>  耦合就是类与类之间的关系。</p>
+<p>我们在设计的时候原则是：<strong><em>自己能完成的就不麻烦别人，这样将来别人产生了修改，就对我的影响较小。</em></strong></p>
+<p>由此可见：在开发中使用继承其实是在使用一把双刃剑。今天我们还是以继承的好处来使用，因为继承还有很多其他的特性。</p>
+<h1 id="继承的特点"><a href="#继承的特点" class="headerlink" title="继承的特点"></a>继承的特点</h1><ol>
+<li><p>Java中只有单继承，没有像C++那样的多继承。多继承会引起混乱，使得继承链过于复杂，系统难于维护。可以多层继承</p>
+</li>
+<li><p>Java中类没有多继承，接口有多继承。</p>
+</li>
+<li><p>子类继承父类，可以得到父类的全部属性和方法 (除了父类的构造方法)，但不见得可以直接访问(比如，父类私有的属性和方法,私有成员其实被隐式继承了)。</p>
+<p>​    其实这也体现了继承的另一个弊端：打破了封装性</p>
+</li>
+<li><p>如果定义一个类时，没有调用extends，则它的父类是：java.lang.Object。</p>
+</li>
+<li><p>子类不能继承父类的构造方法，但是可以通过super关键字去访问父类构造方法。</p>
+</li>
+<li><p>不要为了部分功能而去继承。解释一下：我们发现两个类有部分代码相同，我们就让这两个类产生一个继承关系，这是不对的。</p>
+</li>
+<li><p>我们到底在什么时候使用继承呢?</p>
+<p>​    继承中类之间体现的是：”xxx is a xxx”的关系。</p>
+<p>​    例如：水果和苹果，苹果是一种水果。</p>
+<p>​                  学生和人，学生是人的一种。</p>
+</li>
+</ol>
+<h1 id="继承举例"><a href="#继承举例" class="headerlink" title="继承举例"></a>继承举例</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test2</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Student s = <span class="keyword">new</span> Student(<span class="string">"wjj"</span>,<span class="number">180</span>,<span class="string">"cs"</span>);</span><br><span class="line">        s.rest();<span class="comment">//可以直接调用父类的方法</span></span><br><span class="line">        s.study();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> height;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">rest</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"休息一会！"</span>);</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    String major; <span class="comment">//专业</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"在努力学习java！"</span>);</span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name,<span class="keyword">int</span> height,String major)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//天然拥有父类的属性</span></span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.height = height;</span><br><span class="line">        <span class="keyword">this</span>.major = major;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -622,8 +625,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/02/this关键字/" rel="next" title="this关键字">
-                <i class="fa fa-chevron-left"></i> this关键字
+              <a href="/2019/04/03/代码块/" rel="next" title="代码块">
+                <i class="fa fa-chevron-left"></i> 代码块
               </a>
             
           </div>
@@ -632,8 +635,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/02/面向对象三大特性1—-封装/" rel="prev" title="面向对象三大特性1—封装">
-                面向对象三大特性1—封装 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/04/super关键字/" rel="prev" title="super关键字&&继承树">
+                super关键字&&继承树 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -821,7 +824,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#申明格式"><span class="nav-number">1.</span> <span class="nav-text">申明格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构造方法的重载"><span class="nav-number">2.</span> <span class="nav-text">构造方法的重载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标准案例"><span class="nav-number">3.</span> <span class="nav-text">标准案例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#继承概述"><span class="nav-number">1.</span> <span class="nav-text">继承概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承的好处"><span class="nav-number">2.</span> <span class="nav-text">继承的好处</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承的特点"><span class="nav-number">3.</span> <span class="nav-text">继承的特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承举例"><span class="nav-number">4.</span> <span class="nav-text">继承举例</span></a></li></ol></div>
             
 
           </div>
