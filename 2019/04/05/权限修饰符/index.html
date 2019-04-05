@@ -103,24 +103,25 @@
 
 
 
-  <meta name="description" content="局部代码块​    在局部位置(方法内)，限定变量生命周期，及早释放，提高内存利用率 123456789public class TestDemo &amp;#123;	public static void main(String[] args) &amp;#123;		&amp;#123;			int i=100;			System.out.println(&quot;i=&quot;+i);		&amp;#125;		i=200;//此处编译错">
+  <meta name="description" content="注意：这里的默认不是default关键字！default methods are allowed only in interfaces. 这里的默认修饰符是包访问权限     public protected 默认（就是不写）（包访问权限） private     同一类中 √ √ √ √   同一包子类,其他类 √ √ √    不同包子类 √ 不能通过父类直接访问。 只能通过子类对象去访问">
+<meta name="keywords" content="Java,JavaSE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="代码块">
-<meta property="og:url" content="https://WJJ711.github.io/2019/04/03/代码块/index.html">
+<meta property="og:title" content="权限修饰符">
+<meta property="og:url" content="https://WJJ711.github.io/2019/04/05/权限修饰符/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="局部代码块​    在局部位置(方法内)，限定变量生命周期，及早释放，提高内存利用率 123456789public class TestDemo &amp;#123;	public static void main(String[] args) &amp;#123;		&amp;#123;			int i=100;			System.out.println(&quot;i=&quot;+i);		&amp;#125;		i=200;//此处编译错">
+<meta property="og:description" content="注意：这里的默认不是default关键字！default methods are allowed only in interfaces. 这里的默认修饰符是包访问权限     public protected 默认（就是不写）（包访问权限） private     同一类中 √ √ √ √   同一包子类,其他类 √ √ √    不同包子类 √ 不能通过父类直接访问。 只能通过子类对象去访问">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-03T15:36:15.731Z">
+<meta property="og:updated_time" content="2019-04-05T12:31:47.582Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="代码块">
-<meta name="twitter:description" content="局部代码块​    在局部位置(方法内)，限定变量生命周期，及早释放，提高内存利用率 123456789public class TestDemo &amp;#123;	public static void main(String[] args) &amp;#123;		&amp;#123;			int i=100;			System.out.println(&quot;i=&quot;+i);		&amp;#125;		i=200;//此处编译错">
+<meta name="twitter:title" content="权限修饰符">
+<meta name="twitter:description" content="注意：这里的默认不是default关键字！default methods are allowed only in interfaces. 这里的默认修饰符是包访问权限     public protected 默认（就是不写）（包访问权限） private     同一类中 √ √ √ √   同一包子类,其他类 √ √ √    不同包子类 √ 不能通过父类直接访问。 只能通过子类对象去访问">
 
 
 
 
 
 
-  <link rel="canonical" href="https://WJJ711.github.io/2019/04/03/代码块/">
+  <link rel="canonical" href="https://WJJ711.github.io/2019/04/05/权限修饰符/">
 
 
 
@@ -130,7 +131,7 @@
   };
 </script>
 
-  <title>代码块 | wjjのhomepage</title>
+  <title>权限修饰符 | wjjのhomepage</title>
   
 
 
@@ -356,7 +357,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/03/代码块/">
+    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/05/权限修饰符/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wjj">
@@ -373,7 +374,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">代码块
+          <h1 class="post-title" itemprop="name headline">权限修饰符
 
               
             
@@ -399,7 +400,7 @@
                 
               
 
-              <time title="创建时间：2019-04-03 11:32:20 / 修改时间：23:36:15" itemprop="dateCreated datePublished" datetime="2019-04-03T11:32:20+08:00">2019-04-03</time>
+              <time title="创建时间：2019-04-05 17:34:00 / 修改时间：20:31:47" itemprop="dateCreated datePublished" datetime="2019-04-05T17:34:00+08:00">2019-04-05</time>
             
 
             
@@ -409,6 +410,24 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaSE/" itemprop="url" rel="index"><span itemprop="name">JavaSE</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -422,8 +441,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/03/代码块/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/03/代码块/" itemprop="commentCount"></span>
+                <a href="/2019/04/05/权限修饰符/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/05/权限修饰符/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -452,7 +471,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2k</span>
+                <span title="本文字数">567</span>
               
 
               
@@ -466,7 +485,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -486,23 +505,98 @@
       
 
       
-        <h1 id="局部代码块"><a href="#局部代码块" class="headerlink" title="局部代码块"></a>局部代码块</h1><p>​    在局部位置<strong>(方法内)</strong>，限定变量生命周期，及早释放，提高内存利用率</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> i=<span class="number">100</span>;</span><br><span class="line">			System.out.println(<span class="string">"i="</span>+i);</span><br><span class="line">		&#125;</span><br><span class="line">		i=<span class="number">200</span>;<span class="comment">//此处编译错误</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="构造代码块"><a href="#构造代码块" class="headerlink" title="构造代码块"></a>构造代码块</h1><p>在成员位置（<strong>在类中方法外</strong>）出现；多个构造方法方法中相同的代码提取出来，存放到构造代码块里面，<strong>每次调用构造方法都执行，换句话说，每次创建对象都执行</strong>，并且在构造方法前执行</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Student stu=<span class="keyword">new</span> Student();</span><br><span class="line">		Student stu2=<span class="keyword">new</span> Student(<span class="string">"wjj"</span>,<span class="number">18</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">	String name;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">//System.out.println("我要创建一个学生对象");</span></span><br><span class="line">		System.out.println(<span class="string">"无参构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name,<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//System.out.println("我要创建一个学生对象");</span></span><br><span class="line">		System.out.println(<span class="string">"有参构造方法"</span>);</span><br><span class="line">		<span class="keyword">this</span>.name=name;</span><br><span class="line">		<span class="keyword">this</span>.age=age;</span><br><span class="line">	&#125;</span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"我要创建一个学生对象"</span>);</span><br><span class="line">		<span class="comment">//为为构造代码块,每次调用构造都执行**，并且在构造方法前执行</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">我要创建一个学生对象</span><br><span class="line">无参构造方法</span><br><span class="line">我要创建一个学生对象</span><br><span class="line">有参构造方法</span><br></pre></td></tr></table></figure>
-<h1 id="静态代码块-：在类中方法外出现，加了static修饰"><a href="#静态代码块-：在类中方法外出现，加了static修饰" class="headerlink" title="静态代码块 ：在类中方法外出现，加了static修饰"></a>静态代码块 ：在类中方法外出现，加了static修饰</h1><p>构造方法用于对象的初始化!静态初始化块，用于类的初始化操作!在静态初始化块中不能直接访问非static成员。</p>
-<p>在类中方法外出现，并加上static修饰；用于给类进行初始化，在加载的时候就执行，并且值执行一次。</p>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p><strong>注意事项：</strong></p>
-<p>　　静态初始化块执行顺序：</p>
-<p>　　1. 上溯到Object类，先执行Object的静态初始化块，再向下执行子类的静态初始化块，直到我们的类的静态初始化块为止。</p>
-<p>  　　2. 构造方法执行顺序和上面顺序一样!!</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> TestException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Student stu=<span class="keyword">new</span> Student();</span><br><span class="line">		Student stu2=<span class="keyword">new</span> Student(<span class="string">"wjj"</span>,<span class="number">18</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">	String name;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">	<span class="keyword">static</span> &#123;</span><br><span class="line">		System.out.println(<span class="string">"这是静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    &#123;	<span class="comment">//构造代码块</span></span><br><span class="line">		System.out.println(<span class="string">"我要创建一个学生对象"</span>);</span><br><span class="line">		<span class="comment">//为为构造代码块,每次调用构造都执行**，并且在构造方法前执行</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">//System.out.println("我要创建一个学生对象");</span></span><br><span class="line">		System.out.println(<span class="string">"无参构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name,<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//System.out.println("我要创建一个学生对象");</span></span><br><span class="line">		System.out.println(<span class="string">"有参构造方法"</span>);</span><br><span class="line">		<span class="keyword">this</span>.name=name;</span><br><span class="line">		<span class="keyword">this</span>.age=age;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这是静态代码块<span class="comment">//只执行一次</span></span><br><span class="line">我要创建一个学生对象<span class="comment">//每次创建对象都执行</span></span><br><span class="line">无参构造方法</span><br><span class="line">我要创建一个学生对象</span><br><span class="line">有参构造方法</span><br></pre></td></tr></table></figure>
-<h2 id="面试题："><a href="#面试题：" class="headerlink" title="面试题："></a>面试题：</h2><p>静态代码块，构造代码块，构造方法的执行顺序。<br>    静态代码块 &gt; 构造代码块 &gt; 构造方法</p>
-<h1 id="同步代码块（多线程）"><a href="#同步代码块（多线程）" class="headerlink" title="同步代码块（多线程）"></a>同步代码块（多线程）</h1>
+        <h1 id="注意：这里的默认不是default关键字！"><a href="#注意：这里的默认不是default关键字！" class="headerlink" title="注意：这里的默认不是default关键字！"></a>注意：这里的默认不是default关键字！</h1><p><strong>default methods are allowed only in interfaces.</strong></p>
+<p>这里的默认修饰符是包访问权限</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>public</th>
+<th>protected</th>
+<th>默认（就是不写）（包访问权限）</th>
+<th>private</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同一类中</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>同一包子类,其他类</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td>不同包子类</td>
+<td>√</td>
+<td>不能通过父类直接访问。 <strong>只能通过子类对象去访问</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>不同包其他类</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="面向对象程序设计："><a href="#面向对象程序设计：" class="headerlink" title="面向对象程序设计："></a>面向对象程序设计：</h1><ol>
+<li>有哪些类</li>
+<li>每一类中由哪些职责</li>
+<li>类与类之间的关系<ol>
+<li>类与类之间怎么协作</li>
+<li>类与类之间怎么访问</li>
+</ol>
+</li>
+</ol>
+<h1 id="类及其组成可以用的修饰符"><a href="#类及其组成可以用的修饰符" class="headerlink" title="类及其组成可以用的修饰符"></a>类及其组成可以用的修饰符</h1><p>权限修饰符：public ，protected，默认，private</p>
+<p>状态修饰符：final ，static</p>
+<p>抽象修饰符： abstract</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>权限修饰符</th>
+<th>状态修饰符</th>
+<th>抽象修饰符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通类</td>
+<td>public，默认</td>
+<td>final</td>
+<td>abstract</td>
+</tr>
+<tr>
+<td>成员变量</td>
+<td>均可，自己定义，private居多</td>
+<td>final，static</td>
+<td>不行</td>
+</tr>
+<tr>
+<td>构造方法</td>
+<td>4种均可，自己定义，public居多</td>
+<td>不行</td>
+<td>不行</td>
+</tr>
+<tr>
+<td>成员方法</td>
+<td>均可，自己定义public居多</td>
+<td>final，static</td>
+<td>abstract</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>protected，private，static只能修饰类的成员</strong></p>
+
       
     </div>
 
@@ -556,6 +650,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-google"></i> Java</a>
+          
+            <a href="/tags/JavaSE/" rel="tag"><i class="fa fa-google"></i> JavaSE</a>
+          
+        </div>
+      
 
       
       
@@ -565,8 +667,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/02/static关键字/" rel="next" title="static关键字">
-                <i class="fa fa-chevron-left"></i> static关键字
+              <a href="/2019/04/05/接口interface/" rel="next" title="接口interface">
+                <i class="fa fa-chevron-left"></i> 接口interface
               </a>
             
           </div>
@@ -574,10 +676,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/04/面向对象三大特性2——继承/" rel="prev" title="面向对象三大特性2——继承">
-                面向对象三大特性2——继承 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -768,7 +866,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#局部代码块"><span class="nav-number">1.</span> <span class="nav-text">局部代码块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构造代码块"><span class="nav-number">2.</span> <span class="nav-text">构造代码块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态代码块-：在类中方法外出现，加了static修饰"><span class="nav-number">3.</span> <span class="nav-text">静态代码块 ：在类中方法外出现，加了static修饰</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项"><span class="nav-number">3.1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面试题："><span class="nav-number">3.2.</span> <span class="nav-text">面试题：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#同步代码块（多线程）"><span class="nav-number">4.</span> <span class="nav-text">同步代码块（多线程）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#注意：这里的默认不是default关键字！"><span class="nav-number">1.</span> <span class="nav-text">注意：这里的默认不是default关键字！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象程序设计："><span class="nav-number">2.</span> <span class="nav-text">面向对象程序设计：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类及其组成可以用的修饰符"><span class="nav-number">3.</span> <span class="nav-text">类及其组成可以用的修饰符</span></a></li></ol></div>
             
 
           </div>

@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="wjjのhomepage">
 <meta property="og:description" content="接口代表的是功能例如USB上的接口，扩展作用。 继承体现的是is a的关系 接口体现的是like a的关系，例如：猴子可以像人一样计算。 譬如游泳这一接口，谁都可以实现。 在Java中，接口主要用于解决单继承局限的问题 接口特点 接口是两个模块之间通信的标准，通信的规范。如果能把你要设计的模块之间的接口定义好，就相当于完成了系统的设计大纲，剩下的就是添砖加瓦的具体实现了。大家在工作以后，做系统时往">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-05T09:07:12.234Z">
+<meta property="og:updated_time" content="2019-04-05T14:04:00.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="接口interface">
 <meta name="twitter:description" content="接口代表的是功能例如USB上的接口，扩展作用。 继承体现的是is a的关系 接口体现的是like a的关系，例如：猴子可以像人一样计算。 譬如游泳这一接口，谁都可以实现。 在Java中，接口主要用于解决单继承局限的问题 接口特点 接口是两个模块之间通信的标准，通信的规范。如果能把你要设计的模块之间的接口定义好，就相当于完成了系统的设计大纲，剩下的就是添砖加瓦的具体实现了。大家在工作以后，做系统时往">
@@ -400,7 +400,7 @@
                 
               
 
-              <time title="创建时间：2019-04-05 11:54:41 / 修改时间：17:07:12" itemprop="dateCreated datePublished" datetime="2019-04-05T11:54:41+08:00">2019-04-05</time>
+              <time title="创建时间：2019-04-05 11:54:41 / 修改时间：22:04:00" itemprop="dateCreated datePublished" datetime="2019-04-05T11:54:41+08:00">2019-04-05</time>
             
 
             
@@ -471,7 +471,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.4k</span>
+                <span title="本文字数">2.9k</span>
               
 
               
@@ -485,7 +485,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -551,7 +551,7 @@
 </li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">	System.out.println(<span class="string">"123"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​    2. 静态方法：</p>
+<p>​    2. 静态方法：<strong>静态方法只能通过<code>接口名.静态方法（）</code>调用，不能通过子类调用</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"123"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="接口与类的关系"><a href="#接口与类的关系" class="headerlink" title="接口与类的关系"></a>接口与类的关系</h1><p>类与类：继承关系，只能单继承，但是可以多层继承</p>
 <p>类与接口：实现关系，也可以多实现，还可以继承一个类的同时实现多个接口</p>
@@ -586,9 +586,9 @@
 </tr>
 </tbody>
 </table>
-<h1 id="接口的实际应用"><a href="#接口的实际应用" class="headerlink" title="接口的实际应用"></a>接口的实际应用</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">USB</span></span>&#123;<span class="comment">//定义USB标准</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">start</span><span class="params">()</span></span>;<span class="comment">//默认是public abstract</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Computer</span></span>&#123;<span class="comment">//定义计算机类</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">plugin</span><span class="params">(USB usb)</span> </span>&#123;</span><br><span class="line">		usb.start();</span><br><span class="line">		usb.stop();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flash</span> <span class="keyword">implements</span> <span class="title">USB</span></span>&#123;<span class="comment">//定义U盘子类</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"U盘开始使用"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"U盘停止使用"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Print</span> <span class="keyword">implements</span> <span class="title">USB</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"打印机开始工作"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"打印机停止使用"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Computer computer=<span class="keyword">new</span> Computer();</span><br><span class="line">		computer.plugin(<span class="keyword">new</span> Flash());</span><br><span class="line">		computer.plugin(<span class="keyword">new</span> Print());			</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="接口的实际应用"><a href="#接口的实际应用" class="headerlink" title="接口的实际应用"></a>接口的实际应用</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">USB</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">printInfo</span><span class="params">()</span> </span>&#123;<span class="comment">//默认方法</span></span><br><span class="line">		System.out.println(<span class="string">"采用USB接口连接"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">start</span><span class="params">()</span></span>;<span class="comment">//抽象方法</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">usbInfo</span><span class="params">()</span> </span>&#123;<span class="comment">//静态方法</span></span><br><span class="line">		System.out.println(<span class="string">"USB4.0"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Print</span> <span class="keyword">implements</span> <span class="title">USB</span></span>&#123;<span class="comment">//打印机类</span></span><br><span class="line">	 <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printInfo</span><span class="params">()</span> </span>&#123;<span class="comment">//覆写默认方法</span></span><br><span class="line">		System.out.println(<span class="string">"打印机类覆写默认方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"打印机连接！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"打印机断开连接!"</span>);</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flash</span> <span class="keyword">implements</span> <span class="title">USB</span></span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"U盘连接！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"U盘断开连接!"</span>);</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Computer</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">plugin</span><span class="params">(USB usb)</span> </span>&#123;</span><br><span class="line">		usb.printInfo();<span class="comment">//默认方法</span></span><br><span class="line">		usb.start();<span class="comment">//抽象方法</span></span><br><span class="line">		usb.stop();<span class="comment">//抽象方法</span></span><br><span class="line">		<span class="comment">//usb.usbInfo();//编译错误，接口的静态方法只能通过接口名调用</span></span><br><span class="line">		USB.usbInfo();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HW4</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Computer computer=<span class="keyword">new</span> Computer();</span><br><span class="line">		computer.plugin(<span class="keyword">new</span> Flash());</span><br><span class="line">		System.out.println(<span class="string">"--------------"</span>);</span><br><span class="line">		computer.plugin(<span class="keyword">new</span> Print());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">U盘开始使用</span><br><span class="line">U盘停止使用</span><br><span class="line">打印机开始工作</span><br><span class="line">打印机停止使用</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">采用USB接口连接</span><br><span class="line">U盘连接！</span><br><span class="line">U盘断开连接!</span><br><span class="line">USB4.0</span><br><span class="line">--------------</span><br><span class="line">打印机类覆写默认方法</span><br><span class="line">打印机连接！</span><br><span class="line">打印机断开连接!</span><br><span class="line">USB4.0</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -670,6 +670,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/04/05/权限修饰符/" rel="prev" title="权限修饰符">
+                权限修饰符 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -743,7 +747,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -899,7 +903,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">39k</span>
+    <span title="站点总字数">41k</span>
   
 
   
@@ -908,7 +912,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">36 分钟</span>
+    <span title="站点阅读时长">37 分钟</span>
   
 </div>
 
