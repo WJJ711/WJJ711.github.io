@@ -103,20 +103,18 @@
 
 
 
-  <meta name="description" content="异常机制本质就是当程序出现错误，程序安全退出的机制。 异常​      异常指程序运行过程中出现的非正常现象，例如用户输入错误、除数为零、需要处理的文件不存在、数组下标越界等。 ​      在Java的异常处理机制中，引进了很多用来描述和处理异常的类，称为异常类。异常类定义中包含了该类异常的信息和对异常进行处理的方法。 ​      所谓异常处理，就是指程序在出现问题时依然可以正确的执行完。 异">
+  <meta name="description" content="我会努力变得更好！">
 <meta name="keywords" content="未完待续">
 <meta property="og:type" content="article">
 <meta property="og:title" content="异常机制">
 <meta property="og:url" content="https://WJJ711.github.io/2019/04/04/异常机制/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="异常机制本质就是当程序出现错误，程序安全退出的机制。 异常​      异常指程序运行过程中出现的非正常现象，例如用户输入错误、除数为零、需要处理的文件不存在、数组下标越界等。 ​      在Java的异常处理机制中，引进了很多用来描述和处理异常的类，称为异常类。异常类定义中包含了该类异常的信息和对异常进行处理的方法。 ​      所谓异常处理，就是指程序在出现问题时依然可以正确的执行完。 异">
+<meta property="og:description" content="我会努力变得更好！">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://wjj711.github.io/2019/04/04/异常机制/Java异常类层次结构图.png">
-<meta property="og:updated_time" content="2019-04-05T12:15:49.922Z">
+<meta property="og:updated_time" content="2019-04-05T14:53:11.845Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常机制">
-<meta name="twitter:description" content="异常机制本质就是当程序出现错误，程序安全退出的机制。 异常​      异常指程序运行过程中出现的非正常现象，例如用户输入错误、除数为零、需要处理的文件不存在、数组下标越界等。 ​      在Java的异常处理机制中，引进了很多用来描述和处理异常的类，称为异常类。异常类定义中包含了该类异常的信息和对异常进行处理的方法。 ​      所谓异常处理，就是指程序在出现问题时依然可以正确的执行完。 异">
-<meta name="twitter:image" content="https://wjj711.github.io/2019/04/04/异常机制/Java异常类层次结构图.png">
+<meta name="twitter:description" content="我会努力变得更好！">
 
 
 
@@ -419,7 +417,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-05 20:15:49" itemprop="dateModified" datetime="2019-04-05T20:15:49+08:00">2019-04-05</time>
+                <time title="修改时间：2019-04-05 22:53:11" itemprop="dateModified" datetime="2019-04-05T22:53:11+08:00">2019-04-05</time>
               
             
           </span>
@@ -485,7 +483,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.8k</span>
+                <span title="本文字数">0</span>
               
 
               
@@ -499,7 +497,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -519,34 +517,7 @@
       
 
       
-        <h1 id="异常机制本质"><a href="#异常机制本质" class="headerlink" title="异常机制本质"></a><strong>异常机制本质</strong></h1><p>就是当程序出现错误，程序安全退出的机制。</p>
-<h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p>​      异常指程序运行过程中出现的非正常现象，例如用户输入错误、除数为零、需要处理的文件不存在、数组下标越界等。</p>
-<p>​      在Java的异常处理机制中，引进了很多用来描述和处理异常的类，称为异常类。异常类定义中包含了该类异常的信息和对异常进行处理的方法。</p>
-<p>​      <strong><em>所谓异常处理，就是指程序在出现问题时依然可以正确的执行完。</em></strong></p>
-<h1 id="异常的分析"><a href="#异常的分析" class="headerlink" title="异常的分析"></a>异常的分析</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDemo</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i=<span class="number">1</span>/<span class="number">0</span>;</span><br><span class="line">		System.out.println(i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Exception in thread <span class="string">"main"</span> java.lang.ArithmeticException: / by zero</span><br><span class="line">	at TestException/TestException.TestDemo.main(TestDemo.java:<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="Java是采用面向对象的方式来处理异常的。处理过程："><a href="#Java是采用面向对象的方式来处理异常的。处理过程：" class="headerlink" title="Java是采用面向对象的方式来处理异常的。处理过程："></a><strong>Java是采用面向对象的方式来处理异常的。处理过程：</strong></h1><ol>
-<li><strong>抛出异常：</strong>在执行一个方法时，如果发生异常，则这个方法生成代表该异常的一个对象，停止当前执行路径，并把异常对象提交给JRE。</li>
-<li><strong>捕获异常：</strong>JRE得到该异常后，寻找相应的代码来处理该异常。JRE在方法的调用栈中查找，从生成异常的方法开始回溯，直到找到相应的异常处理代码为止。</li>
-</ol>
-<h1 id="异常的分类"><a href="#异常的分类" class="headerlink" title="异常的分类"></a>异常的分类</h1><p>​      JDK 中定义了很多异常类，这些类对应了各种各样可能出现的异常事件，所有异常对象都是派生于Throwable类的一个实例。如果内置的异常类不能够满足需要，还可以创建自己的异常类。</p>
-<p>​      Java对异常进行了分类，不同类型的异常分别用不同的Java类表示，所有异常的根类为java.lang.Throwable，Throwable下面又派生了两个子类：Error和Exception。Java异常类的层次结构下图所示</p>
-<img src="/2019/04/04/异常机制/Java异常类层次结构图.png">
-<h1 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h1><p> Error是程序无法处理的错误，表示运行应用程序中较严重问题。大多数错误与代码编写者执行的操作无关，而表示代码运行时 JVM(Java 虚拟机)出现的问题。例如，Java虚拟机运行错误(Virtual MachineError)，当 JVM 不再有继续执行操作所需的内存资源时，将出现 OutOfMemoryError。这些异常发生时，Java虚拟机(JVM)一般会选择线程终止。</p>
-<p>​      Error表明系统JVM已经处于不可恢复的崩溃状态中。我们不需要管它。</p>
-<h2 id="Error与Exception的区别"><a href="#Error与Exception的区别" class="headerlink" title="Error与Exception的区别"></a><strong>Error与Exception的区别</strong></h2><ol>
-<li><p>我开着车走在路上，一头猪冲在路中间，我刹车。这叫一个<strong>异常</strong>。</p>
-</li>
-<li><p>我开着车在路上，发动机坏了，我停车，这叫<strong>错误</strong>。系统处于不可恢复的崩溃状态。发动机什么时候坏?我们普通司机能管吗?不能。发动机什么时候坏是汽车厂发动机制造商的事</p>
-</li>
-</ol>
-<h1 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h1><p> Exception是程序本身能够处理的异常，如：空指针异常(NullPointerException)、数组下标越界异常(ArrayIndexOutOfBoundsException)、类型转换异常(ClassCastException)、算术异常(ArithmeticException)等。</p>
-<p>​      <strong>Exception类是所有异常类的父类</strong>，其子类对应了各种各样可能出现的异常事件。 通常Java的异常可分为：</p>
-<p>​      1. RuntimeException 运行时异常</p>
-<p>​      2. CheckedException 已检查异常</p>
-<h1 id="RuntimeException运行时异常"><a href="#RuntimeException运行时异常" class="headerlink" title="RuntimeException运行时异常"></a><strong>RuntimeException运行时异常</strong></h1><p>   派生于RuntimeException的异常，如被 0 除、数组下标越界、空指针等，其产生比较频繁，处理麻烦，如果显式的声明或捕获将会对程序可读性和运行效率影响很大。 因此由系统自动检测并将它们交给缺省的异常处理程序(用户可不必对其处理)。</p>
-<p>​      这类异常通常是由编程错误导致的，所以在编写程序时，并不要求必须使用异常处理机制来处理这类异常,经常需要通过增加“逻辑处理来避免这些异常”。</p>
-<h2 id="ArithmeticException异常：试图除以0"><a href="#ArithmeticException异常：试图除以0" class="headerlink" title="ArithmeticException异常：试图除以0"></a><strong>ArithmeticException异常：试图除以0</strong></h2><h2 id="空指针异常-NullPointerException"><a href="#空指针异常-NullPointerException" class="headerlink" title="空指针异常(NullPointerException)"></a>空指针异常(NullPointerException)</h2>
+        
       
     </div>
 
@@ -675,17 +646,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -702,7 +664,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -808,23 +770,6 @@
       </div>
 
       
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#异常机制本质"><span class="nav-number">1.</span> <span class="nav-text">异常机制本质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常"><span class="nav-number">2.</span> <span class="nav-text">异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常的分析"><span class="nav-number">3.</span> <span class="nav-text">异常的分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java是采用面向对象的方式来处理异常的。处理过程："><span class="nav-number">4.</span> <span class="nav-text">Java是采用面向对象的方式来处理异常的。处理过程：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常的分类"><span class="nav-number">5.</span> <span class="nav-text">异常的分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Error"><span class="nav-number">6.</span> <span class="nav-text">Error</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Error与Exception的区别"><span class="nav-number">6.1.</span> <span class="nav-text">Error与Exception的区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Exception"><span class="nav-number">7.</span> <span class="nav-text">Exception</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RuntimeException运行时异常"><span class="nav-number">8.</span> <span class="nav-text">RuntimeException运行时异常</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ArithmeticException异常：试图除以0"><span class="nav-number">8.1.</span> <span class="nav-text">ArithmeticException异常：试图除以0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#空指针异常-NullPointerException"><span class="nav-number">8.2.</span> <span class="nav-text">空指针异常(NullPointerException)</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
       
         <div class="back-to-top">
@@ -858,7 +803,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">41k</span>
+    <span title="站点总字数">42k</span>
   
 
   
@@ -867,7 +812,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">37 分钟</span>
+    <span title="站点阅读时长">38 分钟</span>
   
 </div>
 
