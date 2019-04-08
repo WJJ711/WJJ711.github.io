@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="wjjのhomepage">
 <meta property="og:description" content="定义把类定义在其他类的内部，这个类就被称为内部类。即在类A中定义了一个类B，类B就是内部类。 由于内部类提供了更好的封装特性，并且可以很方便的访问外部类的属性，所以通常内部类在只为所在外部类提供服务的情况下优先使用 举例：电脑+CPU：CPU是电脑的一个成员，cpu还得和其它成员打交道 第一个作用：隐藏内部类 第二个作用：为了更好的和外部类的其它成员交流 内部类的访问特点： 内部类可以直接访问外部">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-06T08:54:14.813Z">
+<meta property="og:updated_time" content="2019-04-08T03:22:29.652Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="内部类">
 <meta name="twitter:description" content="定义把类定义在其他类的内部，这个类就被称为内部类。即在类A中定义了一个类B，类B就是内部类。 由于内部类提供了更好的封装特性，并且可以很方便的访问外部类的属性，所以通常内部类在只为所在外部类提供服务的情况下优先使用 举例：电脑+CPU：CPU是电脑的一个成员，cpu还得和其它成员打交道 第一个作用：隐藏内部类 第二个作用：为了更好的和外部类的其它成员交流 内部类的访问特点： 内部类可以直接访问外部">
@@ -400,12 +400,24 @@
                 
               
 
-              <time title="创建时间：2019-04-06 10:20:33 / 修改时间：16:54:14" itemprop="dateCreated datePublished" datetime="2019-04-06T10:20:33+08:00">2019-04-06</time>
+              <time title="创建时间：2019-04-06 10:20:33" itemprop="dateCreated datePublished" datetime="2019-04-06T10:20:33+08:00">2019-04-06</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-08 11:22:29" itemprop="dateModified" datetime="2019-04-08T11:22:29+08:00">2019-04-08</time>
               
             
           </span>
@@ -471,7 +483,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.3k</span>
+                <span title="本文字数">4.4k</span>
               
 
               
@@ -485,7 +497,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -518,7 +530,7 @@
 </ol>
 <h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>一般情况下，内部类都会用private进行修饰，不对外部开放。</p>
 <h1 id="内部类的分类："><a href="#内部类的分类：" class="headerlink" title="内部类的分类："></a>内部类的分类：</h1><p>成员内部类： 非静态内部类 和 静态内部类</p>
-<p> 局部内部类</p>
+<p>局部内部类</p>
 <p>匿名内部类</p>
 <h1 id="非静态内部类（inner-class）"><a href="#非静态内部类（inner-class）" class="headerlink" title="非静态内部类（inner class）"></a>非静态内部类（inner class）</h1><p><strong>非静态内部类的对象是外部类对象的一个成员</strong></p>
 <ol>
@@ -628,6 +640,24 @@
 <h1 id="内部类举例"><a href="#内部类举例" class="headerlink" title="内部类举例"></a>内部类举例</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Face</span></span>&#123;</span><br><span class="line">    String type=<span class="string">"瓜子脸"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Nose</span></span>&#123;</span><br><span class="line">        String type=<span class="string">"鹰钩鼻"</span>;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">breath</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"吸一口氧气"</span>);</span><br><span class="line">            System.out.println(<span class="string">"脸型："</span>+Face.<span class="keyword">this</span>.type);<span class="comment">//内部类可直接访问外部类成员</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    Nose nose =<span class="keyword">new</span> Nose();<span class="comment">//外部类访问内部类需要创建对象</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"脸型:"</span>+type+<span class="string">",鼻型:"</span>+nose.type;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getBreath</span><span class="params">()</span></span>&#123;</span><br><span class="line">        nose.breath();<span class="comment">//因为内部类是私有的，需要用get执行内部类的方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InnerClass</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Face face = <span class="keyword">new</span> Face();</span><br><span class="line">        System.out.println(face);</span><br><span class="line">        face.getBreath();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>执行结果：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">脸型:瓜子脸,鼻型:鹰钩鼻</span><br><span class="line">吸一口氧气</span><br><span class="line">脸型：瓜子脸</span><br></pre></td></tr></table></figure>
+<h1 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>就是内部类的简化写法。</p>
+<h2 id="前提："><a href="#前提：" class="headerlink" title="前提："></a>前提：</h2><p>存在一个类或者接口</p>
+<p>这里的类可以是具体类也可以是抽象类。</p>
+<h2 id="格式："><a href="#格式：" class="headerlink" title="格式："></a>格式：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span>  父类构造器(实参类表) \实现接口 () &#123;</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">           <span class="comment">//匿名内部类类体！</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>重写方法;</p>
+<p>}//前面是创建对象，后面是重写父类或接口</p>
+<h2 id="本质："><a href="#本质：" class="headerlink" title="本质："></a>本质：</h2><p><strong>是一个继承了类或者实现了接口的子类匿名对象</strong></p>
+<p>本质是一个<strong>对象</strong>！！！</p>
+<p>理解：</p>
+<p>我要创建一个类或者接口，但是我又不想重写一个类去继承该类或者实现该接口，这时可以用匿名类</p>
+<h2 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a><strong>注意</strong></h2><ol>
+<li><p>匿名内部类没有访问修饰符。</p>
+</li>
+<li><p>匿名内部类没有构造方法。因为它连名字都没有那又何来构造方法呢。</p>
+</li>
+</ol>
+<h2 id="匿名内部类示例"><a href="#匿名内部类示例" class="headerlink" title="匿名内部类示例"></a>匿名内部类示例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Inter</span> </span>&#123;<span class="comment">//定义接口</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Outer</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Inter <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span>  <span class="keyword">new</span> Inter() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"Hello world"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Outer.method().show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="示例2"><a href="#示例2" class="headerlink" title="示例2"></a>示例2</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(A a)</span></span>&#123;</span><br><span class="line">        a.show();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        TestDemo.test(<span class="keyword">new</span> A()&#123;<span class="comment">//匿名内部类</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"Hello world"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -898,7 +928,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类的访问特点："><span class="nav-number">2.</span> <span class="nav-text">内部类的访问特点：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注意"><span class="nav-number">3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类的分类："><span class="nav-number">4.</span> <span class="nav-text">内部类的分类：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#非静态内部类（inner-class）"><span class="nav-number">5.</span> <span class="nav-text">非静态内部类（inner class）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用要点"><span class="nav-number">5.1.</span> <span class="nav-text">使用要点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态内部类（nest-class）"><span class="nav-number">6.</span> <span class="nav-text">静态内部类（nest class）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用要点-1"><span class="nav-number">6.1.</span> <span class="nav-text">使用要点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#局部内部类"><span class="nav-number">7.</span> <span class="nav-text">局部内部类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类举例"><span class="nav-number">8.</span> <span class="nav-text">内部类举例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类的访问特点："><span class="nav-number">2.</span> <span class="nav-text">内部类的访问特点：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注意"><span class="nav-number">3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类的分类："><span class="nav-number">4.</span> <span class="nav-text">内部类的分类：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#非静态内部类（inner-class）"><span class="nav-number">5.</span> <span class="nav-text">非静态内部类（inner class）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用要点"><span class="nav-number">5.1.</span> <span class="nav-text">使用要点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态内部类（nest-class）"><span class="nav-number">6.</span> <span class="nav-text">静态内部类（nest class）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用要点-1"><span class="nav-number">6.1.</span> <span class="nav-text">使用要点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#局部内部类"><span class="nav-number">7.</span> <span class="nav-text">局部内部类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类举例"><span class="nav-number">8.</span> <span class="nav-text">内部类举例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#匿名内部类"><span class="nav-number">9.</span> <span class="nav-text">匿名内部类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">9.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前提："><span class="nav-number">9.2.</span> <span class="nav-text">前提：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格式："><span class="nav-number">9.3.</span> <span class="nav-text">格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本质："><span class="nav-number">9.4.</span> <span class="nav-text">本质：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意-1"><span class="nav-number">9.5.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名内部类示例"><span class="nav-number">9.6.</span> <span class="nav-text">匿名内部类示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例2"><span class="nav-number">9.7.</span> <span class="nav-text">示例2</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -938,7 +968,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">42k</span>
+    <span title="站点总字数">43k</span>
   
 
   
@@ -947,7 +977,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">38 分钟</span>
+    <span title="站点阅读时长">39 分钟</span>
   
 </div>
 
