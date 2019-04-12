@@ -104,7 +104,7 @@
 
 
   <meta name="description" content="世界上最真情的相依,是你在try我在catch,无论你发神马脾气,我都默默接受,静静处理 异常机制的本质就是当程序出现错误，程序安全退出的机制。 JVM的默认处理 jvm发现运算是已经违反了数学运算规则,java将这种常见的问题进行描述,并封装成了对象叫做ArithmeticException  当除0运算发生后,jvm将该问题打包成了一个异常对象.  并将对象抛给调用者main函数,new Ar">
-<meta name="keywords" content="Java,JavaSE">
+<meta name="keywords" content="JavaSE,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="异常机制Exception">
 <meta property="og:url" content="https://WJJ711.github.io/2019/04/11/异常机制/index.html">
@@ -112,7 +112,7 @@
 <meta property="og:description" content="世界上最真情的相依,是你在try我在catch,无论你发神马脾气,我都默默接受,静静处理 异常机制的本质就是当程序出现错误，程序安全退出的机制。 JVM的默认处理 jvm发现运算是已经违反了数学运算规则,java将这种常见的问题进行描述,并封装成了对象叫做ArithmeticException  当除0运算发生后,jvm将该问题打包成了一个异常对象.  并将对象抛给调用者main函数,new Ar">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wjj711.github.io/2019/04/11/异常机制/Java异常类层次结构图.png">
-<meta property="og:updated_time" content="2019-04-11T08:48:23.468Z">
+<meta property="og:updated_time" content="2019-04-11T11:44:26.495Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常机制Exception">
 <meta name="twitter:description" content="世界上最真情的相依,是你在try我在catch,无论你发神马脾气,我都默默接受,静静处理 异常机制的本质就是当程序出现错误，程序安全退出的机制。 JVM的默认处理 jvm发现运算是已经违反了数学运算规则,java将这种常见的问题进行描述,并封装成了对象叫做ArithmeticException  当除0运算发生后,jvm将该问题打包成了一个异常对象.  并将对象抛给调用者main函数,new Ar">
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">5</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">4</span></a>
 
   </li>
         
@@ -269,7 +269,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
 
   </li>
 
@@ -402,7 +402,7 @@
                 
               
 
-              <time title="创建时间：2019-04-11 11:45:18 / 修改时间：16:48:23" itemprop="dateCreated datePublished" datetime="2019-04-11T11:45:18+08:00">2019-04-11</time>
+              <time title="创建时间：2019-04-11 11:45:18 / 修改时间：19:44:26" itemprop="dateCreated datePublished" datetime="2019-04-11T11:45:18+08:00">2019-04-11</time>
             
 
             
@@ -473,7 +473,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">7.7k</span>
+                <span title="本文字数">7.8k</span>
               
 
               
@@ -603,8 +603,10 @@
 </ol>
 <p>##　<strong>注意事项</strong></p>
 <p>​      1. 在方法抛出异常之后，运行时系统将转为寻找合适的异常处理器(exception handler)。潜在的异常处理器是异常发生时依次存留在调用栈中的方法的集合。当异常处理器所能处理的异常类型与方法抛出的异常类型相符时，即为合适的异常处理器。</p>
-<pre><code>2. 运行时系统从发生异常的方法开始，依次回查调用栈中的方法，直至找到含有合适异常处理器的方法并执行。当运行时系统遍历调用栈而**未找到**合适的异常处理器，则运行时系统终止。同时，意味着Java程序的终止。
-</code></pre><h1 id="CheckedException已检查异常"><a href="#CheckedException已检查异常" class="headerlink" title="CheckedException已检查异常"></a><strong>CheckedException已检查异常</strong></h1><p>所有不是RuntimeException的异常，统称为Checked Exception，又被称为“已检查异常”，如IOException、SQLException等以及用户自定义的Exception异常。 这类异常在编译时就必须做出处理，否则无法通过编译。</p>
+<ol start="2">
+<li>运行时系统从发生异常的方法开始，依次回查调用栈中的方法，直至找到含有合适异常处理器的方法并执行。当运行时系统遍历调用栈而<strong>未找到</strong>合适的异常处理器，则运行时系统终止。同时，意味着Java程序的终止。</li>
+</ol>
+<h1 id="CheckedException已检查异常"><a href="#CheckedException已检查异常" class="headerlink" title="CheckedException已检查异常"></a><strong>CheckedException已检查异常</strong></h1><p>所有不是RuntimeException的异常，统称为Checked Exception，又被称为“已检查异常”，如IOException、SQLException等以及用户自定义的Exception异常。 这类异常在编译时就必须做出处理，否则无法通过编译。</p>
 <p>![异常体系](D:\blog\WJJ711\source_posts\异常机制\异常体系.png</p>
 <h1 id="抛出异常throw"><a href="#抛出异常throw" class="headerlink" title="抛出异常throw"></a>抛出异常throw</h1><p>在编写程序时，我们必须要考虑程序出现问题的情况。比如，在定义方法时，方法需要接受参数。那么，当调用方法使用接受到的参数时，首先需要先对参数数据进行合法的判断，数据若不合法，就应该告诉调用者，传递合法的数据进来。这时需要使用抛出异常的方式来告诉调用者。</p>
 <p>在java中，提供了一个<strong>throw</strong>关键字，它用来抛出一个指定的异常对象。那么，抛出一个异常具体如何操作呢？</p>
@@ -637,27 +639,30 @@
 </ol>
 <p><strong>异常类如何定义:</strong></p>
 <ol>
-<li><p>自定义一个编译期异常: 自定义类 并继承于<code>java.lang.Exception</code>。</p>
+<li><p>自定义一个编译期异常: 自定义类 并继承于<code>Exception</code>。</p>
 </li>
-<li><p>自定义一个运行时期的异常类:自定义类 并继承于<code>java.lang.RuntimeException</code>。</p>
+<li><p>自定义一个运行时期的异常类:自定义类 并继承于<code>RuntimeException</code>。 </p>
 </li>
-<li><p>提供构造方法</p>
+<li><p>提供构造方法：一个无参的，一个有参的</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">MyException</span><span class="params">()</span> </span>&#123;<span class="comment">//一个无参的</span></span><br><span class="line">  &#125;</span><br><span class="line">   </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">MyException</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">super</span>(message);<span class="comment">//一个有参的</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span>  </span>&#123;</span><br><span class="line">        Scanner scanner=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> score=scanner.nextInt();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">            check(score);</span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"over"</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> score)</span>  </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(score&lt;<span class="number">0</span>||score&gt;<span class="number">100</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> MyException(<span class="string">"分数不合理~"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyException</span> <span class="keyword">extends</span> <span class="title">RuntimeException</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyException</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyException</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>输出结果</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="number">120</span></span><br><span class="line">casual.MyException: 分数不合理~</span><br><span class="line">	at casual.Test.check(Test.java:<span class="number">21</span>)</span><br><span class="line">	at casual.Test.main(Test.java:<span class="number">11</span>)</span><br><span class="line">over</span><br></pre></td></tr></table></figure>
-<h1 id="异常注意事项"><a href="#异常注意事项" class="headerlink" title="异常注意事项"></a>异常注意事项</h1><p>均是指编译时异常</p>
+<h1 id="异常注意事项"><a href="#异常注意事项" class="headerlink" title="异常注意事项"></a>异常注意事项</h1><p><strong>均是指编译时异常</strong></p>
 <ol>
-<li>子类重写父类方法时，子类的方法必须抛出相同的异常或父类异常的子类。</li>
-<li>如果父类抛出了多个异常,子类重写父类时,只能抛出相同的异常或者是他的子集,子类不能抛出父类没有的异常</li>
+<li>子类重写父类方法时，子类不能抛出父类没有的异常</li>
 <li>如果被重写的方法没有异常抛出,那么子类的方法绝对不可以抛出异常,如果子类方法内有异常发生,那么子类只能try,不能throws</li>
 </ol>
-<p><strong>子类只能比父类好！</strong></p>
+<p>因为多态，父类引用指向子类对象。所以<strong>子类只能比父类好！</strong></p>
 <h1 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> casual;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.DateFormat;</span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result=f();</span><br><span class="line">        System.out.println(result);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">f</span><span class="params">()</span></span>&#123;</span><br><span class="line">        String s=<span class="string">"2019-04-11"</span>;</span><br><span class="line">        DateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy/MM/dd"</span>);</span><br><span class="line">        <span class="keyword">int</span> result=<span class="number">10</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Date date=sdf.parse(s);</span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">            result=<span class="number">30</span>;</span><br><span class="line">            <span class="keyword">return</span> result;<span class="comment">//返回这条，但是finally也会被执行，result返回值不会改</span></span><br><span class="line">        &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"我一定会被执行"</span>);</span><br><span class="line">            result=<span class="number">40</span>;</span><br><span class="line">            <span class="comment">//return result;//如果在finally里有返回，则返回这个，结果为40</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>结果是：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">我一定会被执行</span><br><span class="line"><span class="number">30</span></span><br></pre></td></tr></table></figure>
+<h1 id="使用异常机制的建议"><a href="#使用异常机制的建议" class="headerlink" title="使用异常机制的建议"></a><strong>使用异常机制的建议</strong></h1><p>​      1.要避免使用异常处理代替错误处理，这样会降低程序的清晰性，并且效率低下。</p>
+<p>​      2.处理异常不可以代替简单测试—只在异常情况下使用异常机制。</p>
+<p>​      3.不要进行小粒度的异常处理—应该将整个任务包装在一个try语句块中。</p>
+<p>​      4.异常往往在高层处理</p>
 
       
     </div>
@@ -714,9 +719,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"><i class="fa fa-google"></i> Java</a>
-          
             <a href="/tags/JavaSE/" rel="tag"><i class="fa fa-google"></i> JavaSE</a>
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-google"></i> Java</a>
           
         </div>
       
@@ -738,6 +743,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/11/Collection接口/" rel="prev" title="Collection接口">
+                Collection接口 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -812,7 +821,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -828,8 +837,6 @@
                     
                   
                     
-                    
-                      
                     
                       
                     
@@ -853,8 +860,6 @@
                     
                   
                     
-                    
-                      
                     
                       
                     
@@ -928,7 +933,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#异常机制的本质"><span class="nav-number">1.</span> <span class="nav-text">异常机制的本质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM的默认处理"><span class="nav-number">2.</span> <span class="nav-text">JVM的默认处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常分类"><span class="nav-number">3.</span> <span class="nav-text">异常分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Error与Exception的区别"><span class="nav-number">3.1.</span> <span class="nav-text">Error与Exception的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java是采用面向对象的方式来处理异常的。处理过程："><span class="nav-number">3.2.</span> <span class="nav-text">Java是采用面向对象的方式来处理异常的。处理过程：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常的处理方式之一：捕获异常"><span class="nav-number">4.</span> <span class="nav-text">异常的处理方式之一：捕获异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常的处理方式之二：声明异常-throws子句"><span class="nav-number">5.</span> <span class="nav-text">异常的处理方式之二：声明异常(throws子句)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项"><span class="nav-number">5.1.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RuntimeException运行时异常"><span class="nav-number">6.</span> <span class="nav-text">RuntimeException运行时异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CheckedException已检查异常"><span class="nav-number">7.</span> <span class="nav-text">CheckedException已检查异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#抛出异常throw"><span class="nav-number">8.</span> <span class="nav-text">抛出异常throw</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义异常"><span class="nav-number">9.</span> <span class="nav-text">自定义异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常注意事项"><span class="nav-number">10.</span> <span class="nav-text">异常注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试题"><span class="nav-number">11.</span> <span class="nav-text">面试题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#异常机制的本质"><span class="nav-number">1.</span> <span class="nav-text">异常机制的本质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM的默认处理"><span class="nav-number">2.</span> <span class="nav-text">JVM的默认处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常分类"><span class="nav-number">3.</span> <span class="nav-text">异常分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Error与Exception的区别"><span class="nav-number">3.1.</span> <span class="nav-text">Error与Exception的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java是采用面向对象的方式来处理异常的。处理过程："><span class="nav-number">3.2.</span> <span class="nav-text">Java是采用面向对象的方式来处理异常的。处理过程：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常的处理方式之一：捕获异常"><span class="nav-number">4.</span> <span class="nav-text">异常的处理方式之一：捕获异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常的处理方式之二：声明异常-throws子句"><span class="nav-number">5.</span> <span class="nav-text">异常的处理方式之二：声明异常(throws子句)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项"><span class="nav-number">5.1.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RuntimeException运行时异常"><span class="nav-number">6.</span> <span class="nav-text">RuntimeException运行时异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CheckedException已检查异常"><span class="nav-number">7.</span> <span class="nav-text">CheckedException已检查异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#抛出异常throw"><span class="nav-number">8.</span> <span class="nav-text">抛出异常throw</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义异常"><span class="nav-number">9.</span> <span class="nav-text">自定义异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常注意事项"><span class="nav-number">10.</span> <span class="nav-text">异常注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试题"><span class="nav-number">11.</span> <span class="nav-text">面试题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用异常机制的建议"><span class="nav-number">12.</span> <span class="nav-text">使用异常机制的建议</span></a></li></ol></div>
             
 
           </div>
@@ -968,7 +973,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">58k</span>
+    <span title="站点总字数">59k</span>
   
 
   
@@ -977,7 +982,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">53 分钟</span>
+    <span title="站点阅读时长">54 分钟</span>
   
 </div>
 
