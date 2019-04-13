@@ -103,25 +103,25 @@
 
 
 
-  <meta name="description" content="Java变量的分类与自动类型转换变量的分类   类型 从属于 内存位置 声明位置 生命周期     局部变量 方法/语句块 栈内存（方法被调用时都会创建一个栈帧，存储局部变量等)）（没有默认初始化） 方法或者语句块内 从声明位置开始，直到方法或语句块执行完毕，局部变量消失   成员变量（实例变量） 对象 堆内存（有默认初始化） 类内部，方法外部 对象创建，成员变量也跟着创建。对象消失，成员变量也跟">
+  <meta name="description" content="增强for概述简化数组和Collection集合的遍历，内部使用迭代器实现 public interface   Iterable&amp;lt;T&amp;gt;实现这个接口允许对象成为“foreach” 语句的目标。 格式：1234for(元素数据类型 变量 : 数组或者Collection集合) &amp;#123;  使用变量即可，该变量就是元素&amp;#125; 可变参数定义方法的时候不知道该定义多少个参数 格式1修">
 <meta name="keywords" content="Java,JavaSE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java变量的分类与自动类型转换">
-<meta property="og:url" content="https://WJJ711.github.io/2019/03/26/Java变量的分类与自动类型转换/index.html">
+<meta property="og:title" content="增强for循环与可变参数">
+<meta property="og:url" content="https://WJJ711.github.io/2019/04/13/增强for循环与可变参数/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="Java变量的分类与自动类型转换变量的分类   类型 从属于 内存位置 声明位置 生命周期     局部变量 方法/语句块 栈内存（方法被调用时都会创建一个栈帧，存储局部变量等)）（没有默认初始化） 方法或者语句块内 从声明位置开始，直到方法或语句块执行完毕，局部变量消失   成员变量（实例变量） 对象 堆内存（有默认初始化） 类内部，方法外部 对象创建，成员变量也跟着创建。对象消失，成员变量也跟">
+<meta property="og:description" content="增强for概述简化数组和Collection集合的遍历，内部使用迭代器实现 public interface   Iterable&amp;lt;T&amp;gt;实现这个接口允许对象成为“foreach” 语句的目标。 格式：1234for(元素数据类型 变量 : 数组或者Collection集合) &amp;#123;  使用变量即可，该变量就是元素&amp;#125; 可变参数定义方法的时候不知道该定义多少个参数 格式1修">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-02T10:05:09.227Z">
+<meta property="og:updated_time" content="2019-04-13T06:39:13.656Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java变量的分类与自动类型转换">
-<meta name="twitter:description" content="Java变量的分类与自动类型转换变量的分类   类型 从属于 内存位置 声明位置 生命周期     局部变量 方法/语句块 栈内存（方法被调用时都会创建一个栈帧，存储局部变量等)）（没有默认初始化） 方法或者语句块内 从声明位置开始，直到方法或语句块执行完毕，局部变量消失   成员变量（实例变量） 对象 堆内存（有默认初始化） 类内部，方法外部 对象创建，成员变量也跟着创建。对象消失，成员变量也跟">
+<meta name="twitter:title" content="增强for循环与可变参数">
+<meta name="twitter:description" content="增强for概述简化数组和Collection集合的遍历，内部使用迭代器实现 public interface   Iterable&amp;lt;T&amp;gt;实现这个接口允许对象成为“foreach” 语句的目标。 格式：1234for(元素数据类型 变量 : 数组或者Collection集合) &amp;#123;  使用变量即可，该变量就是元素&amp;#125; 可变参数定义方法的时候不知道该定义多少个参数 格式1修">
 
 
 
 
 
 
-  <link rel="canonical" href="https://WJJ711.github.io/2019/03/26/Java变量的分类与自动类型转换/">
+  <link rel="canonical" href="https://WJJ711.github.io/2019/04/13/增强for循环与可变参数/">
 
 
 
@@ -131,7 +131,7 @@
   };
 </script>
 
-  <title>Java变量的分类与自动类型转换 | wjjのhomepage</title>
+  <title>增强for循环与可变参数 | wjjのhomepage</title>
   
 
 
@@ -357,7 +357,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/03/26/Java变量的分类与自动类型转换/">
+    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/13/增强for循环与可变参数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wjj">
@@ -374,7 +374,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java变量的分类与自动类型转换
+          <h1 class="post-title" itemprop="name headline">增强for循环与可变参数
 
               
             
@@ -400,24 +400,12 @@
                 
               
 
-              <time title="创建时间：2019-03-26 19:16:10" itemprop="dateCreated datePublished" datetime="2019-03-26T19:16:10+08:00">2019-03-26</time>
+              <time title="创建时间：2019-04-13 11:32:29 / 修改时间：14:39:13" itemprop="dateCreated datePublished" datetime="2019-04-13T11:32:29+08:00">2019-04-13</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-02 18:05:09" itemprop="dateModified" datetime="2019-04-02T18:05:09+08:00">2019-04-02</time>
               
             
           </span>
@@ -453,8 +441,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/03/26/Java变量的分类与自动类型转换/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/26/Java变量的分类与自动类型转换/" itemprop="commentCount"></span>
+                <a href="/2019/04/13/增强for循环与可变参数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/13/增强for循环与可变参数/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -483,7 +471,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2k</span>
+                <span title="本文字数">1.6k</span>
               
 
               
@@ -497,7 +485,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -517,92 +505,29 @@
       
 
       
-        <h1 id="Java变量的分类与自动类型转换"><a href="#Java变量的分类与自动类型转换" class="headerlink" title="Java变量的分类与自动类型转换"></a>Java变量的分类与自动类型转换</h1><h2 id="变量的分类"><a href="#变量的分类" class="headerlink" title="变量的分类"></a>变量的分类</h2><table>
-<thead>
-<tr>
-<th>类型</th>
-<th>从属于</th>
-<th>内存位置</th>
-<th>声明位置</th>
-<th>生命周期</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>局部变量</td>
-<td>方法/语句块</td>
-<td>栈内存（方法被调用时都会创建一个栈帧，存储局部变量等)）（没有默认初始化）</td>
-<td>方法或者语句块内</td>
-<td>从声明位置开始，直到方法或语句块执行完毕，局部变量消失</td>
-</tr>
-<tr>
-<td>成员变量（实例变量）</td>
-<td>对象</td>
-<td>堆内存（有默认初始化）</td>
-<td>类内部，方法外部</td>
-<td>对象创建，成员变量也跟着创建。对象消失，成员变量也跟着消失；</td>
-</tr>
-<tr>
-<td>静态变量（类变量）</td>
-<td>类</td>
-<td>方法区中的静态区（有默认初始化）</td>
-<td>类内部，方法外部。static修饰。</td>
-<td>类被加载，静态变量就有效；类被卸载，静态变量就消失</td>
-</tr>
-</tbody>
-</table>
-<h3 id="局部变量（local-variable）"><a href="#局部变量（local-variable）" class="headerlink" title="局部变量（local variable）"></a>局部变量（local variable）</h3><p>方法或语句块内部定义的变量。生命周期是从声明位置开始到到方法或语句块执行完毕为止。局部变量在使用前<strong>必须先声明、初始化(赋初值)再使用</strong>。</p>
-<h3 id="成员变量（也叫实例变量-member-variable）"><a href="#成员变量（也叫实例变量-member-variable）" class="headerlink" title="成员变量（也叫实例变量 member variable）"></a>成员变量（也叫实例变量 member variable）</h3><p>方法外部、类的内部定义的变量。从属于对象，生命周期伴随对象始终。如果不自行初始化，它会自动初始化成该类型的默认初始值。</p>
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>默认初始值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>int</td>
-<td>0</td>
-</tr>
-<tr>
-<td>double</td>
-<td>0.0</td>
-</tr>
-<tr>
-<td>char</td>
-<td>‘\u0000’</td>
-</tr>
-<tr>
-<td>boolean</td>
-<td>false</td>
-</tr>
-</tbody>
-</table>
-<h3 id="静态变量（类变量-static-variable）"><a href="#静态变量（类变量-static-variable）" class="headerlink" title="静态变量（类变量 static variable）"></a>静态变量（类变量 static variable）</h3><p> 使用static定义。 从属于类，生命周期伴随类始终，从类加载到卸载。 如果不自行初始化，与成员变量相同会自动初始化成该类型的默认初始值，如上表所示。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestVariable</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;<span class="comment">//成员变量，从属于对象；成员变量会自动被初始化</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> size; <span class="comment">//静态变量，从属于类</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> age=<span class="number">18</span>;<span class="comment">//局部变量，从属于语句块</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> salary=<span class="number">3000</span>;<span class="comment">//局部变量，从属于方法</span></span><br><span class="line">		<span class="keyword">int</span> i;<span class="comment">//局部变量，必须初始化</span></span><br><span class="line">		<span class="keyword">int</span> j=i+<span class="number">5</span>;<span class="comment">//编译出错，变量i还未被初始化</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h2><ol>
-<li>数据范围小的数据与数据范围大的数据进行数学计算时，自动向大范围的数据类型转换后计算。（例如int和long计算，则int类型先自动变为long类型，再计算）</li>
-<li>常量也有类型，常整数为int，常浮点数为double</li>
+        <h1 id="增强for概述"><a href="#增强for概述" class="headerlink" title="增强for概述"></a>增强for概述</h1><p>简化数组和Collection集合的遍历，内部使用迭代器实现</p>
+<p><code>public interface   Iterable&lt;T&gt;</code>实现这个接口允许对象成为<br>“foreach” 语句的目标。</p>
+<h2 id="格式："><a href="#格式：" class="headerlink" title="格式："></a>格式：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(元素数据类型 变量 : 数组或者Collection集合) &#123;</span><br><span class="line"></span><br><span class="line">  使用变量即可，该变量就是元素</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h1><p>定义方法的时候不知道该定义多少个参数</p>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">修饰符 返回值类型 方法名(数据类型…  变量名)&#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span>  <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span>... a)</span></span>&#123;</span><br><span class="line">       <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i:a)&#123;</span><br><span class="line">           sum+=i;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       System.out.println(add(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>));</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><ol>
+<li><p>这里的变量其实是一个数组</p>
+</li>
+<li><p>如果一个方法有可变参数，并且有多个参数，那么，可变参数肯定是最后一个.</p>
+<p>解释：可变参数的参数个数不一定，编译器自动将传递过来的参数封装成数组，如果像下面这样，则参数全都赋值给了可变参数a。b和c没有进行赋值。所以可变参数a必须放在最后面</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span>  <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span>... a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)</span></span>&#123;</span><br><span class="line">&#125;<span class="comment">//这样定义是错误的</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> a = <span class="number">55555555</span>;  <span class="comment">//编译成功，在int表示的范围内(2.1e9内)。</span></span><br><span class="line"><span class="keyword">long</span> b = <span class="number">55555555555</span>;<span class="comment">//不加L编译可通过，但是结果不正确，已经超过int表示的范围，数据溢出。</span></span><br></pre></td></tr></table></figure>
-<p>我们修改成long类型的常量即可</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> b = <span class="number">55555555555L</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test02</span> </span>&#123;	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">int</span> microPerDay=<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>;</span><br><span class="line">			<span class="keyword">long</span> nanosPerDay=<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>*<span class="number">1000</span>*<span class="number">1000L</span>;</span><br><span class="line">			System.out.print(nanosPerDay/microPerDay);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5794</span><span class="comment">//显然溢出了</span></span><br></pre></td></tr></table></figure>
-<p>这是因为24*60*60*1000*1000数据已经溢出，需要修改如下</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> nanosPerDay=<span class="number">24L</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>*<span class="number">1000</span>*<span class="number">1000</span>;</span><br></pre></td></tr></table></figure>
-<p>此时第一个数就变成long类型，计算正确</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1000000</span><span class="comment">//结果正确</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> f=(<span class="keyword">float</span>)<span class="number">1.24</span>;</span><br><span class="line"><span class="keyword">float</span> f=<span class="number">1.24f</span>;</span><br></pre></td></tr></table></figure>
-<p>问：这两种赋值方式一样么？</p>
-<p>答：不一样。</p>
-<p>第一种方式，底层存储double类型，占8字节，再强制类型转换成float</p>
-<p>第二种方式，底层 存储float类型，占4字节（推荐使用）</p>
-<p><strong>注意事项</strong></p>
-<p>byte,short,char参与运算的时候默认会转换成int类型，即使是统一数据类型相加也会转成int型</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">byte</span> b=<span class="number">10</span>;</span><br><span class="line">	<span class="keyword">byte</span> c=<span class="number">10</span>;<span class="comment">//编译器会自动判断是否处于byte范围内。若属于，则编译通过</span></span><br><span class="line">       <span class="keyword">short</span> a=<span class="number">10</span>;<span class="comment">//同理</span></span><br><span class="line">	<span class="keyword">byte</span> d=b+c;<span class="comment">//此处报错，Type mismatch: cannot convert from int to byte，b+c时候，自动转换成int类型</span></span><br><span class="line">	<span class="keyword">short</span> s=b;<span class="comment">//此处没问题</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Arrays工具类中的一个方法"><a href="#Arrays工具类中的一个方法" class="headerlink" title="Arrays工具类中的一个方法"></a>Arrays工具类中的一个方法</h1><p><code>public static &lt;T&gt; List&lt;T&gt; asList(T... a)</code>//其实是一个视图</p>
+<p>得到的List集合只能查改，不能增删。</p>
+<p>而且List改变，其数组也会改变。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       String[] arr=&#123;<span class="string">"aa"</span>,<span class="string">"bb"</span>,<span class="string">"cc"</span>&#125;;</span><br><span class="line">       List&lt;String&gt; items=Arrays.asList(arr);<span class="comment">//视图技术</span></span><br><span class="line">       <span class="comment">//List&lt;String&gt; items= Arrays.asList("aa","bb","cc");//也可以这样</span></span><br><span class="line">       System.out.println(items.size());</span><br><span class="line">       <span class="comment">//查，可以</span></span><br><span class="line">       <span class="keyword">for</span> (String s:items)&#123;</span><br><span class="line">           System.out.println(s+<span class="string">"---"</span>+s.length());</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">//增，出现异常</span></span><br><span class="line">      <span class="comment">// items.add("dd");//UnsupportedOperationException</span></span><br><span class="line"></span><br><span class="line">       <span class="comment">//删除，出现异常</span></span><br><span class="line">       <span class="comment">//items.remove(0);//UnsupportedOperationException</span></span><br><span class="line"></span><br><span class="line">       <span class="comment">//改,可以</span></span><br><span class="line">       items.set(<span class="number">0</span>,<span class="string">"wjj"</span>);</span><br><span class="line">       System.out.println(items);<span class="comment">//[wjj, bb, cc]</span></span><br><span class="line">       System.out.println(arr[<span class="number">0</span>]);<span class="comment">//wjj,也改变了原数组</span></span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="集合和数组的相互转换"><a href="#集合和数组的相互转换" class="headerlink" title="集合和数组的相互转换"></a>集合和数组的相互转换</h1><p>集合——-&gt;数组</p>
+<p>1、<code>Object[] toArray()</code>//强烈不推荐！</p>
+<p>2、 <code>&lt;T&gt; T[] toArray(T[] a)</code>强烈推荐！</p>
+<p>数组——-&gt;集合</p>
+<p><code>public static  &lt;T&gt;  List&lt;T&gt; asList(T...  a)</code></p>
 
       
     </div>
@@ -674,8 +599,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/26/Java命名规范/" rel="next" title="Java命名规范">
-                <i class="fa fa-chevron-left"></i> Java命名规范
+              <a href="/2019/04/13/泛型Generics/" rel="next" title="泛型Generics">
+                <i class="fa fa-chevron-left"></i> 泛型Generics
               </a>
             
           </div>
@@ -683,10 +608,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/28/位运算符面试问题/" rel="prev" title="位运算符面试问题">
-                位运算符面试问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -873,7 +794,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java变量的分类与自动类型转换"><span class="nav-number">1.</span> <span class="nav-text">Java变量的分类与自动类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的分类"><span class="nav-number">1.1.</span> <span class="nav-text">变量的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#局部变量（local-variable）"><span class="nav-number">1.1.1.</span> <span class="nav-text">局部变量（local variable）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成员变量（也叫实例变量-member-variable）"><span class="nav-number">1.1.2.</span> <span class="nav-text">成员变量（也叫实例变量 member variable）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态变量（类变量-static-variable）"><span class="nav-number">1.1.3.</span> <span class="nav-text">静态变量（类变量 static variable）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动类型转换"><span class="nav-number">1.2.</span> <span class="nav-text">自动类型转换</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#增强for概述"><span class="nav-number">1.</span> <span class="nav-text">增强for概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#格式："><span class="nav-number">1.1.</span> <span class="nav-text">格式：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可变参数"><span class="nav-number">2.</span> <span class="nav-text">可变参数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#格式"><span class="nav-number">2.1.</span> <span class="nav-text">格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意："><span class="nav-number">2.2.</span> <span class="nav-text">注意：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Arrays工具类中的一个方法"><span class="nav-number">3.</span> <span class="nav-text">Arrays工具类中的一个方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合和数组的相互转换"><span class="nav-number">4.</span> <span class="nav-text">集合和数组的相互转换</span></a></li></ol></div>
             
 
           </div>
