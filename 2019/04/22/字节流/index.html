@@ -103,19 +103,19 @@
 
 
 
-  <meta name="description" content="第一章 IO流的四个基类    输入流 输出流     字节流 字节输入流InputStream 字节输出流OutputStream   字符流 字符输入流Reader 字符输出流Writer    第二章 字节流2.1 一切皆为字节一切文件数据(文本、图片、视频等)在存储时，都是以二进制数字的形式保存，都一个一个的字节，那么传输时一样如此。所以，字节流可以传输任意文件数据。在操作流的时候，我们要">
+  <meta name="description" content="第一章 IO流的四个基类    输入流 输出流     字节流 字节输入流InputStream 字节输出流OutputStream   字符流 字符输入流Reader 字符输出流Writer    第二章 字节流 2.1 一切皆为字节一切文件数据(文本、图片、视频等)在存储时，都是以二进制数字的形式保存，都一个一个的字节，那么传输时一样如此。所以，字节流可以传输任意文件数据。在操作流的时候，我们">
 <meta name="keywords" content="JavaSE,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="字节流">
 <meta property="og:url" content="https://WJJ711.github.io/2019/04/22/字节流/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="第一章 IO流的四个基类    输入流 输出流     字节流 字节输入流InputStream 字节输出流OutputStream   字符流 字符输入流Reader 字符输出流Writer    第二章 字节流2.1 一切皆为字节一切文件数据(文本、图片、视频等)在存储时，都是以二进制数字的形式保存，都一个一个的字节，那么传输时一样如此。所以，字节流可以传输任意文件数据。在操作流的时候，我们要">
+<meta property="og:description" content="第一章 IO流的四个基类    输入流 输出流     字节流 字节输入流InputStream 字节输出流OutputStream   字符流 字符输入流Reader 字符输出流Writer    第二章 字节流 2.1 一切皆为字节一切文件数据(文本、图片、视频等)在存储时，都是以二进制数字的形式保存，都一个一个的字节，那么传输时一样如此。所以，字节流可以传输任意文件数据。在操作流的时候，我们">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wjj711.github.io/2019/04/22/字节流/缓冲区流.png">
-<meta property="og:updated_time" content="2019-04-22T14:41:41.702Z">
+<meta property="og:updated_time" content="2019-04-23T03:51:32.758Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字节流">
-<meta name="twitter:description" content="第一章 IO流的四个基类    输入流 输出流     字节流 字节输入流InputStream 字节输出流OutputStream   字符流 字符输入流Reader 字符输出流Writer    第二章 字节流2.1 一切皆为字节一切文件数据(文本、图片、视频等)在存储时，都是以二进制数字的形式保存，都一个一个的字节，那么传输时一样如此。所以，字节流可以传输任意文件数据。在操作流的时候，我们要">
+<meta name="twitter:description" content="第一章 IO流的四个基类    输入流 输出流     字节流 字节输入流InputStream 字节输出流OutputStream   字符流 字符输入流Reader 字符输出流Writer    第二章 字节流 2.1 一切皆为字节一切文件数据(文本、图片、视频等)在存储时，都是以二进制数字的形式保存，都一个一个的字节，那么传输时一样如此。所以，字节流可以传输任意文件数据。在操作流的时候，我们">
 <meta name="twitter:image" content="https://wjj711.github.io/2019/04/22/字节流/缓冲区流.png">
 
 
@@ -402,12 +402,24 @@
                 
               
 
-              <time title="创建时间：2019-04-22 14:57:27 / 修改时间：22:41:41" itemprop="dateCreated datePublished" datetime="2019-04-22T14:57:27+08:00">2019-04-22</time>
+              <time title="创建时间：2019-04-22 14:57:27" itemprop="dateCreated datePublished" datetime="2019-04-22T14:57:27+08:00">2019-04-22</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-23 11:51:32" itemprop="dateModified" datetime="2019-04-23T11:51:32+08:00">2019-04-23</time>
               
             
           </span>
@@ -528,7 +540,8 @@
 </tr>
 </tbody>
 </table>
-<h1 id="第二章-字节流"><a href="#第二章-字节流" class="headerlink" title="第二章 字节流"></a>第二章 字节流</h1><h2 id="2-1-一切皆为字节"><a href="#2-1-一切皆为字节" class="headerlink" title="2.1 一切皆为字节"></a>2.1 一切皆为字节</h2><p>一切文件数据(文本、图片、视频等)在存储时，都是以二进制数字的形式保存，都一个一个的字节，那么传输时一样如此。所以，字节流可以传输任意文件数据。在操作流的时候，我们要时刻明确，无论使用什么样的流对象，底层传输的始终为二进制数据。</p>
+<h1 id="第二章-字节流"><a href="#第二章-字节流" class="headerlink" title="第二章 字节流"></a>第二章 字节流</h1>
+<h2 id="2-1-一切皆为字节"><a href="#2-1-一切皆为字节" class="headerlink" title="2.1 一切皆为字节"></a>2.1 一切皆为字节</h2><p>一切文件数据(文本、图片、视频等)在存储时，都是以二进制数字的形式保存，都一个一个的字节，那么传输时一样如此。所以，字节流可以传输任意文件数据。在操作流的时候，我们要时刻明确，无论使用什么样的流对象，底层传输的始终为二进制数据。</p>
 <h2 id="2-2-字节输出流【OutputStream】"><a href="#2-2-字节输出流【OutputStream】" class="headerlink" title="2.2 字节输出流【OutputStream】"></a>2.2 字节输出流【OutputStream】</h2><p><code>java.io.OutputStream</code>抽象类是表示字节输出流的所有类的超类，将指定的字节信息写出到目的地。它定义了字节输出流的基本共性功能方法。</p>
 <ul>
 <li><code>public void close()</code> ：关闭此输出流并释放与此流相关联的任何系统资源。  </li>
@@ -728,6 +741,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/04/23/字符流/" rel="prev" title="字符流">
+                字符流 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -801,7 +818,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">35</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -957,7 +974,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">88k</span>
+    <span title="站点总字数">96k</span>
   
 
   
@@ -966,7 +983,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:20</span>
+    <span title="站点阅读时长">1:28</span>
   
 </div>
 
