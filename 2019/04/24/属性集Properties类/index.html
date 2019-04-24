@@ -103,17 +103,18 @@
 
 
 
-  <meta name="description" content="我会努力变得更好！">
+  <meta name="description" content="第六章 属性集6.1 概述java.util.Properties 继承于Hashtable ，来表示一个持久的属性集。它使用键值结构存储数据，每个键及其对应值都是一个字符串。该类也被许多Java类使用，比如获取系统属性时，System.getProperties 方法就是返回一个Properties对象。 6.2 Properties类构造方法 public Properties() :创建一个">
+<meta name="keywords" content="JavaSE,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="属性集Properties类">
 <meta property="og:url" content="https://WJJ711.github.io/2019/04/24/属性集Properties类/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="我会努力变得更好！">
+<meta property="og:description" content="第六章 属性集6.1 概述java.util.Properties 继承于Hashtable ，来表示一个持久的属性集。它使用键值结构存储数据，每个键及其对应值都是一个字符串。该类也被许多Java类使用，比如获取系统属性时，System.getProperties 方法就是返回一个Properties对象。 6.2 Properties类构造方法 public Properties() :创建一个">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-24T09:47:50.830Z">
+<meta property="og:updated_time" content="2019-04-24T13:44:44.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="属性集Properties类">
-<meta name="twitter:description" content="我会努力变得更好！">
+<meta name="twitter:description" content="第六章 属性集6.1 概述java.util.Properties 继承于Hashtable ，来表示一个持久的属性集。它使用键值结构存储数据，每个键及其对应值都是一个字符串。该类也被许多Java类使用，比如获取系统属性时，System.getProperties 方法就是返回一个Properties对象。 6.2 Properties类构造方法 public Properties() :创建一个">
 
 
 
@@ -399,12 +400,34 @@
                 
               
 
-              <time title="创建时间：2019-04-24 17:47:50" itemprop="dateCreated datePublished" datetime="2019-04-24T17:47:50+08:00">2019-04-24</time>
+              <time title="创建时间：2019-04-24 17:47:50 / 修改时间：21:44:44" itemprop="dateCreated datePublished" datetime="2019-04-24T17:47:50+08:00">2019-04-24</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaSE/" itemprop="url" rel="index"><span itemprop="name">JavaSE</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -448,7 +471,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">0</span>
+                <span title="本文字数">2.8k</span>
               
 
               
@@ -462,7 +485,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -482,7 +505,25 @@
       
 
       
-        
+        <h1 id="第六章-属性集"><a href="#第六章-属性集" class="headerlink" title="第六章 属性集"></a>第六章 属性集</h1><h2 id="6-1-概述"><a href="#6-1-概述" class="headerlink" title="6.1 概述"></a>6.1 概述</h2><p><code>java.util.Properties</code> 继承于<code>Hashtable</code> ，来表示一个持久的属性集。它使用键值结构存储数据，每个键及其对应值都是一个字符串。该类也被许多Java类使用，比如获取系统属性时，<code>System.getProperties</code> 方法就是返回一个<code>Properties</code>对象。</p>
+<h2 id="6-2-Properties类"><a href="#6-2-Properties类" class="headerlink" title="6.2 Properties类"></a>6.2 Properties类</h2><h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><ul>
+<li><code>public Properties()</code> :创建一个空的属性列表。</li>
+</ul>
+<h3 id="基本的存储方法"><a href="#基本的存储方法" class="headerlink" title="基本的存储方法"></a>基本的存储方法</h3><ul>
+<li><code>public Object setProperty(String key, String value)</code> ： 保存一对属性。  </li>
+<li><code>public String getProperty(String key)</code> ：使用此属性列表中指定的键搜索属性值。</li>
+<li><code>public Set&lt;String&gt; stringPropertyNames()</code> ：所有键的名称的集合。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PropertiesDemo1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//创建属性集对象</span></span><br><span class="line">        Properties properties=<span class="keyword">new</span> Properties();</span><br><span class="line">        <span class="comment">//添加键值对元素</span></span><br><span class="line">        properties.setProperty(<span class="string">"filename"</span>,<span class="string">"a.txt"</span>);</span><br><span class="line">        properties.setProperty(<span class="string">"length"</span>,<span class="string">"233333"</span>);</span><br><span class="line">        properties.setProperty(<span class="string">"location"</span>,<span class="string">"D:/a.txt"</span>);</span><br><span class="line">        <span class="comment">//打印属性集对象</span></span><br><span class="line">        System.out.println(properties);<span class="comment">//&#123;filename=a.txt, length=233333, location=D:/a.txt&#125;</span></span><br><span class="line">        <span class="comment">//通过键，获取属性值</span></span><br><span class="line">        System.out.println(properties.getProperty(<span class="string">"filename"</span>));<span class="comment">//a.txt</span></span><br><span class="line">        System.out.println(properties.getProperty(<span class="string">"length"</span>));<span class="comment">//233333</span></span><br><span class="line">        System.out.println(properties.getProperty(<span class="string">"location"</span>));<span class="comment">//D:/a.txt</span></span><br><span class="line">        <span class="comment">//遍历属性集，获取所有键的集合</span></span><br><span class="line">        Set&lt;String&gt; strings = properties.stringPropertyNames();</span><br><span class="line">        <span class="keyword">for</span>(String key:strings)&#123;</span><br><span class="line">            System.out.println(key+<span class="string">"="</span>+properties.getProperty(key));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            filename=a.txt</span></span><br><span class="line"><span class="comment">            length=233333</span></span><br><span class="line"><span class="comment">            location=D:/a.txt        </span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="6-3与流相关的方法"><a href="#6-3与流相关的方法" class="headerlink" title="6.3与流相关的方法"></a>6.3与流相关的方法</h2><p><code>public void load(InputStream inStream)</code>： 从字节输入流中读取键值对。 </p>
+<p><code>public void load(Reader reader)</code>:从字符输入流中读取键值对。 </p>
+<p><code>public void store(OutputStream out, String comments)</code>:将此属性列表（键和元素对）写入此 Properties表中，以适合于使用 load(InputStream)方法加载到 Properties表中的格式输出流。</p>
+<p><code>void store(Writer writer, String comments)</code>:字符流，以适合使用 load(Reader)方法的格式输出到输出字符流。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PropertiesDemo1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//创建属性集对象</span></span><br><span class="line">        Properties properties=<span class="keyword">new</span> Properties();</span><br><span class="line">        <span class="comment">//添加键值对元素</span></span><br><span class="line">        properties.setProperty(<span class="string">"filename"</span>,<span class="string">"a.txt"</span>);</span><br><span class="line">        properties.setProperty(<span class="string">"length"</span>,<span class="string">"233333"</span>);</span><br><span class="line">        properties.setProperty(<span class="string">"location"</span>,<span class="string">"D:/a.txt"</span>);</span><br><span class="line"></span><br><span class="line">        Writer writer=<span class="keyword">new</span> FileWriter(<span class="string">"a.properties"</span>);</span><br><span class="line">        properties.store(writer,<span class="string">"test"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>从文件中加载到properties</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PropertiesDemo1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Properties properties=<span class="keyword">new</span> Properties();</span><br><span class="line">        FileReader reader=<span class="keyword">new</span> FileReader(<span class="string">"a.properties"</span>);</span><br><span class="line">        properties.load(reader);<span class="comment">//加载文件</span></span><br><span class="line">        Set&lt;String&gt; strings = properties.stringPropertyNames();</span><br><span class="line">        <span class="keyword">for</span>(String string:strings)&#123;</span><br><span class="line">            System.out.println(string+<span class="string">"="</span>+properties.getProperty(string));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>小贴士：文本中的数据，必须是键值对形式，可以使用空格、等号、冒号等符号分隔。</p>
+
       
     </div>
 
@@ -535,6 +576,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaSE/" rel="tag"><i class="fa fa-google"></i> JavaSE</a>
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-google"></i> Java</a>
+          
+        </div>
       
 
       
@@ -601,8 +650,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -725,6 +783,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第六章-属性集"><span class="nav-number">1.</span> <span class="nav-text">第六章 属性集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-概述"><span class="nav-number">1.1.</span> <span class="nav-text">6.1 概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-Properties类"><span class="nav-number">1.2.</span> <span class="nav-text">6.2 Properties类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本的存储方法"><span class="nav-number">1.2.2.</span> <span class="nav-text">基本的存储方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3与流相关的方法"><span class="nav-number">1.3.</span> <span class="nav-text">6.3与流相关的方法</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -758,7 +833,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">102k</span>
+    <span title="站点总字数">104k</span>
   
 
   
@@ -767,7 +842,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:32</span>
+    <span title="站点阅读时长">1:35</span>
   
 </div>
 
