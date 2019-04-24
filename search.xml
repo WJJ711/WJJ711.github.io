@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[属性集Properties类]]></title>
+    <url>%2F2019%2F04%2F24%2F%E5%B1%9E%E6%80%A7%E9%9B%86Properties%E7%B1%BB%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[序列化流]]></title>
     <url>%2F2019%2F04%2F24%2F%E5%BA%8F%E5%88%97%E5%8C%96%E6%B5%81%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[第五章 序列化5.1 概述Java 提供了一种对象序列化的机制。用一个字节序列可以表示一个对象，该字节序列包含该对象的数据、对象的类型和对象中存储的属性等信息。字节序列写出到文件之后，相当于文件中持久保存了一个对象的信息。 对象序列化是将对象状态转换为可保持或传输的过程。一般的格式是与平台无关的二进制流，可以将这种二进制流持久保存在磁盘上，也可以通过网络将这种二进制流传输到另一个网络结点。 反之，该字节序列还可以从文件中读取回来，重构对象，对它进行反序列化。对象的数据、对象的类型和对象中存储的数据信息，都可以用来在内存中创建对象。对象反序列化，是指把这种二进制流数据还原成对象。 5.2 ObjectOutputStream类java.io.ObjectOutputStream 类，将Java对象的原始数据类型写出到文件,实现对象的持久存储。 构造方法 public ObjectOutputStream(OutputStream out)： 创建一个指定OutputStream的ObjectOutputStream。 构造举例，代码如下： 12FileOutputStream fileOut = new FileOutputStream("employee.txt");ObjectOutputStream out = new ObjectOutputStream(fileOut); 序列化操作 一个对象要想序列化，必须满足两个条件: 该类必须实现java.io.Serializable 接口，Serializable 是一个标记接口，不实现此接口的类将不会使任何状态序列化或反序列化，会抛出NotSerializableException 。 该类的所有属性必须是可序列化的。如果有一个属性不需要可序列化的，则该属性必须注明是瞬态的，使用transient 关键字修饰。 123456789101112131415161718192021222324252627282930313233343536public class Student implements Serializable &#123; private transient String name;//年龄为瞬态的 private int age; public Student() &#123; &#125; public Student(String name, int age) &#123; this.name = name; this.age = age; &#125; public String getName() &#123; return name; &#125; public void setName(String name) &#123; this.name = name; &#125; public int getAge() &#123; return age; &#125; public void setAge(int age) &#123; this.age = age; &#125; @Override public String toString() &#123; return "Student&#123;" + "name='" + name + '\'' + ", age=" + age + '&#125;'; &#125;&#125; 2.写出对象方法 public final void writeObject (Object obj) : 将指定的对象写出。 1234567891011121314public class ObjectSteamDemo1 &#123; public static void main(String[] args) throws IOException, ClassNotFoundException &#123; ObjectOutputStream out=new ObjectOutputStream(new FileOutputStream("Object.backup")); Student s = new Student("wjj", 18); out.writeObject(s);//写对象 out.close(); ObjectInputStream in=new ObjectInputStream(new FileInputStream("Object.backup")); Student o = ((Student) in.readObject());//读对象 System.out.println(o); System.out.println(s==o); &#125;&#125;输出结果：Student&#123;name='null', age=18&#125;//因为年龄是瞬态的 5.3 ObjectInputStream类ObjectInputStream反序列化流，将之前使用ObjectOutputStream序列化的原始数据恢复为对象。 构造方法 public ObjectInputStream(InputStream in)： 创建一个指定InputStream的ObjectInputStream。 反序列化操作1如果能找到一个对象的class文件，我们可以进行反序列化操作，调用ObjectInputStream读取对象的方法： public final Object readObject () : 读取一个对象。 对于JVM可以反序列化对象，它必须是能够找到class文件的类。如果找不到该类的class文件，则抛出一个 ClassNotFoundException 异常。 反序列化操作2另外，当JVM反序列化对象时，能找到class文件，但是class文件在序列化对象之后发生了修改，那么反序列化操作也会失败，抛出一个InvalidClassException异常。发生这个异常的原因如下： 该类的序列版本号与从流中读取的类描述符的版本号不匹配 该类包含未知数据类型 该类没有可访问的无参数构造方法 Serializable 接口给需要序列化的类，提供了一个序列版本号。serialVersionUID 该版本号的目的在于验证序列化的对象和对应类是否版本匹配。 123456public class Student implements Serializable &#123; private static final long serialVersionUID = -9527L; private String name; private int age; private String gender;&#125;]]></content>
+      <categories>
+        <category>JavaSE</category>
+      </categories>
+      <tags>
+        <tag>JavaSE</tag>
+        <tag>Java</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[打印流]]></title>
