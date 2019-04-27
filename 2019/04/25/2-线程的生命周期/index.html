@@ -116,7 +116,8 @@
 <meta property="og:image" content="https://wjj711.github.io/2019/04/25/2-线程的生命周期/Blocked.png">
 <meta property="og:image" content="https://wjj711.github.io/2019/04/25/2-线程的生命周期/Waiting.png">
 <meta property="og:image" content="https://wjj711.github.io/2019/04/25/2-线程的生命周期/线程生命图.png">
-<meta property="og:updated_time" content="2019-04-25T14:59:28.770Z">
+<meta property="og:image" content="https://wjj711.github.io/2019/04/25/2-线程的生命周期/线程生命周期图2.png">
+<meta property="og:updated_time" content="2019-04-26T12:12:39.060Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2.线程的生命周期">
 <meta name="twitter:description" content="当线程被创建并启动以后，它既不是一启动就进入了执行状态，也不是一直处于执行状态。在线程的生命周期中，有几种状态呢？在API中 java.lang.Thread.State 这个枚举中给出了六种线程状态：  1.Timed Waiting （计时等待)Timed Waiting在API中的描述为：正在等待另一个线程执行动作达到指定等待时间的线程处于此状态。单独的去理解这句话，真是玄之又玄，其实我们在">
@@ -406,12 +407,24 @@
                 
               
 
-              <time title="创建时间：2019-04-25 15:28:09 / 修改时间：22:59:28" itemprop="dateCreated datePublished" datetime="2019-04-25T15:28:09+08:00">2019-04-25</time>
+              <time title="创建时间：2019-04-25 15:28:09" itemprop="dateCreated datePublished" datetime="2019-04-25T15:28:09+08:00">2019-04-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-26 20:12:39" itemprop="dateModified" datetime="2019-04-26T20:12:39+08:00">2019-04-26</time>
               
             
           </span>
@@ -516,9 +529,9 @@
 <h1 id="1-Timed-Waiting-（计时等待"><a href="#1-Timed-Waiting-（计时等待" class="headerlink" title="1.Timed Waiting （计时等待)"></a>1.Timed Waiting （计时等待)</h1><p>Timed Waiting在API中的描述为：正在等待另一个线程执行动作达到指定等待时间的线程处于此状态。单独<br>的去理解这句话，真是玄之又玄，其实我们在之前的操作中已经接触过这个状态了，在哪里呢？<br>在我们写卖票的案例中，为了模拟网络延时，在run方法中添加了sleep语句，这样就强制当前正在执行的线程休眠（暂停执行），以“减慢线程”。<br>其实当我们调用了sleep方法之后，当前执行的线程就进入到“休眠状态”，其实就是所谓的Timed Waiting(计时等<br>待)。</p>
 <p>通过案例可以发现， sleep方法的使用还是很简单的。我们需要记住下面几点：</p>
 <ol>
-<li><p>进入 TIMED_WAITING 状态的一种常见情形是调用的 sleep 方法，单独的线程也可以调用，不一定非要有协<br>作关系。</p>
+<li><p>进入 TIMED_WAITING 状态的一种常见情形是调用的 sleep 方法，单独的线程也可以调用，不一定非要有协<br> 作关系。</p>
 </li>
-<li><p>为了让其他线程有机会执行，可以将Thread.sleep()的调用放线程run()之内。这样才能保证该线程执行过程<br>中会睡眠</p>
+<li><p>为了让其他线程有机会执行，可以将Thread.sleep()的调用放线程run()之内。这样才能保证该线程执行过程<br> 中会睡眠</p>
 </li>
 <li><p>sleep与锁无关，线程睡眠到期自动苏醒，并返回到Runnable（可运行）状态。</p>
 <blockquote>
@@ -534,7 +547,7 @@
 <p>一个调用了某个对象的 Object.wait 方法的线程会等待另一个线程调用此对象的<br>Object.notify()方法 或 Object.notifyAll()方法。<br>其实waiting状态并不是一个线程的操作，它体现的是多个线程间的通信，可以理解为多个线程之间的协作关系，<br>多个线程会争取锁，同时相互之间又存在协作关系。<br>当多个线程协作时，比如A，B线程，如果A线程在Runnable（可运行）状态中调用了wait()方法那么A线程就进入<br>了Waiting（无限等待）状态，同时失去了同步锁。假如这个时候B线程获取到了同步锁，在运行状态中调用了<br>notify()方法，那么就会将无限等待的A线程唤醒。注意是唤醒，如果获取到锁对象，那么A线程唤醒后就进入<br>Runnable（可运行）状态；如果没有获取锁对象，那么就进入到Blocked（锁阻塞状态）。</p>
 <img src="/2019/04/25/2-线程的生命周期/Waiting.png">
 <h1 id="4-综上"><a href="#4-综上" class="headerlink" title="4.综上"></a>4.综上</h1><img src="/2019/04/25/2-线程的生命周期/线程生命图.png">
-
+<img src="/2019/04/25/2-线程的生命周期/线程生命周期图2.png">
       
     </div>
 
@@ -692,7 +705,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">41</span>
+                    <span class="site-state-item-count">44</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -848,7 +861,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">113k</span>
+    <span title="站点总字数">119k</span>
   
 
   
@@ -857,7 +870,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:43</span>
+    <span title="站点阅读时长">1:49</span>
   
 </div>
 
