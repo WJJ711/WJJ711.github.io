@@ -103,25 +103,28 @@
 
 
 
-  <meta name="description" content="第四章 打印流4.1 概述平时我们在控制台打印输出，是调用print方法和println方法完成的，这两个方法都来自于java.io.PrintStream类，该类能够方便地打印各种数据类型的值，是一种便捷的输出方式。 4.2 PrintStream类构造方法 public PrintStream(String fileName)： 使用指定的文件名创建一个新的打印流。  构造举例，代码如下：">
+  <meta name="description" content="第一章  概述TCP通信能实现两台计算机之间的数据交互，通信的两端，要严格区分为客户端（Client）与服务端（Server）。 两端通信时步骤：  服务端程序，需要事先启动，等待客户端的连接。 客户端主动连接服务器端，连接成功才能通信。服务端不可以主动连接客户端。  在Java中，提供了两个类用于实现TCP通信程序：  客户端：java.net.Socket 类表示。创建Socket对象，向服务">
 <meta name="keywords" content="JavaSE,Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="打印流">
-<meta property="og:url" content="https://WJJ711.github.io/2019/04/24/打印流/index.html">
+<meta property="og:title" content="7.TCP通信程序">
+<meta property="og:url" content="https://WJJ711.github.io/2019/04/29/7-TCP通信程序/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="第四章 打印流4.1 概述平时我们在控制台打印输出，是调用print方法和println方法完成的，这两个方法都来自于java.io.PrintStream类，该类能够方便地打印各种数据类型的值，是一种便捷的输出方式。 4.2 PrintStream类构造方法 public PrintStream(String fileName)： 使用指定的文件名创建一个新的打印流。  构造举例，代码如下：">
+<meta property="og:description" content="第一章  概述TCP通信能实现两台计算机之间的数据交互，通信的两端，要严格区分为客户端（Client）与服务端（Server）。 两端通信时步骤：  服务端程序，需要事先启动，等待客户端的连接。 客户端主动连接服务器端，连接成功才能通信。服务端不可以主动连接客户端。  在Java中，提供了两个类用于实现TCP通信程序：  客户端：java.net.Socket 类表示。创建Socket对象，向服务">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-24T07:47:17.150Z">
+<meta property="og:image" content="d:/blog/WJJ711/source/_posts/7-TCP通信程序/TCP简单通信.jpg">
+<meta property="og:image" content="https://wjj711.github.io/2019/04/29/7-TCP通信程序/TCP简单通信.jpg">
+<meta property="og:updated_time" content="2019-04-29T03:43:14.510Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="打印流">
-<meta name="twitter:description" content="第四章 打印流4.1 概述平时我们在控制台打印输出，是调用print方法和println方法完成的，这两个方法都来自于java.io.PrintStream类，该类能够方便地打印各种数据类型的值，是一种便捷的输出方式。 4.2 PrintStream类构造方法 public PrintStream(String fileName)： 使用指定的文件名创建一个新的打印流。  构造举例，代码如下：">
+<meta name="twitter:title" content="7.TCP通信程序">
+<meta name="twitter:description" content="第一章  概述TCP通信能实现两台计算机之间的数据交互，通信的两端，要严格区分为客户端（Client）与服务端（Server）。 两端通信时步骤：  服务端程序，需要事先启动，等待客户端的连接。 客户端主动连接服务器端，连接成功才能通信。服务端不可以主动连接客户端。  在Java中，提供了两个类用于实现TCP通信程序：  客户端：java.net.Socket 类表示。创建Socket对象，向服务">
+<meta name="twitter:image" content="d:/blog/WJJ711/source/_posts/7-TCP通信程序/TCP简单通信.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://WJJ711.github.io/2019/04/24/打印流/">
+  <link rel="canonical" href="https://WJJ711.github.io/2019/04/29/7-TCP通信程序/">
 
 
 
@@ -131,7 +134,7 @@
   };
 </script>
 
-  <title>打印流 | wjjのhomepage</title>
+  <title>7.TCP通信程序 | wjjのhomepage</title>
   
 
 
@@ -357,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/24/打印流/">
+    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/29/7-TCP通信程序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wjj">
@@ -374,7 +377,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">打印流
+          <h1 class="post-title" itemprop="name headline">7.TCP通信程序
 
               
             
@@ -400,7 +403,7 @@
                 
               
 
-              <time title="创建时间：2019-04-24 10:19:13 / 修改时间：15:47:17" itemprop="dateCreated datePublished" datetime="2019-04-24T10:19:13+08:00">2019-04-24</time>
+              <time title="创建时间：2019-04-29 11:06:52 / 修改时间：11:43:14" itemprop="dateCreated datePublished" datetime="2019-04-29T11:06:52+08:00">2019-04-29</time>
             
 
             
@@ -441,8 +444,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/24/打印流/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/24/打印流/" itemprop="commentCount"></span>
+                <a href="/2019/04/29/7-TCP通信程序/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/29/7-TCP通信程序/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -471,7 +474,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.1k</span>
+                <span title="本文字数">5.9k</span>
               
 
               
@@ -485,7 +488,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">5 分钟</span>
               
             </div>
           
@@ -505,29 +508,81 @@
       
 
       
-        <h1 id="第四章-打印流"><a href="#第四章-打印流" class="headerlink" title="第四章 打印流"></a>第四章 打印流</h1><h2 id="4-1-概述"><a href="#4-1-概述" class="headerlink" title="4.1 概述"></a>4.1 概述</h2><p>平时我们在控制台打印输出，是调用<code>print</code>方法和<code>println</code>方法完成的，这两个方法都来自于<code>java.io.PrintStream</code>类，该类能够方便地打印各种数据类型的值，是一种便捷的输出方式。</p>
-<h2 id="4-2-PrintStream类"><a href="#4-2-PrintStream类" class="headerlink" title="4.2 PrintStream类"></a>4.2 PrintStream类</h2><h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><ul>
-<li><code>public PrintStream(String fileName)</code>： 使用指定的文件名创建一个新的打印流。</li>
+        <h1 id="第一章-概述"><a href="#第一章-概述" class="headerlink" title="第一章  概述"></a>第一章  概述</h1><p>TCP通信能实现两台计算机之间的数据交互，通信的两端，要严格区分为客户端（Client）与服务端（Server）。</p>
+<p><strong>两端通信时步骤：</strong></p>
+<ol>
+<li>服务端程序，需要事先启动，等待客户端的连接。</li>
+<li>客户端主动连接服务器端，连接成功才能通信。服务端不可以主动连接客户端。</li>
+</ol>
+<p><strong>在Java中，提供了两个类用于实现TCP通信程序：</strong></p>
+<ol>
+<li>客户端：<code>java.net.Socket</code> 类表示。创建<code>Socket</code>对象，向服务端发出连接请求，服务端响应请求，两者建立连接开始通信。</li>
+<li>服务端：<code>java.net.ServerSocket</code> 类表示。创建<code>ServerSocket</code>对象，相当于开启一个服务，并等待客户端的连接。</li>
+</ol>
+<h1 id="第二章-Socket类"><a href="#第二章-Socket类" class="headerlink" title="第二章 Socket类"></a>第二章 Socket类</h1><p><code>Socket</code> 类：该类实现客户端套接字，套接字指的是两台设备之间通讯的端点。</p>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><ul>
+<li><p><code>public Socket(String host, int port)</code> :创建套接字对象并将其连接到指定主机上的指定端口号。如果指定的host是null ，则相当于指定地址为回送地址。  </p>
+<blockquote>
+<p>小贴士：回送地址(127.x.x.x) 是本机回送地址（Loopback Address），主要用于网络软件测试以及本地机进程间通信，无论什么程序，一旦使用回送地址发送数据，立即返回，不进行任何网络传输。</p>
+</blockquote>
+</li>
 </ul>
-<p>构造举例，代码如下：  </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PrintStream ps = <span class="keyword">new</span> PrintStream(<span class="string">"ps.txt"</span>)；</span><br></pre></td></tr></table></figure>
-<h3 id="改变打印流向"><a href="#改变打印流向" class="headerlink" title="改变打印流向"></a>改变打印流向</h3><p><code>System.out</code>就是<code>PrintStream</code>类型的，只不过它的流向是系统规定的，打印在控制台上。不过，既然是流对象，我们就可以玩一个”小把戏”，改变它的流向。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrintDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">		<span class="comment">// 调用系统的打印流,控制台直接输出97</span></span><br><span class="line">        System.out.println(<span class="number">97</span>);</span><br><span class="line">      </span><br><span class="line">		<span class="comment">// 创建打印流,指定文件的名称</span></span><br><span class="line">        PrintStream ps = <span class="keyword">new</span> PrintStream(<span class="string">"ps.txt"</span>);</span><br><span class="line">      	</span><br><span class="line">      	<span class="comment">// 设置系统的打印流流向,输出到ps.txt</span></span><br><span class="line">        System.setOut(ps);</span><br><span class="line">      	<span class="comment">// 调用系统的打印流,ps.txt中输出97</span></span><br><span class="line">        System.out.println(<span class="number">97</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4-3-标准输入输出流"><a href="#4-3-标准输入输出流" class="headerlink" title="4.3 标准输入输出流"></a>4.3 标准输入输出流</h2><p>System类中的字段：in，out。</p>
-<p>它们各代表了系统标准的输入和输出设备。</p>
-<p>默认输入设备是键盘，输出设备是显示器。</p>
-<p>System.in的类型是InputStream.</p>
-<p>System.out的类型是PrintStream是OutputStream的子类FilterOutputStream 的子类.</p>
-<h2 id="4-4流的重定向"><a href="#4-4流的重定向" class="headerlink" title="4.4流的重定向"></a>4.4流的重定向</h2><ol>
-<li>输入流重定向</li>
+<p>构造举例，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Socket client = <span class="keyword">new</span> Socket(<span class="string">"127.0.0.1"</span>, <span class="number">6666</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="成员方法"><a href="#成员方法" class="headerlink" title="成员方法"></a>成员方法</h3><ul>
+<li><code>public InputStream getInputStream()</code> ： 返回此套接字的输入流。<ul>
+<li>如果此Scoket具有相关联的通道，则生成的InputStream 的所有操作也关联该通道。</li>
+<li>关闭生成的InputStream也将关闭相关的Socket。</li>
+</ul>
+</li>
+<li><code>public OutputStream getOutputStream()</code> ： 返回此套接字的输出流。<ul>
+<li>如果此Scoket具有相关联的通道，则生成的OutputStream 的所有操作也关联该通道。</li>
+<li>关闭生成的OutputStream也将关闭相关的Socket。</li>
+</ul>
+</li>
+<li><code>public void close()</code> ：关闭此套接字。<ul>
+<li>一旦一个socket被关闭，它不可再使用。</li>
+<li>关闭此socket也将关闭相关的InputStream和OutputStream 。 </li>
+</ul>
+</li>
+<li><code>public void shutdownOutput()</code> ： 禁用此套接字的输出流。   <ul>
+<li>任何先前写出的数据将被发送，随后终止输出流。 </li>
+</ul>
+</li>
+</ul>
+<h1 id="第三章ServerSocket类"><a href="#第三章ServerSocket类" class="headerlink" title="第三章ServerSocket类"></a>第三章ServerSocket类</h1><p><code>ServerSocket</code>类：这个类实现了服务器套接字，该对象等待通过网络的请求。</p>
+<h3 id="构造方法-1"><a href="#构造方法-1" class="headerlink" title="构造方法"></a>构造方法</h3><ul>
+<li><code>public ServerSocket(int port)</code> ：使用该构造方法在创建ServerSocket对象时，就可以将其绑定到一个指定的端口号上，参数port就是端口号。</li>
+</ul>
+<p>构造举例，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServerSocket server = <span class="keyword">new</span> ServerSocket(<span class="number">6666</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="成员方法-1"><a href="#成员方法-1" class="headerlink" title="成员方法"></a>成员方法</h3><ul>
+<li><code>public Socket accept()</code> ：侦听并接受连接，返回一个新的Socket对象，用于和客户端实现通信。该方法会一直阻塞直到建立连接。 </li>
+</ul>
+<h1 id="第三章-简单的TCP网络程序"><a href="#第三章-简单的TCP网络程序" class="headerlink" title="第三章 简单的TCP网络程序"></a>第三章 简单的TCP网络程序</h1><h2 id="TCP传输-客户端思路"><a href="#TCP传输-客户端思路" class="headerlink" title="TCP传输-客户端思路"></a>TCP传输-客户端思路</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*创建客户端</span><br><span class="line">* 1、建立连接：使用Socket创建客户端+服务器的地址和端口</span><br><span class="line">* 2、操作：输入输出流操作</span><br><span class="line">* 3、释放资源</span><br></pre></td></tr></table></figure>
+<h1 id="TCP传输-服务器端思路"><a href="#TCP传输-服务器端思路" class="headerlink" title="TCP传输-服务器端思路"></a>TCP传输-服务器端思路</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* 创建服务器</span><br><span class="line">* 1.指定端口：使用ServerSocket创建服务器</span><br><span class="line">* 2.阻塞式等待连接accept</span><br><span class="line">* 3.操作：输入输出流操作</span><br><span class="line">* 4.关闭资源</span><br></pre></td></tr></table></figure>
+<h3 id="TCP通信分析图解"><a href="#TCP通信分析图解" class="headerlink" title="TCP通信分析图解"></a>TCP通信分析图解</h3><blockquote>
+<p>到此，客户端向服务端发送数据成功。</p>
+</blockquote>
+<p><img src="D:\blog\WJJ711\source\_posts\7-TCP通信程序\TCP简单通信.jpg" alt="TCP简单通信"></p>
+<img src="/2019/04/29/7-TCP通信程序/TCP简单通信.jpg">
+<blockquote>
+<p>自此，服务端向客户端回写数据。</p>
+</blockquote>
+<ol start="6">
+<li>【服务端】Socket对象，获取OutputStream，向客户端回写数据。</li>
+<li>【客户端】Scoket对象，获取InputStream，解析回写数据。</li>
+<li>【客户端】释放资源，断开连接。</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IO10</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.setIn(<span class="keyword">new</span> FileInputStream(<span class="string">"in.txt"</span>));<span class="comment">//重定向，读该文件中的第一行数据</span></span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String s = scanner.nextLine();</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.输出流重定向</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IO10</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.setIn(<span class="keyword">new</span> FileInputStream(<span class="string">"in.txt"</span>));<span class="comment">//输入流重定向</span></span><br><span class="line">        System.setOut(<span class="keyword">new</span> PrintStream(<span class="string">"copy.txt"</span>));<span class="comment">//输出流重定向</span></span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">while</span> (scanner.hasNext())&#123;</span><br><span class="line">            String s = scanner.nextLine();</span><br><span class="line">            System.out.println(s);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>重定向回控制台</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IO10</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//重定向到文件</span></span><br><span class="line">        System.setOut(<span class="keyword">new</span> PrintStream(<span class="string">"dest.txt"</span>));</span><br><span class="line">        System.out.println(<span class="string">"i love you"</span>);</span><br><span class="line">        System.out.println(<span class="string">"i miss you"</span>);</span><br><span class="line">        <span class="comment">//重定向回控制台,用FileDescriptor.out重定向回控制台</span></span><br><span class="line">        System.setOut(<span class="keyword">new</span> PrintStream(<span class="keyword">new</span> FileOutputStream(FileDescriptor.out)));</span><br><span class="line">        System.out.println(<span class="string">"i love you"</span>);</span><br><span class="line">        System.out.println(<span class="string">"i miss you"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="客户端向服务器发送数据"><a href="#客户端向服务器发送数据" class="headerlink" title="客户端向服务器发送数据"></a>客户端向服务器发送数据</h3><p><strong>服务端实现：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> tcp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.DataInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.ServerSocket;</span><br><span class="line"><span class="keyword">import</span> java.net.Socket;</span><br><span class="line"><span class="keyword">import</span> java.util.logging.SocketHandler;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 创建服务器</span></span><br><span class="line"><span class="comment"> * 1.指定端口：使用ServerSocket创建服务器</span></span><br><span class="line"><span class="comment"> * 2.阻塞式等待连接accept</span></span><br><span class="line"><span class="comment"> * 3.操作：输入输出流操作</span></span><br><span class="line"><span class="comment"> * 4.关闭资源</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Server</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"------Server------------"</span>);</span><br><span class="line">        <span class="comment">//1指定端口：使用ServerSocket创建服务器</span></span><br><span class="line">        ServerSocket server=<span class="keyword">new</span> ServerSocket(<span class="number">8888</span>);</span><br><span class="line">        <span class="comment">//2.阻塞式等待连接</span></span><br><span class="line">        Socket client = server.accept();</span><br><span class="line">        System.out.println(<span class="string">"一个客户端建立了连接"</span>);</span><br><span class="line">        <span class="comment">//3操作</span></span><br><span class="line">        DataInputStream dis=<span class="keyword">new</span> DataInputStream(client.getInputStream());</span><br><span class="line">        System.out.println(dis.readUTF());</span><br><span class="line">        <span class="comment">//4关闭资源</span></span><br><span class="line">        dis.close();</span><br><span class="line">        client.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>客户端实现：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> tcp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.DataOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.Socket;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 创建客户端</span></span><br><span class="line"><span class="comment"> * 1、建立连接：使用Socket创建客户端+服务器的地址和端口</span></span><br><span class="line"><span class="comment"> * 2、操作：输入输出流操作</span></span><br><span class="line"><span class="comment"> * 3、释放资源</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"---------Client------------"</span>);</span><br><span class="line">        <span class="comment">//建立连接</span></span><br><span class="line">        Socket client=<span class="keyword">new</span> Socket(<span class="string">"localhost"</span>,<span class="number">8888</span>);</span><br><span class="line">        <span class="comment">//2操作</span></span><br><span class="line">        DataOutputStream dos=<span class="keyword">new</span> DataOutputStream(client.getOutputStream());</span><br><span class="line">        String s=<span class="string">"hello"</span>;</span><br><span class="line">        dos.writeUTF(s);</span><br><span class="line"></span><br><span class="line">        dos.close();</span><br><span class="line">        client.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="服务器向客户端回写数据"><a href="#服务器向客户端回写数据" class="headerlink" title="服务器向客户端回写数据"></a>服务器向客户端回写数据</h3><p><strong>服务端实现：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> tcp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.DataInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.DataOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.ServerSocket;</span><br><span class="line"><span class="keyword">import</span> java.net.Socket;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 模拟登陆：双向</span></span><br><span class="line"><span class="comment"> * 创建服务器</span></span><br><span class="line"><span class="comment"> * 1、指定端口</span></span><br><span class="line"><span class="comment"> * 2、阻塞式等待连接accept</span></span><br><span class="line"><span class="comment"> * 3操作</span></span><br><span class="line"><span class="comment"> * 4关闭资源</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoginTwoWayServer</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"------Server-----------------"</span>);</span><br><span class="line">        <span class="comment">//1指定端口</span></span><br><span class="line">        ServerSocket server=<span class="keyword">new</span> ServerSocket(<span class="number">8888</span>);</span><br><span class="line">        <span class="comment">//2阻塞式等待连接</span></span><br><span class="line">        Socket client=server.accept();</span><br><span class="line">        <span class="comment">//3操作</span></span><br><span class="line">        DataInputStream dis=<span class="keyword">new</span> DataInputStream(client.getInputStream());</span><br><span class="line">        String data = dis.readUTF();</span><br><span class="line">        String uname=<span class="string">""</span>;</span><br><span class="line">        String upwd=<span class="string">""</span>;</span><br><span class="line">        String[] dataArray = data.split(<span class="string">"&amp;"</span>);</span><br><span class="line">        <span class="keyword">for</span>(String info:dataArray)&#123;</span><br><span class="line">            String[] msg = info.split(<span class="string">"="</span>);</span><br><span class="line">            <span class="keyword">if</span>(msg[<span class="number">0</span>].equals(<span class="string">"uname"</span>))&#123;</span><br><span class="line">                uname=msg[<span class="number">1</span>];</span><br><span class="line">                System.out.println(<span class="string">"用户名---&gt;"</span>+msg[<span class="number">1</span>]);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                upwd=msg[<span class="number">1</span>];</span><br><span class="line">                System.out.println(<span class="string">"密码---&gt;"</span>+msg[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        DataOutputStream dos=<span class="keyword">new</span> DataOutputStream(client.getOutputStream());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//反馈</span></span><br><span class="line">        <span class="keyword">if</span>(uname.equals(<span class="string">"wjj"</span>)&amp;&amp;upwd.equals(<span class="string">"123456"</span>))&#123;</span><br><span class="line">            dos.writeUTF(<span class="string">"登陆成功，欢迎回来"</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            dos.writeUTF(<span class="string">"用户名或密码错误"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        dos.flush();</span><br><span class="line">        <span class="comment">//关闭资源</span></span><br><span class="line">        dis.close();</span><br><span class="line">        dos.close();</span><br><span class="line">        client.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>客户端实现：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> tcp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.net.Socket;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 模拟登陆 双向</span></span><br><span class="line"><span class="comment"> * 创建客户端</span></span><br><span class="line"><span class="comment"> * 1、建立连接：使用Socket创建客户端+服务的地址和端口</span></span><br><span class="line"><span class="comment"> * 2、操作：输入输出流操作</span></span><br><span class="line"><span class="comment"> * 3、释放资源</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoginTwoWayClient</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"---------Client------"</span>);</span><br><span class="line">        <span class="comment">//控制台输入</span></span><br><span class="line">        BufferedReader reader=<span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">        System.out.println(<span class="string">"请输入用户名"</span>);</span><br><span class="line">        String uname=reader.readLine();</span><br><span class="line">        System.out.println(<span class="string">"请输入密码"</span>);</span><br><span class="line">        String upwd=reader.readLine();</span><br><span class="line">        <span class="comment">//1建立连接：使用Socket创建客户端+服务的地址和端口</span></span><br><span class="line">        Socket client=<span class="keyword">new</span> Socket(<span class="string">"localhost"</span>,<span class="number">8888</span>);</span><br><span class="line">        <span class="comment">//2输入输出流操作</span></span><br><span class="line">        DataOutputStream dos=<span class="keyword">new</span> DataOutputStream(client.getOutputStream());</span><br><span class="line">        dos.writeUTF(<span class="string">"uname="</span>+uname+<span class="string">"&amp;upwd="</span>+upwd);</span><br><span class="line">        dos.flush();</span><br><span class="line">        <span class="comment">//接受服务器消息</span></span><br><span class="line">        DataInputStream dis=<span class="keyword">new</span> DataInputStream(client.getInputStream());</span><br><span class="line">        String s = dis.readUTF();</span><br><span class="line">        System.out.println(s);</span><br><span class="line">        <span class="comment">//3释放资源</span></span><br><span class="line">        dis.close();</span><br><span class="line">        dos.close();</span><br><span class="line">        client.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p># </p>
 
       
     </div>
@@ -599,8 +654,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/23/字符流/" rel="next" title="字符流">
-                <i class="fa fa-chevron-left"></i> 字符流
+              <a href="/2019/04/29/TCP通信程序/" rel="next" title="TCP通信程序">
+                <i class="fa fa-chevron-left"></i> TCP通信程序
               </a>
             
           </div>
@@ -608,10 +663,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/24/序列化流/" rel="prev" title="序列化流">
-                序列化流 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -802,7 +853,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-打印流"><span class="nav-number">1.</span> <span class="nav-text">第四章 打印流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-概述"><span class="nav-number">1.1.</span> <span class="nav-text">4.1 概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-PrintStream类"><span class="nav-number">1.2.</span> <span class="nav-text">4.2 PrintStream类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改变打印流向"><span class="nav-number">1.2.2.</span> <span class="nav-text">改变打印流向</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-标准输入输出流"><span class="nav-number">1.3.</span> <span class="nav-text">4.3 标准输入输出流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4流的重定向"><span class="nav-number">1.4.</span> <span class="nav-text">4.4流的重定向</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-概述"><span class="nav-number">1.</span> <span class="nav-text">第一章  概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-Socket类"><span class="nav-number">2.</span> <span class="nav-text">第二章 Socket类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法"><span class="nav-number">2.0.1.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成员方法"><span class="nav-number">2.0.2.</span> <span class="nav-text">成员方法</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章ServerSocket类"><span class="nav-number">3.</span> <span class="nav-text">第三章ServerSocket类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法-1"><span class="nav-number">3.0.1.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成员方法-1"><span class="nav-number">3.0.2.</span> <span class="nav-text">成员方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章-简单的TCP网络程序"><span class="nav-number">4.</span> <span class="nav-text">第三章 简单的TCP网络程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP传输-客户端思路"><span class="nav-number">4.1.</span> <span class="nav-text">TCP传输-客户端思路</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP传输-服务器端思路"><span class="nav-number">5.</span> <span class="nav-text">TCP传输-服务器端思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP通信分析图解"><span class="nav-number">5.0.1.</span> <span class="nav-text">TCP通信分析图解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端向服务器发送数据"><span class="nav-number">5.0.2.</span> <span class="nav-text">客户端向服务器发送数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器向客户端回写数据"><span class="nav-number">5.0.3.</span> <span class="nav-text">服务器向客户端回写数据</span></a></li></ol></li></div>
             
 
           </div>

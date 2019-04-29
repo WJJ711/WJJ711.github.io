@@ -103,25 +103,28 @@
 
 
 
-  <meta name="description" content="第四章 打印流4.1 概述平时我们在控制台打印输出，是调用print方法和println方法完成的，这两个方法都来自于java.io.PrintStream类，该类能够方便地打印各种数据类型的值，是一种便捷的输出方式。 4.2 PrintStream类构造方法 public PrintStream(String fileName)： 使用指定的文件名创建一个新的打印流。  构造举例，代码如下：">
+  <meta name="description" content="第一章 SocketSocket套接字： ›网络上具有唯一标识的IP地址和端口号组合在一起才能构成唯一能识别的标识符套接字。Socket屏蔽了协议的具体细节（不同类型的socket使用不同的协议） Socket原理机制： ›通信的两端都有Socket。 ›网络通信其实就是Socket间的通信。 ›数据在两个Socket间通过IO传输。  第二章 UDP传输DatagramSocket与Datagr">
 <meta name="keywords" content="JavaSE,Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="打印流">
-<meta property="og:url" content="https://WJJ711.github.io/2019/04/24/打印流/index.html">
+<meta property="og:title" content="6.UDP通信程序">
+<meta property="og:url" content="https://WJJ711.github.io/2019/04/29/6-UDP通信程序/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="第四章 打印流4.1 概述平时我们在控制台打印输出，是调用print方法和println方法完成的，这两个方法都来自于java.io.PrintStream类，该类能够方便地打印各种数据类型的值，是一种便捷的输出方式。 4.2 PrintStream类构造方法 public PrintStream(String fileName)： 使用指定的文件名创建一个新的打印流。  构造举例，代码如下：">
+<meta property="og:description" content="第一章 SocketSocket套接字： ›网络上具有唯一标识的IP地址和端口号组合在一起才能构成唯一能识别的标识符套接字。Socket屏蔽了协议的具体细节（不同类型的socket使用不同的协议） Socket原理机制： ›通信的两端都有Socket。 ›网络通信其实就是Socket间的通信。 ›数据在两个Socket间通过IO传输。  第二章 UDP传输DatagramSocket与Datagr">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-24T07:47:17.150Z">
+<meta property="og:image" content="d:/blog/WJJ711/source/_posts/6-UDP通信程序/Socket机制图解.jpg">
+<meta property="og:image" content="https://wjj711.github.io/2019/04/29/6-UDP通信程序/Socket机制图解.jpg">
+<meta property="og:updated_time" content="2019-04-29T03:04:45.839Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="打印流">
-<meta name="twitter:description" content="第四章 打印流4.1 概述平时我们在控制台打印输出，是调用print方法和println方法完成的，这两个方法都来自于java.io.PrintStream类，该类能够方便地打印各种数据类型的值，是一种便捷的输出方式。 4.2 PrintStream类构造方法 public PrintStream(String fileName)： 使用指定的文件名创建一个新的打印流。  构造举例，代码如下：">
+<meta name="twitter:title" content="6.UDP通信程序">
+<meta name="twitter:description" content="第一章 SocketSocket套接字： ›网络上具有唯一标识的IP地址和端口号组合在一起才能构成唯一能识别的标识符套接字。Socket屏蔽了协议的具体细节（不同类型的socket使用不同的协议） Socket原理机制： ›通信的两端都有Socket。 ›网络通信其实就是Socket间的通信。 ›数据在两个Socket间通过IO传输。  第二章 UDP传输DatagramSocket与Datagr">
+<meta name="twitter:image" content="d:/blog/WJJ711/source/_posts/6-UDP通信程序/Socket机制图解.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://WJJ711.github.io/2019/04/24/打印流/">
+  <link rel="canonical" href="https://WJJ711.github.io/2019/04/29/6-UDP通信程序/">
 
 
 
@@ -131,7 +134,7 @@
   };
 </script>
 
-  <title>打印流 | wjjのhomepage</title>
+  <title>6.UDP通信程序 | wjjのhomepage</title>
   
 
 
@@ -357,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/24/打印流/">
+    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/29/6-UDP通信程序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wjj">
@@ -374,7 +377,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">打印流
+          <h1 class="post-title" itemprop="name headline">6.UDP通信程序
 
               
             
@@ -400,7 +403,7 @@
                 
               
 
-              <time title="创建时间：2019-04-24 10:19:13 / 修改时间：15:47:17" itemprop="dateCreated datePublished" datetime="2019-04-24T10:19:13+08:00">2019-04-24</time>
+              <time title="创建时间：2019-04-29 09:42:27 / 修改时间：11:04:45" itemprop="dateCreated datePublished" datetime="2019-04-29T09:42:27+08:00">2019-04-29</time>
             
 
             
@@ -441,8 +444,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/24/打印流/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/24/打印流/" itemprop="commentCount"></span>
+                <a href="/2019/04/29/6-UDP通信程序/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/29/6-UDP通信程序/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -471,7 +474,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.1k</span>
+                <span title="本文字数">462</span>
               
 
               
@@ -485,7 +488,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -505,29 +508,43 @@
       
 
       
-        <h1 id="第四章-打印流"><a href="#第四章-打印流" class="headerlink" title="第四章 打印流"></a>第四章 打印流</h1><h2 id="4-1-概述"><a href="#4-1-概述" class="headerlink" title="4.1 概述"></a>4.1 概述</h2><p>平时我们在控制台打印输出，是调用<code>print</code>方法和<code>println</code>方法完成的，这两个方法都来自于<code>java.io.PrintStream</code>类，该类能够方便地打印各种数据类型的值，是一种便捷的输出方式。</p>
-<h2 id="4-2-PrintStream类"><a href="#4-2-PrintStream类" class="headerlink" title="4.2 PrintStream类"></a>4.2 PrintStream类</h2><h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><ul>
-<li><code>public PrintStream(String fileName)</code>： 使用指定的文件名创建一个新的打印流。</li>
-</ul>
-<p>构造举例，代码如下：  </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PrintStream ps = <span class="keyword">new</span> PrintStream(<span class="string">"ps.txt"</span>)；</span><br></pre></td></tr></table></figure>
-<h3 id="改变打印流向"><a href="#改变打印流向" class="headerlink" title="改变打印流向"></a>改变打印流向</h3><p><code>System.out</code>就是<code>PrintStream</code>类型的，只不过它的流向是系统规定的，打印在控制台上。不过，既然是流对象，我们就可以玩一个”小把戏”，改变它的流向。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrintDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">		<span class="comment">// 调用系统的打印流,控制台直接输出97</span></span><br><span class="line">        System.out.println(<span class="number">97</span>);</span><br><span class="line">      </span><br><span class="line">		<span class="comment">// 创建打印流,指定文件的名称</span></span><br><span class="line">        PrintStream ps = <span class="keyword">new</span> PrintStream(<span class="string">"ps.txt"</span>);</span><br><span class="line">      	</span><br><span class="line">      	<span class="comment">// 设置系统的打印流流向,输出到ps.txt</span></span><br><span class="line">        System.setOut(ps);</span><br><span class="line">      	<span class="comment">// 调用系统的打印流,ps.txt中输出97</span></span><br><span class="line">        System.out.println(<span class="number">97</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4-3-标准输入输出流"><a href="#4-3-标准输入输出流" class="headerlink" title="4.3 标准输入输出流"></a>4.3 标准输入输出流</h2><p>System类中的字段：in，out。</p>
-<p>它们各代表了系统标准的输入和输出设备。</p>
-<p>默认输入设备是键盘，输出设备是显示器。</p>
-<p>System.in的类型是InputStream.</p>
-<p>System.out的类型是PrintStream是OutputStream的子类FilterOutputStream 的子类.</p>
-<h2 id="4-4流的重定向"><a href="#4-4流的重定向" class="headerlink" title="4.4流的重定向"></a>4.4流的重定向</h2><ol>
-<li>输入流重定向</li>
+        <h1 id="第一章-Socket"><a href="#第一章-Socket" class="headerlink" title="第一章 Socket"></a>第一章 Socket</h1><p>Socket套接字：</p>
+<p>›网络上具有唯一标识的IP地址和端口号组合在一起才能构成唯一能识别的标识符套接字。Socket屏蔽了协议的具体细节（不同类型的socket使用不同的协议）</p>
+<p>Socket原理机制：</p>
+<p>›通信的两端都有Socket。</p>
+<p>›网络通信其实就是Socket间的通信。</p>
+<p>›数据在两个Socket间通过IO传输。<img src="D:\blog\WJJ711\source\_posts\6-UDP通信程序\Socket机制图解.jpg" alt="Socket机制图解"></p>
+<img src="/2019/04/29/6-UDP通信程序/Socket机制图解.jpg">
+<h1 id="第二章-UDP传输"><a href="#第二章-UDP传输" class="headerlink" title="第二章 UDP传输"></a>第二章 UDP传输</h1><p>DatagramSocket与DatagramPacket</p>
+<ol>
+<li><p>建立发送端，接收端。</p>
+</li>
+<li><p>建立数据包。</p>
+</li>
+<li><p>调用Socket的发送接收方法。</p>
+</li>
+<li><p>关闭Socket。</p>
+</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IO10</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.setIn(<span class="keyword">new</span> FileInputStream(<span class="string">"in.txt"</span>));<span class="comment">//重定向，读该文件中的第一行数据</span></span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String s = scanner.nextLine();</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.输出流重定向</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IO10</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.setIn(<span class="keyword">new</span> FileInputStream(<span class="string">"in.txt"</span>));<span class="comment">//输入流重定向</span></span><br><span class="line">        System.setOut(<span class="keyword">new</span> PrintStream(<span class="string">"copy.txt"</span>));<span class="comment">//输出流重定向</span></span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">while</span> (scanner.hasNext())&#123;</span><br><span class="line">            String s = scanner.nextLine();</span><br><span class="line">            System.out.println(s);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>重定向回控制台</li>
+<p>发送端与接收端是两个独立的运行程序。</p>
+<h1 id="第三章-UDP传输-发送端思路"><a href="#第三章-UDP传输-发送端思路" class="headerlink" title="第三章 UDP传输-发送端思路"></a>第三章 UDP传输-发送端思路</h1><ol>
+<li><p>使用DatagramSocket 指定端口，创建发送端</p>
+</li>
+<li><p><strong>将要发送内容转成字节数组</strong>（不同的传输类型只有该步不同）</p>
+</li>
+<li><p>封装成DatagramPacket包裹，需要指定目的地</p>
+</li>
+<li><p>发送包裹send</p>
+</li>
+<li>释放资源</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IO10</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//重定向到文件</span></span><br><span class="line">        System.setOut(<span class="keyword">new</span> PrintStream(<span class="string">"dest.txt"</span>));</span><br><span class="line">        System.out.println(<span class="string">"i love you"</span>);</span><br><span class="line">        System.out.println(<span class="string">"i miss you"</span>);</span><br><span class="line">        <span class="comment">//重定向回控制台,用FileDescriptor.out重定向回控制台</span></span><br><span class="line">        System.setOut(<span class="keyword">new</span> PrintStream(<span class="keyword">new</span> FileOutputStream(FileDescriptor.out)));</span><br><span class="line">        System.out.println(<span class="string">"i love you"</span>);</span><br><span class="line">        System.out.println(<span class="string">"i miss you"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="第四章-UDP传输-接收端思路"><a href="#第四章-UDP传输-接收端思路" class="headerlink" title="第四章 UDP传输-接收端思路"></a>第四章 UDP传输-接收端思路</h1><ol>
+<li>指定端口</li>
+<li>创建容器，封装成包裹</li>
+<li>阻塞式接受</li>
+<li><strong>解析数据</strong>（不同的传输类型只有该步不同）</li>
+<li>释放资源</li>
+</ol>
 
       
     </div>
@@ -599,8 +616,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/23/字符流/" rel="next" title="字符流">
-                <i class="fa fa-chevron-left"></i> 字符流
+              <a href="/2019/04/27/5-网络编程开篇/" rel="next" title="5.网络编程开篇">
+                <i class="fa fa-chevron-left"></i> 5.网络编程开篇
               </a>
             
           </div>
@@ -609,8 +626,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/24/序列化流/" rel="prev" title="序列化流">
-                序列化流 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/29/TCP通信程序/" rel="prev" title="TCP通信程序">
+                TCP通信程序 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -802,7 +819,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-打印流"><span class="nav-number">1.</span> <span class="nav-text">第四章 打印流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-概述"><span class="nav-number">1.1.</span> <span class="nav-text">4.1 概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-PrintStream类"><span class="nav-number">1.2.</span> <span class="nav-text">4.2 PrintStream类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改变打印流向"><span class="nav-number">1.2.2.</span> <span class="nav-text">改变打印流向</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-标准输入输出流"><span class="nav-number">1.3.</span> <span class="nav-text">4.3 标准输入输出流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4流的重定向"><span class="nav-number">1.4.</span> <span class="nav-text">4.4流的重定向</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-Socket"><span class="nav-number">1.</span> <span class="nav-text">第一章 Socket</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-UDP传输"><span class="nav-number">2.</span> <span class="nav-text">第二章 UDP传输</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章-UDP传输-发送端思路"><span class="nav-number">3.</span> <span class="nav-text">第三章 UDP传输-发送端思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-UDP传输-接收端思路"><span class="nav-number">4.</span> <span class="nav-text">第四章 UDP传输-接收端思路</span></a></li></ol></div>
             
 
           </div>
