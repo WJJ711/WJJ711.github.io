@@ -103,25 +103,25 @@
 
 
 
-  <meta name="description" content="第一个与key值相等的元素1234567891011121314151617181920/** * 第一个与key值相等的元素 */public class BinarySearch01 &amp;#123;    public static int search(int[] arr,int key)&amp;#123;        int left=0;        int right=arr.length">
-<meta name="keywords" content="Algorithm">
+  <meta name="description" content="第一章 反射12对象是表示或封装一些数据，一个类被加载后，JVM会创建一个对应该类的Class对象，类的整个结构信息会放到对应的Class对象中。这个Class对象就像一面镜子一样，通过这面镜子我可以看到该类的全部信息 JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能">
+<meta name="keywords" content="JavaSE,Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二分查找模板">
-<meta property="og:url" content="https://WJJ711.github.io/2019/04/19/二分查找模板/index.html">
+<meta property="og:title" content="8.反射机制">
+<meta property="og:url" content="https://WJJ711.github.io/2019/04/29/8-反射机制/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="第一个与key值相等的元素1234567891011121314151617181920/** * 第一个与key值相等的元素 */public class BinarySearch01 &amp;#123;    public static int search(int[] arr,int key)&amp;#123;        int left=0;        int right=arr.length">
+<meta property="og:description" content="第一章 反射12对象是表示或封装一些数据，一个类被加载后，JVM会创建一个对应该类的Class对象，类的整个结构信息会放到对应的Class对象中。这个Class对象就像一面镜子一样，通过这面镜子我可以看到该类的全部信息 JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-20T04:40:46.048Z">
+<meta property="og:updated_time" content="2019-04-29T15:37:13.966Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二分查找模板">
-<meta name="twitter:description" content="第一个与key值相等的元素1234567891011121314151617181920/** * 第一个与key值相等的元素 */public class BinarySearch01 &amp;#123;    public static int search(int[] arr,int key)&amp;#123;        int left=0;        int right=arr.length">
+<meta name="twitter:title" content="8.反射机制">
+<meta name="twitter:description" content="第一章 反射12对象是表示或封装一些数据，一个类被加载后，JVM会创建一个对应该类的Class对象，类的整个结构信息会放到对应的Class对象中。这个Class对象就像一面镜子一样，通过这面镜子我可以看到该类的全部信息 JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能">
 
 
 
 
 
 
-  <link rel="canonical" href="https://WJJ711.github.io/2019/04/19/二分查找模板/">
+  <link rel="canonical" href="https://WJJ711.github.io/2019/04/29/8-反射机制/">
 
 
 
@@ -131,7 +131,7 @@
   };
 </script>
 
-  <title>二分查找模板 | wjjのhomepage</title>
+  <title>8.反射机制 | wjjのhomepage</title>
   
 
 
@@ -357,7 +357,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/19/二分查找模板/">
+    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/29/8-反射机制/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wjj">
@@ -374,7 +374,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">二分查找模板
+          <h1 class="post-title" itemprop="name headline">8.反射机制
 
               
             
@@ -400,24 +400,12 @@
                 
               
 
-              <time title="创建时间：2019-04-19 23:27:02" itemprop="dateCreated datePublished" datetime="2019-04-19T23:27:02+08:00">2019-04-19</time>
+              <time title="创建时间：2019-04-29 21:01:06 / 修改时间：23:37:13" itemprop="dateCreated datePublished" datetime="2019-04-29T21:01:06+08:00">2019-04-29</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-20 12:40:46" itemprop="dateModified" datetime="2019-04-20T12:40:46+08:00">2019-04-20</time>
               
             
           </span>
@@ -434,7 +422,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaSE/" itemprop="url" rel="index"><span itemprop="name">JavaSE</span></a></span>
 
                 
                 
@@ -453,8 +441,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/19/二分查找模板/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/19/二分查找模板/" itemprop="commentCount"></span>
+                <a href="/2019/04/29/8-反射机制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/29/8-反射机制/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -483,7 +471,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.6k</span>
+                <span title="本文字数">6.4k</span>
               
 
               
@@ -497,7 +485,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">6 分钟</span>
               
             </div>
           
@@ -517,10 +505,38 @@
       
 
       
-        <h1 id="第一个与key值相等的元素"><a href="#第一个与key值相等的元素" class="headerlink" title="第一个与key值相等的元素"></a>第一个与key值相等的元素</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 第一个与key值相等的元素</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinarySearch01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> key)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right=arr.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left&lt;right)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid=left+((right-left)&gt;&gt;<span class="number">1</span>);<span class="comment">//因为这里是right=mid所以不用+1,注意，这里括号一个都不能少&gt;&gt;优先级较低</span></span><br><span class="line">            <span class="keyword">if</span>(arr[mid]&gt;=key)&#123;<span class="comment">//说明第一个与key相等的值在mid或者mid左边</span></span><br><span class="line">                right=mid;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                left=mid+<span class="number">1</span>;<span class="comment">//说明第一个与key相等的值在mid右边</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(arr[left]==key)</span><br><span class="line">            <span class="keyword">return</span> left;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="最后一个等于key的元素"><a href="#最后一个等于key的元素" class="headerlink" title="最后一个等于key的元素"></a>最后一个等于key的元素</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 最后一个等于key的元素</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinarySearch02</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> key)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right=arr.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left&lt;right)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid=left+((right-left+<span class="number">1</span>)&gt;&gt;<span class="number">1</span>);<span class="comment">//因为求最后一个等于key的元素，left要向右边逼近，是left=mid</span></span><br><span class="line">            <span class="comment">//这里如果不加1会死循环，因为mid向下取整，例如right=9，mid永远=8，left永远等于8</span></span><br><span class="line">            <span class="keyword">if</span>(arr[mid]&lt;=key)&#123;<span class="comment">//该位置在mid右边或者mid</span></span><br><span class="line">                left=mid;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                right=mid-<span class="number">1</span>;<span class="comment">//该位置在mid左边</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(arr[left]==key)</span><br><span class="line">            <span class="keyword">return</span> left;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="查找最后一个小于等于key值的元素"><a href="#查找最后一个小于等于key值的元素" class="headerlink" title="查找最后一个小于等于key值的元素"></a>查找最后一个小于等于key值的元素</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 查找最后一个小于等于key值的元素</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinarySearch03</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> key)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right=arr.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left&lt;right)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid=left+((right-left+<span class="number">1</span>)&gt;&gt;<span class="number">1</span>);<span class="comment">//这里括号一个都不能少&gt;&gt;优先级较低，这里必须+1,因为找的最后一个，left向右边逼近，如果没有+1，right=9，left=8，则mid和left永远等于8，死循环</span></span><br><span class="line">            <span class="keyword">if</span>(arr[mid]&lt;=key)&#123;<span class="comment">//在mid处或者mid的右边</span></span><br><span class="line">                left=mid;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;<span class="comment">//在mid左边</span></span><br><span class="line">                right=mid-<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(arr[left]&lt;=key)&#123;</span><br><span class="line">            <span class="keyword">return</span> left;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="查找第一个大于等于key的值"><a href="#查找第一个大于等于key的值" class="headerlink" title="查找第一个大于等于key的值"></a>查找第一个大于等于key的值</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 查找第一个大于等于key的值</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinarySearch04</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> key)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right=arr.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left&lt;right)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid=left+((right-left)&gt;&gt;<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span>(arr[mid]&gt;=key)&#123;<span class="comment">//在mid处，或者mid的左边,right向左边逼近，这里括号一个都不能少，&gt;&gt;优先级较低</span></span><br><span class="line">                right=mid;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;<span class="comment">//在mid右边</span></span><br><span class="line">                left=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(arr[left]&gt;=key)&#123;</span><br><span class="line">            <span class="keyword">return</span> left;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="第一章-反射"><a href="#第一章-反射" class="headerlink" title="第一章 反射"></a>第一章 反射</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">对象是表示或封装一些数据，一个类被加载后，JVM会创建一个对应该类的Class对象，类的整个结构信息会放到对应的Class对象中。</span><br><span class="line">这个Class对象就像一面镜子一样，通过这面镜子我可以看到该类的全部信息</span><br></pre></td></tr></table></figure>
+<p>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。</p>
+<p>加载完类之后，在堆内存中，就产生了一个 Class 类型的对象（一个类只有一个 Class 对象），这个对象就包含了完整的类的结构信息。我们可以通过这个对象看到类的结构。这个对象就像一面镜子，透过这个镜子看到类的结构，所以，我们形象的称之为：反射。</p>
+<p>要想解剖一个类,必须先要获取到该类的字节码文件对象。而解剖使用的就是Class类对象。从而得到其中的方法或成员.所以先要获取到每一个字节码文件对应的Class类型的对象.</p>
+<h1 id="第二章Class类"><a href="#第二章Class类" class="headerlink" title="第二章Class类"></a>第二章Class类</h1><p> java.lang.Class类十分特殊，用来表示java中类型(class/interface/enum/annotation/primitive type/void)本身。</p>
+<ul>
+<li>Class类的对象包含了某个被加载类的结构。一个被加载的类对应一个Class对象。</li>
+<li>当一个class被加载，或当加载器（class loader）的defineClass()被JVM调用，JVM 便自动产生一个Class 对象。</li>
+</ul>
+<p>• Class类是Reflection的根源。</p>
+<ul>
+<li>针对任何您想动态加载、运行的类，唯有先获得相应的Class 对象</li>
+</ul>
+<h2 id="获取Class类型的对象"><a href="#获取Class类型的对象" class="headerlink" title="获取Class类型的对象"></a>获取Class类型的对象</h2><p><strong>三种获取Class对象的方式</strong></p>
+<ol>
+<li><p>方式一</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Person p = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line">Class c = p.getClass();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方式二</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class c2 = Person.class;</span><br></pre></td></tr></table></figure>
+<p>  任意数据类型都具备一个class静态属性,看上去要比第一种方式简单.</p>
+</li>
+<li><p>将类名作为字符串传递给Class类中的静态方法forName即可</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class c3 = Class.forName(<span class="string">"包名.类名"</span>);<span class="comment">//最常用</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>   第三种和前两种的区别  </p>
+<p>   前两种你必须明确Person类型.</p>
+<p>   后面是你给我这种类型的字符串就行.这种扩展更强.我不需要知道你的类.我只提供字符串,按照配置文件加载就可以了</p>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> reflection;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException </span>&#123;</span><br><span class="line">        String path=<span class="string">"reflection.User"</span>;</span><br><span class="line">        Class&lt;?&gt; clazz = Class.forName(path);</span><br><span class="line">        <span class="comment">//对象是表示或封装一些数据，一个类被加载后，JVM会创建一个对应该类的Class对象，类的整个结构信息会放到对应的Class对象中。</span></span><br><span class="line">        <span class="comment">//这个Class对象就像一面镜子一样，通过这面镜子我可以看到该类的全部信息</span></span><br><span class="line">        System.out.println(clazz.hashCode());<span class="comment">//509886383</span></span><br><span class="line">        Class&lt;?&gt; clazz2 = Class.forName(path);</span><br><span class="line">        System.out.println(clazz2==clazz);<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line">        Class&lt;String&gt; strClazz = String.class;</span><br><span class="line">        Class&lt;? extends String&gt; strClazz2 = path.getClass();</span><br><span class="line">        <span class="comment">//String类型共享一个Class对象</span></span><br><span class="line">        System.out.println(strClazz==strClazz2);<span class="comment">//true,同一类型共享同一个Class对象</span></span><br><span class="line"></span><br><span class="line">        Class&lt;Integer&gt; intClazz = <span class="keyword">int</span>.class;</span><br><span class="line">        <span class="keyword">int</span>[] arr01=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">        <span class="keyword">int</span>[] arr02=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">30</span>];</span><br><span class="line">        <span class="keyword">int</span>[][] arr03=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">30</span>][];</span><br><span class="line">        <span class="keyword">double</span>[] arr04=<span class="keyword">new</span> <span class="keyword">double</span>[<span class="number">10</span>];</span><br><span class="line">        System.out.println(arr01.hashCode());<span class="comment">//1854778591</span></span><br><span class="line">        System.out.println(arr02.hashCode());<span class="comment">//2054798982</span></span><br><span class="line">        <span class="comment">//同一类型的对象共享一个Class对象所以，int[]类型的共享一个Class对象</span></span><br><span class="line">        System.out.println(arr01.getClass().hashCode());<span class="comment">//885951223</span></span><br><span class="line">        System.out.println(arr02.getClass().hashCode());<span class="comment">//885951223</span></span><br><span class="line">        System.out.println(arr03.getClass().hashCode());<span class="comment">//191382150</span></span><br><span class="line">        System.out.println(arr04.getClass().hashCode());<span class="comment">//142666848</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="应用反射的API，获取类的信息-类的名字、属性、方法、构造器等"><a href="#应用反射的API，获取类的信息-类的名字、属性、方法、构造器等" class="headerlink" title="应用反射的API，获取类的信息(类的名字、属性、方法、构造器等)"></a>应用反射的API，获取类的信息(类的名字、属性、方法、构造器等)</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> reflection;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> jdk.swing.interop.SwingInterOpUtils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Constructor;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo02</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException, NoSuchMethodException </span>&#123;</span><br><span class="line">        String path=<span class="string">"reflection.User"</span>;</span><br><span class="line">        Class&lt;?&gt; clazz = Class.forName(path);<span class="comment">//获取类对象</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取类的名字</span></span><br><span class="line">        System.out.println(clazz.getName());<span class="comment">//reflection.User</span></span><br><span class="line">        System.out.println(clazz.getSimpleName());<span class="comment">//User</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取属性的信息</span></span><br><span class="line">        <span class="comment">//Field[] fields = clazz.getFields();//只能获取public的field</span></span><br><span class="line">        Field[] fields = clazz.getDeclaredFields();<span class="comment">//获取所有的field</span></span><br><span class="line">        System.out.println(fields.length);<span class="comment">//3</span></span><br><span class="line">        <span class="keyword">for</span> (Field f:fields)&#123;       <span class="comment">//private int reflection.User.id</span></span><br><span class="line">            System.out.println(f);  <span class="comment">//private int reflection.User.age</span></span><br><span class="line">        &#125;                           <span class="comment">//private java.lang.String reflection.User.name</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取方法的信息</span></span><br><span class="line">        System.out.println(<span class="string">"-------------------------"</span>);</span><br><span class="line">        Method[] methods = clazz.getDeclaredMethods();</span><br><span class="line">        <span class="comment">//如果方法无参，则传递null</span></span><br><span class="line">        Method m01=clazz.getDeclaredMethod(<span class="string">"getName"</span>);</span><br><span class="line">        System.out.println(m01);</span><br><span class="line">        <span class="comment">//如果方法有参，则必须传递参数类型对应的class对象</span></span><br><span class="line">        Method m02 = clazz.getDeclaredMethod(<span class="string">"setName"</span>, String.class);</span><br><span class="line">        <span class="keyword">for</span> (Method m:methods)&#123;</span><br><span class="line">            System.out.println(m);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取构造器信息</span></span><br><span class="line">        System.out.println(<span class="string">"--------------------------------"</span>);</span><br><span class="line">        Constructor&lt;?&gt;[] constructors = clazz.getDeclaredConstructors();</span><br><span class="line">        Constructor c=clazz.getConstructor(<span class="keyword">int</span>.class,<span class="keyword">int</span>.class,String.class);</span><br><span class="line">        System.out.println(c);</span><br><span class="line">        <span class="keyword">for</span> (Constructor temp:constructors)&#123;</span><br><span class="line">            System.out.println(temp);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> reflection;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Constructor;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo03</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        String path=<span class="string">"reflection.User"</span>;</span><br><span class="line">        <span class="comment">//获取Class对象</span></span><br><span class="line">        Class&lt;User&gt; clazz = (Class&lt;User&gt;)Class.forName(path);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//通过反射API调用构造方法，构造对象已过时</span></span><br><span class="line">        <span class="comment">//可以替换</span></span><br><span class="line">        <span class="comment">//   clazz.getDeclaredConstructor().newInstance()</span></span><br><span class="line">       <span class="comment">// User u = ((User) clazz.newInstance());//其实是调用了User的无参构造方法</span></span><br><span class="line">        Constructor&lt;?&gt; c1 = clazz.getDeclaredConstructor();</span><br><span class="line">        User u = ((User) c1.newInstance());</span><br><span class="line">        System.out.println(u);<span class="comment">//User&#123;id=0, age=0, name='null'&#125;</span></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"------------------------"</span>);</span><br><span class="line">        <span class="comment">//通过反射API调用构造方法，构造对象</span></span><br><span class="line">        Constructor&lt;User&gt; c = clazz.getDeclaredConstructor(<span class="keyword">int</span>.class, <span class="keyword">int</span>.class, String.class);</span><br><span class="line">        User u2 = c.newInstance(<span class="number">100</span>, <span class="number">18</span>, <span class="string">"wjj2"</span>);</span><br><span class="line">        System.out.println(u2);<span class="comment">//User&#123;id=100, age=18, name='wjj2'&#125;</span></span><br><span class="line">        System.out.println(u2.getName());<span class="comment">//wjj2</span></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"------------------------------"</span>);</span><br><span class="line">        <span class="comment">//通过反射API调用普通方法</span></span><br><span class="line">        User u3 = clazz.getDeclaredConstructor().newInstance();</span><br><span class="line">        Method setNameClass = clazz.getDeclaredMethod(<span class="string">"setName"</span>, String.class);</span><br><span class="line">        setNameClass.invoke(u3,<span class="string">"wjj3"</span>);</span><br><span class="line">       <span class="comment">// u3.setName("wjj3");//等价于，但是用上面的如果要调用别的方法，只需要改变字符串，如setAge，方法不需要变</span></span><br><span class="line">        System.out.println(u3);<span class="comment">//User&#123;id=0, age=0, name='wjj3'&#125;</span></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"-------------------------"</span>);</span><br><span class="line">        <span class="comment">//通过反射API操作属性</span></span><br><span class="line">        User u4 = clazz.getDeclaredConstructor().newInstance();</span><br><span class="line">        Field nameClass = clazz.getDeclaredField(<span class="string">"name"</span>);</span><br><span class="line">        nameClass.setAccessible(<span class="keyword">true</span>);<span class="comment">//这个属性不需要做安全检查，可以直接访问</span></span><br><span class="line">        nameClass.set(u4,<span class="string">"wjj4"</span>);<span class="comment">//通过反射直接写属性</span></span><br><span class="line">        System.out.println(nameClass.get(u4));<span class="comment">//通过反射直接读属性的值</span></span><br><span class="line">        System.out.println(u4.getName());<span class="comment">//通过对象获取</span></span><br><span class="line">        System.out.println(u4);<span class="comment">//User&#123;id=0, age=0, name='wjj4'&#125;</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -577,7 +593,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"><i class="fa fa-google"></i> Algorithm</a>
+            <a href="/tags/JavaSE/" rel="tag"><i class="fa fa-google"></i> JavaSE</a>
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-google"></i> Java</a>
           
         </div>
       
@@ -590,8 +608,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/19/7种排序算法/" rel="next" title="7种排序算法">
-                <i class="fa fa-chevron-left"></i> 7种排序算法
+              <a href="/2019/04/29/7-TCP通信程序/" rel="next" title="7.TCP通信程序">
+                <i class="fa fa-chevron-left"></i> 7.TCP通信程序
               </a>
             
           </div>
@@ -600,8 +618,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/22/字节流/" rel="prev" title="字节流">
-                字节流 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/30/9-注解Annotation/" rel="prev" title="9.注解Annotation">
+                9.注解Annotation <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -793,7 +811,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一个与key值相等的元素"><span class="nav-number">1.</span> <span class="nav-text">第一个与key值相等的元素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后一个等于key的元素"><span class="nav-number">2.</span> <span class="nav-text">最后一个等于key的元素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查找最后一个小于等于key值的元素"><span class="nav-number">3.</span> <span class="nav-text">查找最后一个小于等于key值的元素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查找第一个大于等于key的值"><span class="nav-number">4.</span> <span class="nav-text">查找第一个大于等于key的值</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-反射"><span class="nav-number">1.</span> <span class="nav-text">第一章 反射</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章Class类"><span class="nav-number">2.</span> <span class="nav-text">第二章Class类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取Class类型的对象"><span class="nav-number">2.1.</span> <span class="nav-text">获取Class类型的对象</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用反射的API，获取类的信息-类的名字、属性、方法、构造器等"><span class="nav-number">3.</span> <span class="nav-text">应用反射的API，获取类的信息(类的名字、属性、方法、构造器等)</span></a></li></ol></div>
             
 
           </div>
