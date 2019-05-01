@@ -103,25 +103,24 @@
 
 
 
-  <meta name="description" content="接口代表的是功能例如USB上的接口，扩展作用。 继承体现的是is a的关系 接口体现的是like a的关系，例如：猴子可以像人一样计算。 譬如游泳这一接口，谁都可以实现。 在Java中，接口主要用于解决单继承局限的问题 接口特点 接口是两个模块之间通信的标准，通信的规范。如果能把你要设计的模块之间的接口定义好，就相当于完成了系统的设计大纲，剩下的就是添砖加瓦的具体实现了。大家在工作以后，做系统时往">
-<meta name="keywords" content="JavaSE,Java">
+  <meta name="description" content="我会努力变得更好！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="接口interface">
-<meta property="og:url" content="https://WJJ711.github.io/2019/04/05/接口interface/index.html">
+<meta property="og:title" content="16.手写webserver">
+<meta property="og:url" content="https://WJJ711.github.io/2019/05/01/16-手写webserver/index.html">
 <meta property="og:site_name" content="wjjのhomepage">
-<meta property="og:description" content="接口代表的是功能例如USB上的接口，扩展作用。 继承体现的是is a的关系 接口体现的是like a的关系，例如：猴子可以像人一样计算。 譬如游泳这一接口，谁都可以实现。 在Java中，接口主要用于解决单继承局限的问题 接口特点 接口是两个模块之间通信的标准，通信的规范。如果能把你要设计的模块之间的接口定义好，就相当于完成了系统的设计大纲，剩下的就是添砖加瓦的具体实现了。大家在工作以后，做系统时往">
+<meta property="og:description" content="我会努力变得更好！">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-05T14:04:00.570Z">
+<meta property="og:updated_time" content="2019-05-01T08:33:01.989Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="接口interface">
-<meta name="twitter:description" content="接口代表的是功能例如USB上的接口，扩展作用。 继承体现的是is a的关系 接口体现的是like a的关系，例如：猴子可以像人一样计算。 譬如游泳这一接口，谁都可以实现。 在Java中，接口主要用于解决单继承局限的问题 接口特点 接口是两个模块之间通信的标准，通信的规范。如果能把你要设计的模块之间的接口定义好，就相当于完成了系统的设计大纲，剩下的就是添砖加瓦的具体实现了。大家在工作以后，做系统时往">
+<meta name="twitter:title" content="16.手写webserver">
+<meta name="twitter:description" content="我会努力变得更好！">
 
 
 
 
 
 
-  <link rel="canonical" href="https://WJJ711.github.io/2019/04/05/接口interface/">
+  <link rel="canonical" href="https://WJJ711.github.io/2019/05/01/16-手写webserver/">
 
 
 
@@ -131,7 +130,7 @@
   };
 </script>
 
-  <title>接口interface | wjjのhomepage</title>
+  <title>16.手写webserver | wjjのhomepage</title>
   
 
 
@@ -357,7 +356,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/05/接口interface/">
+    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/05/01/16-手写webserver/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wjj">
@@ -374,7 +373,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">接口interface
+          <h1 class="post-title" itemprop="name headline">16.手写webserver
 
               
             
@@ -400,34 +399,12 @@
                 
               
 
-              <time title="创建时间：2019-04-05 11:54:41 / 修改时间：22:04:00" itemprop="dateCreated datePublished" datetime="2019-04-05T11:54:41+08:00">2019-04-05</time>
+              <time title="创建时间：2019-05-01 16:33:01" itemprop="dateCreated datePublished" datetime="2019-05-01T16:33:01+08:00">2019-05-01</time>
             
 
-            
-              
-
-              
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaSE/" itemprop="url" rel="index"><span itemprop="name">JavaSE</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -441,8 +418,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/05/接口interface/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/05/接口interface/" itemprop="commentCount"></span>
+                <a href="/2019/05/01/16-手写webserver/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/01/16-手写webserver/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -471,7 +448,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.9k</span>
+                <span title="本文字数">0</span>
               
 
               
@@ -485,7 +462,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -505,91 +482,7 @@
       
 
       
-        <h1 id="接口代表的是功能"><a href="#接口代表的是功能" class="headerlink" title="接口代表的是功能"></a>接口代表的是功能</h1><p>例如USB上的接口，扩展作用。</p>
-<p>继承体现的是is a的关系</p>
-<p>接口体现的是like a的关系，例如：猴子可以像人一样计算。</p>
-<p>譬如游泳这一接口，谁都可以实现。</p>
-<p><strong><em>在Java中，接口主要用于解决单继承局限的问题</em></strong></p>
-<h1 id="接口特点"><a href="#接口特点" class="headerlink" title="接口特点"></a>接口特点</h1><p> 接口是两个模块之间通信的<strong>标准</strong>，通信的规范。如果能把你要设计的模块之间的接口定义好，就相当于完成了系统的设计大纲，剩下的就是添砖加瓦的具体实现了。大家在工作以后，做系统时往往就是使用“面向接口”的思想来设计系统。</p>
-<p><strong><em>接口的本质是契约，就像我们人间的法律一样。制定好后大家都遵守。</em></strong></p>
-<ol>
-<li>接口用关键字interface表示</li>
-</ol>
-<blockquote>
-<p>格式：interface 接口名 {}</p>
-</blockquote>
-<ol start="2">
-<li>类实现接口用implements表示</li>
-</ol>
-<blockquote>
-<p>格式：class 类名 implements 接口名 {}</p>
-</blockquote>
-<ol start="3">
-<li><p>接口不能实例化</p>
-<p>那么，接口如何实例化呢?</p>
-<p>答：按照多态的方式，由具体的子类实例化，其实这也是多态的一种，接口多态</p>
-</li>
-<li><p>接口的子类</p>
-<p>抽象类：不必重写所有的抽象方法</p>
-<p>具体类：重写接口中的所有抽象方法</p>
-</li>
-</ol>
-<h1 id="成员常量"><a href="#成员常量" class="headerlink" title="成员常量"></a>成员常量</h1><p><strong><em>只能是常量</em></strong></p>
-<p><strong><em>默认修饰符 public static final</em></strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Inter inter=<span class="keyword">new</span> Demo();</span><br><span class="line">		System.out.println(inter.num1);</span><br><span class="line">		inter.num1=<span class="number">12</span>;	<span class="comment">//编译报错The final field Inter.num1 cannot be assigned</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Inter</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> num1=<span class="number">100</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> <span class="keyword">implements</span> <span class="title">Inter</span></span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h1><p>没有构造方法，不能实例化。</p>
-<p>因为接口中所有的成员变量都是静态常量，不能实例化成对象，不需要初始化。</p>
-<h1 id="成员方法"><a href="#成员方法" class="headerlink" title="成员方法"></a>成员方法</h1><p><strong><em>接口中所有成员的访问权限都是public</em></strong></p>
-<p>​    <strong><em>接口表示的是一个功能，所以谁都可以实现它。</em></strong></p>
-<p>JDK1.7之前，接口中只能包含静态常量、抽象方法，不能有普通属性、构造方法、普通方法。</p>
-<p>​    抽象方法：默认用public abstract修饰</p>
-<p>JDK1.8后：接口中包含普通的静态方法和默认方法。</p>
-<ol>
-<li><p>默认方法：如果该接口的子类没有重写该方法，就是这个默认方法。<strong><em>这里的default表示的不是访问权限，表示的是默认方法</em></strong></p>
-<p><strong>这里其实是public  default void method()</strong></p>
-<p><strong>但是接口中public推荐省略</strong></p>
-</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">	System.out.println(<span class="string">"123"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​    2. 静态方法：<strong>静态方法只能通过<code>接口名.静态方法（）</code>调用，不能通过子类调用</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"123"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="接口与类的关系"><a href="#接口与类的关系" class="headerlink" title="接口与类的关系"></a>接口与类的关系</h1><p>类与类：继承关系，只能单继承，但是可以多层继承</p>
-<p>类与接口：实现关系，也可以多实现，还可以继承一个类的同时实现多个接口</p>
-<p>接口与接口：继承关系，可以单继承，也可以多继承</p>
-<h1 id="抽象类与接口的区别"><a href="#抽象类与接口的区别" class="headerlink" title="抽象类与接口的区别"></a>抽象类与接口的区别</h1><table>
-<thead>
-<tr>
-<th>抽象类</th>
-<th>方法</th>
-<th>变量</th>
-<th>构造方法</th>
-<th>关系区别</th>
-<th>设计理念</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>抽象类</td>
-<td>抽象方法，普通方法，静态方法</td>
-<td>变量，常量</td>
-<td>有</td>
-<td>类与类（继承），单继承；类与接口 （实现），单实现，多实现</td>
-<td>抽象类 被继承体现的是：”is a”的关系。<strong>共性功能</strong></td>
-</tr>
-<tr>
-<td>接口</td>
-<td>JDK1.8之前，只能有抽象方法  ；  JDK1.8以后有默认方法（default）、静态方法、抽象方法</td>
-<td>常量，默认public static final</td>
-<td>无</td>
-<td>接口与接口（继承），单继承，多继承</td>
-<td>接口 被实现体现的是：”like a”的关系。<strong>扩展功能</strong></td>
-</tr>
-</tbody>
-</table>
-<h1 id="接口的实际应用"><a href="#接口的实际应用" class="headerlink" title="接口的实际应用"></a>接口的实际应用</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">USB</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">printInfo</span><span class="params">()</span> </span>&#123;<span class="comment">//默认方法</span></span><br><span class="line">		System.out.println(<span class="string">"采用USB接口连接"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">start</span><span class="params">()</span></span>;<span class="comment">//抽象方法</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">usbInfo</span><span class="params">()</span> </span>&#123;<span class="comment">//静态方法</span></span><br><span class="line">		System.out.println(<span class="string">"USB4.0"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Print</span> <span class="keyword">implements</span> <span class="title">USB</span></span>&#123;<span class="comment">//打印机类</span></span><br><span class="line">	 <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printInfo</span><span class="params">()</span> </span>&#123;<span class="comment">//覆写默认方法</span></span><br><span class="line">		System.out.println(<span class="string">"打印机类覆写默认方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"打印机连接！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"打印机断开连接!"</span>);</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flash</span> <span class="keyword">implements</span> <span class="title">USB</span></span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"U盘连接！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"U盘断开连接!"</span>);</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Computer</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">plugin</span><span class="params">(USB usb)</span> </span>&#123;</span><br><span class="line">		usb.printInfo();<span class="comment">//默认方法</span></span><br><span class="line">		usb.start();<span class="comment">//抽象方法</span></span><br><span class="line">		usb.stop();<span class="comment">//抽象方法</span></span><br><span class="line">		<span class="comment">//usb.usbInfo();//编译错误，接口的静态方法只能通过接口名调用</span></span><br><span class="line">		USB.usbInfo();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HW4</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Computer computer=<span class="keyword">new</span> Computer();</span><br><span class="line">		computer.plugin(<span class="keyword">new</span> Flash());</span><br><span class="line">		System.out.println(<span class="string">"--------------"</span>);</span><br><span class="line">		computer.plugin(<span class="keyword">new</span> Print());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">采用USB接口连接</span><br><span class="line">U盘连接！</span><br><span class="line">U盘断开连接!</span><br><span class="line">USB4.0</span><br><span class="line">--------------</span><br><span class="line">打印机类覆写默认方法</span><br><span class="line">打印机连接！</span><br><span class="line">打印机断开连接!</span><br><span class="line">USB4.0</span><br></pre></td></tr></table></figure>
-
+        
       
     </div>
 
@@ -643,14 +536,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/JavaSE/" rel="tag"><i class="fa fa-google"></i> JavaSE</a>
-          
-            <a href="/tags/Java/" rel="tag"><i class="fa fa-google"></i> Java</a>
-          
-        </div>
-      
 
       
       
@@ -660,8 +545,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/05/抽象类/" rel="next" title="抽象类">
-                <i class="fa fa-chevron-left"></i> 抽象类
+              <a href="/2019/04/30/15-类加载器/" rel="next" title="15.类加载器">
+                <i class="fa fa-chevron-left"></i> 15.类加载器
               </a>
             
           </div>
@@ -669,10 +554,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/05/权限修饰符/" rel="prev" title="权限修饰符">
-                权限修饰符 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -720,17 +601,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -852,23 +724,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#接口代表的是功能"><span class="nav-number">1.</span> <span class="nav-text">接口代表的是功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口特点"><span class="nav-number">2.</span> <span class="nav-text">接口特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#成员常量"><span class="nav-number">3.</span> <span class="nav-text">成员常量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构造方法"><span class="nav-number">4.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#成员方法"><span class="nav-number">5.</span> <span class="nav-text">成员方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口与类的关系"><span class="nav-number">6.</span> <span class="nav-text">接口与类的关系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#抽象类与接口的区别"><span class="nav-number">7.</span> <span class="nav-text">抽象类与接口的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口的实际应用"><span class="nav-number">8.</span> <span class="nav-text">接口的实际应用</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
