@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-atom.min.css?v=1.0.2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="字符流=字节流+编码表。字符编码和字符集字符编码计算机中储存的信息都是用二进制数表示的，而我们在屏幕上看到的数字、英文、标点符号、汉字等字符是二进制数转换之后的结果。按照某种规则，将字符存储到计算机中，称为编码 。反之，将存储在计算机中的二进制数按照某种规则解析显示出来，称为解码 。比如说，按照A规则存储，同样按照A规则解析，那么就能显示正确的文本符号。反之，按照A规则存储，再按照B规则解析，就会">
+<meta name="keywords" content="JavaSE,Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符流">
+<meta property="og:url" content="https://WJJ711.github.io/2019/04/23/java基础/字符流/index.html">
+<meta property="og:site_name" content="wjjのhomepage">
+<meta property="og:description" content="字符流=字节流+编码表。字符编码和字符集字符编码计算机中储存的信息都是用二进制数表示的，而我们在屏幕上看到的数字、英文、标点符号、汉字等字符是二进制数转换之后的结果。按照某种规则，将字符存储到计算机中，称为编码 。反之，将存储在计算机中的二进制数按照某种规则解析显示出来，称为解码 。比如说，按照A规则存储，同样按照A规则解析，那么就能显示正确的文本符号。反之，按照A规则存储，再按照B规则解析，就会">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wjj711.github.io/2019/04/23/java基础/字符流/charset.jpg">
+<meta property="og:image" content="https://wjj711.github.io/2019/04/23/java基础/字符流/转换流.jpg">
+<meta property="og:updated_time" content="2019-04-23T05:19:56.223Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="字符流">
+<meta name="twitter:description" content="字符流=字节流+编码表。字符编码和字符集字符编码计算机中储存的信息都是用二进制数表示的，而我们在屏幕上看到的数字、英文、标点符号、汉字等字符是二进制数转换之后的结果。按照某种规则，将字符存储到计算机中，称为编码 。反之，将存储在计算机中的二进制数按照某种规则解析显示出来，称为解码 。比如说，按照A规则存储，同样按照A规则解析，那么就能显示正确的文本符号。反之，按照A规则存储，再按照B规则解析，就会">
+<meta name="twitter:image" content="https://wjj711.github.io/2019/04/23/java基础/字符流/charset.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="https://WJJ711.github.io/2019/04/23/java基础/字符流/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>字符流 | wjjのhomepage</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/WJJ711" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">wjjのhomepage</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">5</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+  
+
+  
+
+  <a href="https://github.com/yourname" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://WJJ711.github.io/2019/04/23/java基础/字符流/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wjj">
+      <meta itemprop="description" content="我会努力变得更好！">
+      <meta itemprop="image" content="/images/123.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wjjのhomepage">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">字符流
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-23 09:55:09 / 修改时间：13:19:56" itemprop="dateCreated datePublished" datetime="2019-04-23T09:55:09+08:00">2019-04-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaSE/" itemprop="url" rel="index"><span itemprop="name">JavaSE</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/04/23/java基础/字符流/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/23/java基础/字符流/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">8.6k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">8 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="字符流-字节流-编码表。"><a href="#字符流-字节流-编码表。" class="headerlink" title="字符流=字节流+编码表。"></a>字符流=字节流+编码表。</h1><h2 id="字符编码和字符集"><a href="#字符编码和字符集" class="headerlink" title="字符编码和字符集"></a>字符编码和字符集</h2><h3 id="字符编码"><a href="#字符编码" class="headerlink" title="字符编码"></a>字符编码</h3><p>计算机中储存的信息都是用二进制数表示的，而我们在屏幕上看到的数字、英文、标点符号、汉字等字符是二进制数转换之后的结果。按照某种规则，将字符存储到计算机中，称为<strong>编码</strong> 。反之，将存储在计算机中的二进制数按照某种规则解析显示出来，称为<strong>解码</strong> 。比如说，按照A规则存储，同样按照A规则解析，那么就能显示正确的文本符号。反之，按照A规则存储，再按照B规则解析，就会导致乱码现象。</p>
+<p>编码:字符(能看懂的)–字节(看不懂的)</p>
+<p>解码:字节(看不懂的)–&gt;字符(能看懂的)</p>
+<ul>
+<li><p><strong>字符编码<code>Character Encoding</code></strong> : 就是一套自然语言的字符与二进制数之间的对应规则。</p>
+<p>编码表:生活中文字和计算机中二进制的对应规则</p>
+</li>
+</ul>
+<h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><ul>
+<li><strong>字符集 <code>Charset</code></strong>：也叫编码表。是一个系统支持的所有字符的集合，包括各国家文字、标点符号、图形符号、数字等。</li>
+</ul>
+<p>计算机要准确的存储和识别各种字符集符号，需要进行字符编码，一套字符集必然至少有一套字符编码。常见字符集有ASCII字符集、GBK字符集、Unicode字符集等。</p>
+<img src="/2019/04/23/java基础/字符流/charset.jpg">
+<p>可见，当指定了<strong>编码</strong>，它所对应的<strong>字符集</strong>自然就指定了，所以<strong>编码</strong>才是我们最终要关心的。</p>
+<ul>
+<li><p><strong>ASCII字符集</strong> ：</p>
+<ul>
+<li>ASCII（American Standard Code for Information Interchange，美国信息交换标准代码）是基于拉丁字母的一套电脑编码系统，用于显示现代英语，主要包括控制字符（回车键、退格、换行键等）和可显示字符（英文大小写字符、阿拉伯数字和西文符号）。</li>
+<li>基本的ASCII字符集，使用7位（bits）表示一个字符，共128字符。ASCII的扩展字符集使用8位（bits）表示一个字符，共256字符，方便支持欧洲常用字符。</li>
+</ul>
+</li>
+<li><p><strong>ISO-8859-1字符集</strong>：</p>
+<ul>
+<li>拉丁码表，别名Latin-1，用于显示欧洲使用的语言，包括荷兰、丹麦、德语、意大利语、西班牙语等。</li>
+<li>ISO-8859-1使用单字节编码，兼容ASCII编码。</li>
+</ul>
+</li>
+<li><p><strong>GBxxx字符集</strong>：</p>
+<ul>
+<li>GB就是国标的意思，是为了显示中文而设计的一套字符集。</li>
+<li><strong>GB2312</strong>：简体中文码表。一个小于127的字符的意义与原来相同。但两个大于127的字符连在一起时，就表示一个汉字，这样大约可以组合了包含7000多个简体汉字，此外数学符号、罗马希腊的字母、日文的假名们都编进去了，连在ASCII里本来就有的数字、标点、字母都统统重新编了两个字节长的编码，这就是常说的”全角”字符，而原来在127号以下的那些就叫”半角”字符了。</li>
+<li><strong>GBK</strong>：最常用的中文码表。是在GB2312标准基础上的扩展规范，使用了双字节编码方案，共收录了21003个汉字，完全兼容GB2312标准，同时支持繁体汉字以及日韩汉字等。</li>
+<li><strong>GB18030</strong>：最新的中文码表。收录汉字70244个，采用多字节编码，每个字可以由1个、2个或4个字节组成。支持中国国内少数民族的文字，同时支持繁体汉字以及日韩汉字等。</li>
+</ul>
+</li>
+<li><p><strong>Unicode字符集</strong> ：</p>
+<ul>
+<li><p>Unicode编码系统为表达任意语言的任意字符而设计，是业界的一种标准，也称为统一码、标准万国码。</p>
+</li>
+<li><p>它最多使用4个字节的数字来表达每个字母、符号，或者文字。有三种编码方案，UTF-8、UTF-16和UTF-32。最为常用的UTF-8编码。</p>
+</li>
+<li><p><strong>UTF-8编码</strong>，可以用来表示Unicode标准中任何字符，它是电子邮件、网页及其他存储或传送文字的应用中，优先采用的编码。互联网工程工作小组（IETF）要求所有互联网协议都必须支持UTF-8编码。所以，我们开发Web应用，也要使用UTF-8编码。它使用一至四个字节为每个字符编码，编码规则：</p>
+<ol>
+<li>128个US-ASCII字符，只需一个字节编码。</li>
+<li>拉丁文等字符，需要二个字节编码。 </li>
+<li>大部分常用字（含中文），使用三个字节编码。</li>
+<li>其他极少使用的Unicode辅助字符，使用四字节编码。</li>
+</ol>
+<p>UTF-8：可变长度来表示一个字符。</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>UTF-8，它定义了一种“区间规则”，这种规则可以和ASCII编码保持最大程度的兼容：
+
+它将Unicode编码为00000000-0000007F的字符，用单个字节来表示  0111  1111  =  7F
+它将Unicode编码为00000080-000007FF的字符用两个字节表示 
+它将Unicode编码为00000800-0000FFFF的字符用3字节表示 
+
+1字节 0xxxxxxx 
+
+2字节 110xxxxx 10xxxxxx 
+3字节 1110xxxx 10xxxxxx 10xxxxxx 
+</code></pre><h1 id="第三章-字符流"><a href="#第三章-字符流" class="headerlink" title="第三章 字符流"></a>第三章 字符流</h1>
+<p>当使用字节流读取文本文件时，可能会有一个小问题。就是遇到中文字符时，可能不会显示完整的字符，那是因为一个中文字符可能占用多个字节存储。所以Java提供一些字符流类，以字符为单位读写数据，专门用于处理文本文件。</p>
+<h2 id="3-1字符输出流【Writer】"><a href="#3-1字符输出流【Writer】" class="headerlink" title="3.1字符输出流【Writer】"></a>3.1字符输出流【Writer】</h2><p><code>java.io.Writer</code>抽象类是表示用于写出字符流的所有类的超类，将指定的字符信息写出到目的地。它定义了字节输出流的基本共性功能方法。</p>
+<ul>
+<li><code>void write(int c)</code> 写入单个字符。</li>
+<li><code>void write(char[] cbuf)</code>写入字符数组。 </li>
+<li><code>abstract  void write(char[] cbuf, int off, int len)</code>写入字符数组的某一部分,off数组的开始索引,len写的字符个数。 </li>
+<li><code>void write(String str)</code>写入字符串。 </li>
+<li><code>void write(String str, int off, int len)</code> 写入字符串的某一部分,off字符串的开始索引,len写的字符个数。</li>
+<li><code>void flush()</code>刷新该流的缓冲。  </li>
+<li><code>void close()</code> 关闭此流，但要先刷新它。 </li>
+</ul>
+<h2 id="3-2-FileWriter类"><a href="#3-2-FileWriter类" class="headerlink" title="3.2 FileWriter类"></a>3.2 FileWriter类</h2><p><code>java.io.FileWriter</code>类是写出字符到文件的便利类。构造时使用系统默认的字符编码和默认字节缓冲区。</p>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><ul>
+<li><code>FileWriter(File file)</code>： 创建一个新的 FileWriter，给定要读取的File对象。   </li>
+<li><code>FileWriter(String fileName)</code>： 创建一个新的 FileWriter，给定要读取的文件的名称。  </li>
+</ul>
+<p>当你创建一个流对象时，必须传入一个文件路径，类似于FileOutputStream。</p>
+<p>构造举例，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileWriterConstructor</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">   	 	<span class="comment">// 使用File对象创建流对象</span></span><br><span class="line">        File file = <span class="keyword">new</span> File(<span class="string">"a.txt"</span>);</span><br><span class="line">        FileWriter fw = <span class="keyword">new</span> FileWriter(file);</span><br><span class="line">      </span><br><span class="line">        <span class="comment">// 使用文件名称创建流对象</span></span><br><span class="line">        FileWriter fw = <span class="keyword">new</span> FileWriter(<span class="string">"b.txt"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-3-转换流-OutputStreamWriter类"><a href="#3-3-转换流-OutputStreamWriter类" class="headerlink" title="3.3 转换流 OutputStreamWriter类"></a>3.3 转换流 OutputStreamWriter类</h2><p>转换流<code>java.io.OutputStreamWriter</code> ，是Writer的子类，是从字符流到字节流的桥梁。使用指定的字符集将字符编码为字节。它的字符集可以由名称指定，也可以接受平台的默认字符集。 </p>
+<h3 id="构造方法-1"><a href="#构造方法-1" class="headerlink" title="构造方法"></a>构造方法</h3><ul>
+<li><code>OutputStreamWriter(OutputStream in)</code>: 创建一个使用默认字符集的字符流。 </li>
+<li><code>OutputStreamWriter(OutputStream in, String charsetName)</code>: 创建一个指定字符集的字符流。</li>
+</ul>
+<p>构造举例，代码如下： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">OutputStreamWriter isr = <span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(<span class="string">"out.txt"</span>));</span><br><span class="line">OutputStreamWriter isr2 = <span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(<span class="string">"out.txt"</span>) , <span class="string">"GBK"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="指定编码写出"><a href="#指定编码写出" class="headerlink" title="指定编码写出"></a>指定编码写出</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OutputDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">      	<span class="comment">// 定义文件路径</span></span><br><span class="line">        String FileName = <span class="string">"E:\\out.txt"</span>;</span><br><span class="line">      	<span class="comment">// 创建流对象,默认UTF8编码</span></span><br><span class="line">        OutputStreamWriter osw = <span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(FileName));</span><br><span class="line">        <span class="comment">// 写出数据</span></span><br><span class="line">      	osw.write(<span class="string">"你好"</span>); <span class="comment">// 保存为6个字节</span></span><br><span class="line">        osw.close();</span><br><span class="line">      	</span><br><span class="line">		<span class="comment">// 定义文件路径</span></span><br><span class="line">		String FileName2 = <span class="string">"E:\\out2.txt"</span>;</span><br><span class="line">     	<span class="comment">// 创建流对象,指定GBK编码</span></span><br><span class="line">        OutputStreamWriter osw2 = <span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(FileName2),<span class="string">"GBK"</span>);</span><br><span class="line">        <span class="comment">// 写出数据</span></span><br><span class="line">      	osw2.write(<span class="string">"你好"</span>);<span class="comment">// 保存为4个字节</span></span><br><span class="line">        osw2.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="转换流理解图解"><a href="#转换流理解图解" class="headerlink" title="转换流理解图解"></a>转换流理解图解</h3><p><strong>转换流是字节与字符间的桥梁！</strong></p>
+<img src="/2019/04/23/java基础/字符流/转换流.jpg">
+<h2 id="3-4-字符输入流【Reader】"><a href="#3-4-字符输入流【Reader】" class="headerlink" title="3.4 字符输入流【Reader】"></a>3.4 字符输入流【Reader】</h2><p><code>java.io.Reader</code>抽象类是表示用于读取字符流的所有类的超类，可以读取字符信息到内存中。它定义了字符输入流的基本共性功能方法。</p>
+<ul>
+<li><code>public void close()</code> ：关闭此流并释放与此流相关联的任何系统资源。    </li>
+<li><code>public int read()</code>： 从输入流读取一个字符。 </li>
+<li><code>public int read(char[] cbuf)</code>： 从输入流中读取一些字符，并将它们存储到字符数组 cbuf中 。</li>
+</ul>
+<h2 id="3-5-FileReader类"><a href="#3-5-FileReader类" class="headerlink" title="3.5 FileReader类"></a>3.5 FileReader类</h2><p><code>java.io.FileReader</code>类是读取字符文件的便利类。构造时使用系统默认的字符编码和默认字节缓冲区。</p>
+<blockquote>
+<p>小贴士：</p>
+<ol>
+<li>字符编码：字节与字符的对应规则。Windows系统的中文编码默认是GBK编码表。</li>
+</ol>
+<p>idea中UTF-8</p>
+<ol start="2">
+<li>字节缓冲区：一个字节数组，用来临时存储字节数据。</li>
+</ol>
+</blockquote>
+<h3 id="构造方法-2"><a href="#构造方法-2" class="headerlink" title="构造方法"></a>构造方法</h3><ul>
+<li><code>FileReader(File file)</code>： 创建一个新的 FileReader ，给定要读取的File对象。   </li>
+<li><code>FileReader(String fileName)</code>： 创建一个新的 FileReader ，给定要读取的文件的名称。  </li>
+</ul>
+<p>当你创建一个流对象时，必须传入一个文件路径。类似于FileInputStream 。</p>
+<ul>
+<li>构造举例，代码如下：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileReaderConstructor</span> <span class="title">throws</span> <span class="title">IOException</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">   	 	<span class="comment">// 使用File对象创建流对象</span></span><br><span class="line">        File file = <span class="keyword">new</span> File(<span class="string">"a.txt"</span>);</span><br><span class="line">        FileReader fr = <span class="keyword">new</span> FileReader(file);</span><br><span class="line">      </span><br><span class="line">        <span class="comment">// 使用文件名称创建流对象</span></span><br><span class="line">        FileReader fr = <span class="keyword">new</span> FileReader(<span class="string">"b.txt"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-6-转换流-InputStreamReader类"><a href="#3-6-转换流-InputStreamReader类" class="headerlink" title="3.6  转换流 InputStreamReader类"></a>3.6  转换流 InputStreamReader类</h2><p>转换流<code>java.io.InputStreamReader</code>，是Reader的子类，是从字节流到字符流的桥梁。它读取字节，并使用指定的字符集将其解码为字符。它的字符集可以由名称指定，也可以接受平台的默认字符集。 </p>
+<h3 id="构造方法-3"><a href="#构造方法-3" class="headerlink" title="构造方法"></a>构造方法</h3><ul>
+<li><code>InputStreamReader(InputStream in)</code>: 创建一个使用默认字符集的字符流。 </li>
+<li><code>InputStreamReader(InputStream in, String charsetName)</code>: 创建一个指定字符集的字符流。</li>
+</ul>
+<p>构造举例，代码如下： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">InputStreamReader isr = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(<span class="string">"in.txt"</span>));</span><br><span class="line">InputStreamReader isr2 = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(<span class="string">"in.txt"</span>) , <span class="string">"GBK"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="指定编码读取"><a href="#指定编码读取" class="headerlink" title="指定编码读取"></a>指定编码读取</h3><h3 id="指定编码读取-1"><a href="#指定编码读取-1" class="headerlink" title="指定编码读取"></a>指定编码读取</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReaderDemo2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">      	<span class="comment">// 定义文件路径,文件为gbk编码</span></span><br><span class="line">        String FileName = <span class="string">"E:\\file_gbk.txt"</span>;</span><br><span class="line">      	<span class="comment">// 创建流对象,默认UTF8编码</span></span><br><span class="line">        InputStreamReader isr = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(FileName));</span><br><span class="line">      	<span class="comment">// 创建流对象,指定GBK编码</span></span><br><span class="line">        InputStreamReader isr2 = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(FileName) , <span class="string">"GBK"</span>);</span><br><span class="line">		<span class="comment">// 定义变量,保存字符</span></span><br><span class="line">        <span class="keyword">int</span> read;</span><br><span class="line">      	<span class="comment">// 使用默认编码字符流读取,乱码</span></span><br><span class="line">        <span class="keyword">while</span> ((read = isr.read()) != -<span class="number">1</span>) &#123;</span><br><span class="line">            System.out.print((<span class="keyword">char</span>)read); <span class="comment">// ��Һ�</span></span><br><span class="line">        &#125;</span><br><span class="line">        isr.close();</span><br><span class="line">      </span><br><span class="line">      	<span class="comment">// 使用指定编码字符流读取,正常解析</span></span><br><span class="line">        <span class="keyword">while</span> ((read = isr2.read()) != -<span class="number">1</span>) &#123;</span><br><span class="line">            System.out.print((<span class="keyword">char</span>)read);<span class="comment">// 大家好</span></span><br><span class="line">        &#125;</span><br><span class="line">        isr2.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-7-练习：转换文件编码"><a href="#3-7-练习：转换文件编码" class="headerlink" title="3.7 练习：转换文件编码"></a>3.7 练习：转换文件编码</h2><p>将GBK编码的文本文件，转换为UTF-8编码的文本文件。</p>
+<h3 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h3><ol>
+<li>指定GBK编码的转换流，读取文本文件。</li>
+<li>使用UTF-8编码的转换流，写出文本文件。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> day24_IO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IO04</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 1.定义文件路径</span></span><br><span class="line">        String srcFile = <span class="string">"a.txt"</span>;</span><br><span class="line">        String destFile = <span class="string">"file_utf8.txt"</span>;</span><br><span class="line">        <span class="comment">// 2.创建流对象</span></span><br><span class="line">        <span class="comment">// 2.1 转换输入流,指定GBK编码</span></span><br><span class="line">        <span class="keyword">try</span>(Reader isr = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(srcFile),<span class="string">"GBK"</span>);</span><br><span class="line">                <span class="comment">// 2.2 转换输出流,默认utf8编码</span></span><br><span class="line">            Writer osw = <span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(destFile),<span class="string">"UTF-8"</span>))&#123;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 3.读写数据</span></span><br><span class="line">            <span class="comment">// 3.1 定义数组</span></span><br><span class="line">            <span class="keyword">char</span>[] cbuf = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">1024</span>];</span><br><span class="line">            <span class="comment">// 3.2 定义长度</span></span><br><span class="line">            <span class="keyword">int</span> len;</span><br><span class="line">            <span class="comment">// 3.3 循环读取</span></span><br><span class="line">            <span class="keyword">while</span> ((len = isr.read(cbuf))!=-<span class="number">1</span>) &#123;</span><br><span class="line">                <span class="comment">// 循环写出</span></span><br><span class="line">                System.out.print(<span class="keyword">new</span> String(cbuf,<span class="number">0</span>,len));</span><br><span class="line">                osw.write(cbuf,<span class="number">0</span>,len);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (UnsupportedEncodingException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-8-字符缓冲流"><a href="#3-8-字符缓冲流" class="headerlink" title="3.8 字符缓冲流"></a>3.8 字符缓冲流</h2><h3 id="构造方法-4"><a href="#构造方法-4" class="headerlink" title="构造方法"></a>构造方法</h3><ul>
+<li><code>public BufferedReader(Reader in)</code> ：创建一个 新的缓冲输入流。 </li>
+<li><code>public BufferedWriter(Writer out)</code>： 创建一个新的缓冲输出流。</li>
+</ul>
+<p>构造举例，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建字符缓冲输入流</span></span><br><span class="line">BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> FileReader(<span class="string">"br.txt"</span>));</span><br><span class="line"><span class="comment">// 创建字符缓冲输出流</span></span><br><span class="line">BufferedWriter bw = <span class="keyword">new</span> BufferedWriter(<span class="keyword">new</span> FileWriter(<span class="string">"bw.txt"</span>));</span><br></pre></td></tr></table></figure>
+<h3 id="特有方法"><a href="#特有方法" class="headerlink" title="特有方法"></a>特有方法</h3><p>字符缓冲流的基本方法与普通字符流调用方式一致，不再阐述，我们来看它们具备的特有方法。</p>
+<ul>
+<li>BufferedReader：<code>public String readLine()</code>: 读一行文字。 </li>
+<li>BufferedWriter：<code>public void newLine()</code>: 写一行行分隔符,由系统属性定义符号。 </li>
+</ul>
+<p><code>readLine</code>方法演示，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> day24_IO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IO05</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> (BufferedReader reader=<span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> FileReader(<span class="string">"a.txt"</span>));</span><br><span class="line">        BufferedWriter writer=<span class="keyword">new</span> BufferedWriter(<span class="keyword">new</span> FileWriter(<span class="string">"dest.txt"</span>)))&#123;</span><br><span class="line">            String s;</span><br><span class="line">            <span class="keyword">while</span> ((s=reader.readLine())!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                writer.write(s);</span><br><span class="line">                writer.newLine();</span><br><span class="line">            &#125;</span><br><span class="line">            writer.flush();</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>Donate comment here</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="wjj 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.png" alt="wjj 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaSE/" rel="tag"><i class="fa fa-google"></i> JavaSE</a>
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-google"></i> Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/22/java基础/字节流/" rel="next" title="字节流">
+                <i class="fa fa-chevron-left"></i> 字节流
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/24/java基础/打印流/" rel="prev" title="打印流">
+                打印流 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/123.jpg" alt="wjj">
+            
+              <p class="site-author-name" itemprop="name">wjj</p>
+              <div class="site-description motion-element" itemprop="description">我会努力变得更好！</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">59</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/WJJ711" title="GitHub &rarr; https://github.com/WJJ711" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:wangjiajie@zju.edu.cn" title="E-Mail &rarr; mailto:wangjiajie@zju.edu.cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#字符流-字节流-编码表。"><span class="nav-number">1.</span> <span class="nav-text">字符流=字节流+编码表。</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符编码和字符集"><span class="nav-number">1.1.</span> <span class="nav-text">字符编码和字符集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符编码"><span class="nav-number">1.1.1.</span> <span class="nav-text">字符编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符集"><span class="nav-number">1.1.2.</span> <span class="nav-text">字符集</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章-字符流"><span class="nav-number">2.</span> <span class="nav-text">第三章 字符流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1字符输出流【Writer】"><span class="nav-number">2.1.</span> <span class="nav-text">3.1字符输出流【Writer】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-FileWriter类"><span class="nav-number">2.2.</span> <span class="nav-text">3.2 FileWriter类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法"><span class="nav-number">2.2.1.</span> <span class="nav-text">构造方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-转换流-OutputStreamWriter类"><span class="nav-number">2.3.</span> <span class="nav-text">3.3 转换流 OutputStreamWriter类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法-1"><span class="nav-number">2.3.1.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定编码写出"><span class="nav-number">2.3.2.</span> <span class="nav-text">指定编码写出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转换流理解图解"><span class="nav-number">2.3.3.</span> <span class="nav-text">转换流理解图解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-字符输入流【Reader】"><span class="nav-number">2.4.</span> <span class="nav-text">3.4 字符输入流【Reader】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-FileReader类"><span class="nav-number">2.5.</span> <span class="nav-text">3.5 FileReader类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法-2"><span class="nav-number">2.5.1.</span> <span class="nav-text">构造方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-6-转换流-InputStreamReader类"><span class="nav-number">2.6.</span> <span class="nav-text">3.6  转换流 InputStreamReader类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法-3"><span class="nav-number">2.6.1.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定编码读取"><span class="nav-number">2.6.2.</span> <span class="nav-text">指定编码读取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定编码读取-1"><span class="nav-number">2.6.3.</span> <span class="nav-text">指定编码读取</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-7-练习：转换文件编码"><span class="nav-number">2.7.</span> <span class="nav-text">3.7 练习：转换文件编码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#案例分析"><span class="nav-number">2.7.1.</span> <span class="nav-text">案例分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-8-字符缓冲流"><span class="nav-number">2.8.</span> <span class="nav-text">3.8 字符缓冲流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法-4"><span class="nav-number">2.8.1.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特有方法"><span class="nav-number">2.8.2.</span> <span class="nav-text">特有方法</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-fas fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wjj</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">203k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">3:04</span>
+  
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
+-->
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+  
+  
+
+
+
+  
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/three/three.min.js"></script>
+
+  
+  <script src="/lib/three/three-waves.min.js"></script>
+
+  
+  <script src="/lib/three/canvas_lines.min.js"></script>
+
+  
+  <script src="/lib/three/canvas_sphere.min.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+  <script src="/js/src/js.cookie.js?v=7.0.1"></script>
+  <script src="/js/src/scroll-cookie.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'vS3oNxp0harmzpPs3OnFfOOl-gzGzoHsz',
+    appKey: 'aWj02yNzK8SYCm97cFm1R2np',
+    placeholder: '博主好帅！',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+  
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+</body>
+</html>
